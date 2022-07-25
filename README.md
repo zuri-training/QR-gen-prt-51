@@ -27,4 +27,4 @@
 - create a new virtual environment 
 - install dependencies using ## pip3 install -r requirements.txt
 - run migrations 
-- sun server
+- python manage.py  runserver
