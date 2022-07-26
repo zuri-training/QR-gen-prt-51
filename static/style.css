@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans');
+
+:root{
+    --button-background:#4959E9;
+    --button-border-radius:8px;
+    --Josefin_san:'Josefin Sans';
+    --footer-background:#A4ACF4;
+}
+
+
 *,body, main ,::before, ::after {
     margin:0px;
     padding: 0px;
     box-sizing: border-box;
-    background-color: white;
 }
 
 
