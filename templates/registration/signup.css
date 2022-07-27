@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
-*{box-sizing: border-boxt6;}
+*{box-sizing: border-box;}
 
 body{
-    width: 100%;
     border-radius: 0px;  
 }
 
@@ -12,32 +11,26 @@ main{
     flex-direction: row;
     align-items: center;
     padding: 0px;
-    gap: 40px;
+    gap: 62px;
     position: absolute;
     left: 0px;
     top: 0px;
+    font-family: josefin-sans;
 }
 
-.info{
-    align-items: center;
-    font-family: josefin sans;
-    justify-content: center;
-    padding: 30px;
+h1{
+    font-family: 'josefin-sans';
+    font-size: 56px;
+    font-weight: 700;
 
 }
-.login{
-    font-family: josefin sans;
-    height: 590px;
-    width: 800px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    border: 1px solid black;
-    padding: 0px;
-    border: none;
-    border-radius: 10px;
+.info p{
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
 }
+
 .login input{
     height: 50px;
     width: 350px;
@@ -51,6 +44,7 @@ main{
     border: 1px solid black;
     border-radius: 5px;
 }
+
 button{
     display: flex;
     flex-direction: row;
