@@ -1,4 +1,80 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
+{% load static %} 
+<body>
+    <main>
+        <div class="hero-image">
+            <img src="{% static 'images/background.png' %}" alt="computer" style="width: 100%;" class="contact__image">
+            <div class="hero-text">
+                <h1>Contact Us</h1>
+                <p>We are here for your questions, inquiries,
+                feedback, and concerns. With 24/7 support,
+                you can count on us to respond quickly to
+                your needs.</p>
+            </div>
+        </div>
 
+        <div class="message__container">
+            <div class="left-col">
+                <h3>Send a Message</h3>
+                <form action="ContactUs" method="get">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Akinosun Anjola">
+                    <label for="fname">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="anjola.akinosun@email.com">
+                    <label for="message">Message</label>
+                    <textarea name="Message" id="" cols="30" rows="7"></textarea>
+                    <div class="submit">
+                        <button type="submit">SEND</button>
+                    </div>
+                </form>
+            </div>
+            <div class="right-col">
+                <div>
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                    </div>
+                    <div class="phone">
+                        <span class="iconify" data-icon="ant-design:phone-outlined" data-flip="horizontal"></span>
+                        <p class="phone__number">+234 252 635 8975</p>
+                    </div>
+                    
+                    <div class="email">
+                        <span class="iconify" data-icon="bx:message-alt-detail"></span>
+                        <p class="email__address">support@projectname.com</p>
+                    </div>
+                </div>
+
+                <div class="icons">
+                    <div class="instagram">
+                        <a href="https://www.instagram.com/ingressive4good/?__coig_restricted=1" target="_blank">
+                            <span class="iconify" data-icon="lucide:instagram"></span>                        </a>
+                    </div>
+                    <div class="facebook">
+                        <a href="https://www.facebook.com/ingressiveforgood/">
+                            <span class="iconify" data-icon="jam:facebook-square"></span>
+                        </a>
+                    </div>
+                    <div class="twitter">
+                            <a href="https://twitter.com/thezuriteam?lang=en" target="_blank">
+                                <span class="iconify" data-icon="jam:twitter-square"></span>
+                            </a>
+                    </div>
+                    <div class="linkedin">
+                            <a href="https://ng.linkedin.com/company/zuri-team" target="_blank">
+                                <span class="iconify" data-icon="jam:linkedin-square"></span>
+                            </a>
+                    </div>
+                </div>
+
+                <div class="contact-map">
+                    <div class="contact__map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3963.039723372923!2d3.363691580950916!3d6.641989501681672!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1658942598316!5m2!1sen!2sng" 
+                    width="322px" height="198px" style="border: 2px;;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
 {% block content %}
 {% endblock %}
