@@ -20,11 +20,41 @@
     <br> 
 </p>
 
+
+
 ## 📝 Table of Contents
 
+### Getting Started 
+
+What things you need to install the software and how to install them.
+
+```
 - Fork the repository
 - clone  repository to you local machine 
 - create a new virtual environment 
 - install dependencies using ## pip3 install -r requirements.txt
 - run migrations 
 - python manage.py  runserver
+```
+
+### Contributing
+
+How to contribute to the project
+
+```
+- create new branch  ## using git branch <branch name>
+- switch branch ## git checkout <branch_name>
+- git add . 
+- git commit -m "commit message"
+- git fetch origin upstream
+- git pull
+- git push <branch_name>
+```
+
+Lastly
+
+```
+Open pull request
+```
+
+
