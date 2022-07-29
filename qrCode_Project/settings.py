@@ -21,7 +21,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # new app installed
     'Accounts',
-    'qrCode_Project',
+    'qrCode_App',
 ]
 
 MIDDLEWARE = [
