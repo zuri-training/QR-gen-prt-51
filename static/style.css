@@ -5,6 +5,51 @@
     --button-border-radius:8px;
     --Josefin_san:'Josefin Sans';
     --footer-background:#A4ACF4;
+    /* Oops! */
+    --oops-height:797px;
+    --oops-weight:338px;
+    --oops-color:linear-gradient(180deg, #4959E9 8.2%, #D2D2D2 85.25%);
+
+
+    --oops-font-style: normal;
+    --oops-font-weight: 700;
+    --oops-font-size: 280px;
+    --oops-line-height: 150%;
+
+    --oops-letter-spacing: -1.5px;
+    --oops-webkit-background-clip: text;
+    --oops--webkit-text-fill-color: transparent;
+    --oops-background-clip: text;
+    --oops-fill-color: transparent;
+/* end of oops */
+/* status-message */
+--oops-status-width: 765px;
+
+--oops-status-height: 96px;
+/* Desktop/Heading (Bold)/2 */
+
+--oops-status-font-style: normal;
+--oops-status-font-weight: 700;
+--oops-status--size: 64px;
+--oops-status-line-height: 150%;
+/* identical to box height, or 96px */
+--oops-status-letter-spacing: -0.5px;
+--oops-status-color: #181818;
+/* end of status  */
+
+/* inner oops error message  */
+/* width: 686px;
+height: 72px; */
+
+
+--oops-inner-message-font-style: normal;
+--oops-inner-message-font-weight: 400;
+--oops-inner-message-font-size: 24px;
+--oops-inner-message-line-height: 150%;
+/* or 36px */
+
+--oops-inner-message-text-align: center;
+--oops-inner-message-letter-spacing: 0.5px;
 }
 
 
@@ -13,9 +58,12 @@
     padding: 0px;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+    color: white;
+}
 
-/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap'); */
-
+/* signup css */
 .signup-section{
     display: flex; 
     flex-direction: row;
@@ -75,5 +123,62 @@ button{
     font-size: small;
     border: none;
 }
+/* end of signup css */
 
+/* error page css*/
 
+.error-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.oops-message{
+    font-family: var(--Josefin_san);
+    font-size: var(--oops-font-size);
+    font-weight:var(--oops-font-weight);
+    font-style: var(--oops-font-style);
+    line-height: var(--oops-line-height);
+    background: var(--oops-color);
+    -webkit-background-clip: var(--oops-webkit-background-clip);
+    background-clip: var(--oops-background-clip);
+    -webkit-text-fill-color: var(--oops-fill-color);
+    -webkit-background-clip: text;
+}
+
+.status-message{
+    font-family: var(--Josefin_san);
+    font-style: var(--oops-status-font-style);
+    font-weight: var(--oops-status-font-weight);
+    font-size: var(--oops-status--size);
+    line-height: var(--oops-status-line-height);
+    letter-spacing: var(--oops-status-letter-spacing);
+    color: var(--oops-status-color);
+}
+
+.inner-error-404{
+    font-family: var(--Josefin_san);
+    font-style: var(--oops-inner-message-font-style);
+    font-weight: var(--oops-inner-message-font-weight);
+    font-style: var(--oops-inner-message-font-style);
+    text-align: var(--oops-inner-message-text-align);
+    letter-spacing: var(--oops-inner-message-letter-spacing);
+    color: black;
+}
+.error-404-button{
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    
+    font-family: var(--Josefin_san);
+    background-color: var(--button-background);
+    border-radius: var(--button-border-radius);
+    margin-top:  26px;
+}
+@media screen and (min-width:420px){
+    
+}
