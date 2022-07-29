@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans");
+
+:root {
+  --button-background: #4959e9;
+  --button-border-radius: 8px;
+  --Josefin_san: "Josefin Sans";
+  --footer-background: #a4acf4;
+}
+
+@media only screen and (max-width: 360px) {
+  .logo {
+    text-align: center;
+    display: block !important;
+  }
+
+  .left {
+    display: none;
+  }
+  .right {
+    max-width: 360px;
+    height: 800px;
+    padding: 10px;
+  }
+  .top .sign, .top .wel {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+  }
+  .input-box input {
+    height: 40px;
+    max-width: 300px;
+    padding-left: 10px;
+    margin: 3px;
+  }
+  .bottom .bottom-top button {
+    max-width: 300px;
+  }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: var(--Josefin_san);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  max-width: 1440px;
+  background-color: white;
+}
+
+.right {
+  gap: 62px;
+  width: 590px;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.top .wel {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 150%;
+}
+
+.top .sign {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 150%;
+  letter-spacing: 0.25px;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom .bottom-top button {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  align-items: center;
+  padding: 16px 50px;
+  width: 100%;
+  height: 56px;
+  border: 1px solid var(--button-background);
+  background-color: white;
+  border-radius: var(--button-border-radius);
+  margin-top: 5px;
+  text-align: center;
+}
+
+.middle img {
+  width: 100%;
+  height: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.bottom-last {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.bottom-last .input-box label,
+input {
+  width: 100%;
+  font-size: 16px;
+}
+
+.bottom-last .input-box label {
+  width: 76px;
+  height: 24px;
+  font-style: normal;
+  font-weight: 500;
+  padding-left: 5px;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 1.25px;
+}
+
+.input-box input {
+  height: 50px;
+  width: 590px;
+  padding-left: 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.last {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.last button {
+  background-color: #4959e9;
+  color: white;
+  border-radius: var(--button-border-radius);
+  width: 120px;
+  height: 50px;
+  padding: 16px 24px;
+  border: none;
+}
+
+.last p {
+  font-size: 15px;
+  line-height: 150%;
+  letter-spacing: 0.25px;
+  text-align: center;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.last a,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: #4959e9;
+  font-weight: 400;
+}
+
+#toggle {
+  margin-left: -40px;
+  cursor: pointer;
+}
