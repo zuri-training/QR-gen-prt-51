@@ -25,8 +25,8 @@
 ## 📝 Table of Contents
 
 ### Links to Documents
-[https://www.figma.com/file/Iwa6c7uuZmtmvMQiXzjSq4?](Figma board)
-[https://docs.google.com/document/d/1CR0OWttM92_KzSb2btf34lFwD4Tz6wopEoSTMZp_euA/edit](Google Docs)
+[Figma board](https://www.figma.com/file/Iwa6c7uuZmtmvMQiXzjSq4?)
+[Google Docs](https://docs.google.com/document/d/1CR0OWttM92_KzSb2btf34lFwD4Tz6wopEoSTMZp_euA/edit)
 
 ### Getting Started 
 
