@@ -27,6 +27,12 @@
     font-weight: 600;
     letter-spacing: -1.5px;
   }
+  .top .reg{
+    font-size: 7px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    margin-bottom: 14px;
+  }
   .input-box input {
     height: 40px;
     max-width: 300px;
@@ -50,6 +56,7 @@
   align-items: center;
   max-width: 1440px;
   background-color: white;
+  gap: 40px;
 }
 
 .right {
@@ -71,7 +78,13 @@
   line-height: 150%;
   letter-spacing: 0.25px;
 }
-
+.top .reg{
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 150%;
+  letter-spacing: 0.4px;
+  margin-bottom: 63px;
+}
 .bottom {
   display: flex;
   flex-direction: column;
@@ -122,6 +135,16 @@ input {
   line-height: 150%;
   text-align: center;
   letter-spacing: 1.25px;
+}
+.bottom-last li{
+  list-style-type:disc;
+  font-family: 'Lora';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+.bottom-last ul{
+  margin-left: 25px;
 }
 
 .input-box input {
