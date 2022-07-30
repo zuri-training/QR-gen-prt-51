@@ -21,7 +21,8 @@
     height: 800px;
     padding: 10px;
   }
-  .top .sign, .top .wel {
+  .top .sign,
+  .top .wel {
     font-size: 10px;
     font-weight: 600;
     letter-spacing: -1.5px;
