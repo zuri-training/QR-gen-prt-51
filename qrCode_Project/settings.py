@@ -1,14 +1,17 @@
 
 from pathlib import Path
+import os
+from environs import Env
+env = Env() 
+env.read_env()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-x0dp25v51=wfb3lo5wibvw=t32v13oof#-b(_!f@-=+293m9j-'
+SECRET_KEY = env.str("SECRET_KEY", default='django-insecure-x0dp25v51=wfb3lo5wibvw=t32v13oof#-b(_!f@-=+293m9j-')
+ 
+DEBUG = env.bool('DEBUG', default=True)
 
-DEBUG = True
-
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -19,10 +22,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
     # new app installed
-    'Accounts',
-    'qrCode_App',
+    'accounts',
+    'qrCode_Project',
+    'widget_tweaks',
 ]
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -101,7 +108,8 @@ USE_TZ = True
 # static
 STATIC_URL = 'static/'
 STATIC_DIR = BASE_DIR / STATIC_URL
-STATICFILES_DIRS=[STATIC_DIR,]
+STATICFILES_DIRS=[os.path.join(BASE_DIR, 'static')]
+
 # media file
 MEDIA_URL = '/mediaFolder/'
 MEDIA_DIR= BASE_DIR /'mediaFolder'

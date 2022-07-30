@@ -1,8 +1,640 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans');
+
+:root{
+    --button-background:#4959E9;
+    --button-border-radius:8px;
+    --Josefin_san:'Josefin Sans';
+    --footer-background:#A4ACF4;
+    /* Oops! */
+    --oops-height:797px;
+    --oops-weight:338px;
+    --oops-color:linear-gradient(180deg, #4959E9 8.2%, #D2D2D2 85.25%);
+
+
+    --oops-font-style: normal;
+    --oops-font-weight: 700;
+    --oops-font-size: 280px;
+    --oops-line-height: 150%;
+
+    --oops-letter-spacing: -1.5px;
+    --oops-webkit-background-clip: text;
+    --oops--webkit-text-fill-color: transparent;
+    --oops-background-clip: text;
+    --oops-fill-color: transparent;
+/* end of oops */
+/* status-message */
+--oops-status-width: 765px;
+
+--oops-status-height: 96px;
+/* Desktop/Heading (Bold)/2 */
+
+--oops-status-font-style: normal;
+--oops-status-font-weight: 700;
+--oops-status--size: 64px;
+--oops-status-line-height: 150%;
+/* identical to box height, or 96px */
+--oops-status-letter-spacing: -0.5px;
+--oops-status-color: #181818;
+/* end of status  */
+
+/* inner oops error message  */
+/* width: 686px;
+height: 72px; */
+
+
+--oops-inner-message-font-style: normal;
+--oops-inner-message-font-weight: 400;
+--oops-inner-message-font-size: 24px;
+--oops-inner-message-line-height: 150%;
+/* or 36px */
+
+--oops-inner-message-text-align: center;
+--oops-inner-message-letter-spacing: 0.5px;
+}
+
+
 *,body, main ,::before, ::after {
     margin:0px;
     padding: 0px;
     box-sizing: border-box;
     background-color: white;
+    font-family: 'Josefin Sans', sans-serif;
+}
+/* Beginning of base css */
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    height: 120px;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    }
+    .logo{
+        margin-left: -118px;
+        margin-right: 40px;
+    }
+    
+    #ul {
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 199px;
+    gap: 35px;
+    }
+    
+    #sub{
+        display: flex;
+    }
+    
+    li {
+        list-style: none;
+        text-decoration: none;
+    
+    }
+    .li{
+        margin-left: 30px;
+        margin-right: 30px;
+        font-size: 16px;
+        letter-spacing: 1.25px;
+        text-decoration: none;
+        color: #000000;
+    }
+    .li:active{
+        color: #4959E9;
+    }
+    
+    .login {
+        font-family: 'Josefin Sans', sans-serif;
+        padding: 16px 24px;
+        gap: 16px;
+        border: 1px solid #4959E9;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        margin-right: 10px;
+    }
+    #log{
+        color: #000000;
+        text-decoration: none;
+    }
+    
+    .signin{
+        font-family: 'Josefin Sans', sans-serif;
+        padding: 16px 24px;
+        gap: 16px;
+        margin-left: 10px;
+        margin-right: -50px;
+        background: #4959E9;
+        border-radius: 8px;
+        border: none;
+    }
+    #sign{
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    
+    #footer{
+        width: 100%;
+        height: 600px;
+        left: 0px;
+        bottom: 0px;
+        background-color: #A4ACF4;
+        border-radius: 8px;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    
+    .social-icons{
+        position: relative;
+        display: flex;
+        text-align: center;
+        justify-content: right;
+        margin-left: 82%;
+        height: 116px;
+        margin-bottom: 44px;
+        background: #DBDEFB;
+        opacity: 0.8;
+        box-shadow: 0px 12px 17px 2px rgba(0, 0, 0, 0.14);
+        border-radius: 0px 0px 0px 8px;
+    }
+    .icon-links{
+        margin: 20px;
+        padding-top: 10px;
+        width: 75px;
+        height: 60px;
+        background: #8690F0;
+        box-shadow: 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        color: #000000;
+        text-decoration: none;
+    }
+    
+    #flex-footer{
+        display: flex;
+        margin-left: 90px;
+    
+    }
+    .footer-logo{
+        width: 150px;
+        height: 150px;
+    }
+    #footer-p1{
+        width: 411px;
+        height: 39px;
+        font-weight: 400;
+        font-size: 24px;
+        margin-bottom: 0px;
+    }
+    #footer-li{
+         color: #000000;
+    
+    }
+    #footer-sub{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        display: flex;
+    }
+    #footer-login{
+        font-family: 'Josefin Sans', sans-serif;
+        padding: 16px 24px;
+        gap: 16px;
+        border: 1px solid #4959E9;
+        border-radius: 8px;
+        background-color: #A4ACF4;
+        margin-right: 10px;
+    }
+    #footer-signin{
+        font-family: 'Josefin Sans', sans-serif;
+        padding: 16px 24px;
+        gap: 16px;
+        margin-left: 10px;
+        margin-right: -50px;
+        background: #4959E9;
+        border-radius: 8px;
+        border: none;
+    }
+    .footer-li2{
+        text-decoration: none;
+        color: #000000;
+        
+    }
+    #footer-h2{
+        margin-top: -20px;
+        margin-bottom: 15px;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 150%;
+        letter-spacing: 0.25px;
+    }
+    #footer-ul{
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        line-height: 250%;
+        margin-left: 750px;
+    }
+    hr{
+        width: 90%;
+        margin-bottom: 50px;
+    }
+    #footer-p2{
+        width: 790px;
+        font-weight: 400;
+        font-size: 15px;
+        letter-spacing: 0.4px;
+        margin-left: 30%;
+    }    
+/* End of base css */
+
+/* Beginning of contactus css */
+
+body, html{
+    height: 100%;
+    background-color: #ffffff;
+}
+.hero-image{
+    height: 40%;
+}
+.contact__image {
+    z-index: 1;
 }
 
+.hero-text{
+    position: absolute;
+    top: 30%;
+    padding-left: 6%;
+    z-index: 99999;
+    left: 25%;
+    transform: translate(-30%, -30%);
+    color: #ffffff;
+    font-size: 700;
+    padding-bottom: 0%;
+    width:30% ;
+}
 
+.hero-text h1 {
+    font-size: 64px;
+    margin-bottom: 24px;
+}
+.hero-text p {
+    font-size: 24px;
+    line-height: 150%;
+    width: 85%;
+}
+
+.message__container{
+    background: #ffffff;
+    display: flex;
+    width: 60%;
+    height: 690px;
+    margin: 0 auto;
+    margin-top: -200px;
+    margin-bottom: 120px;
+}
+
+.message__container .left-col{
+    flex-basis: 62%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 32px;
+    background-color: white;
+    box-shadow: 5px 13px 14px 1px rgba(0,0,0,0.3);
+    color: #000000;
+}
+
+.message__container .left-col h3{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px;
+    width: 204px;
+    margin-bottom: 24px;
+}
+.message__container .left-col input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 22px 20px;
+    margin: 17px 0 32px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 18px;
+  }
+
+.message__container .left-col .submit button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 16px;
+    width: 98px;
+    height: 56px;
+    background: #4959E9;
+    border-radius: 8px;
+    border: 1px solid #4959E9;
+    color: white;
+}
+
+.message__container .right-col{
+    flex-basis: 38%;
+    background: #A4ACF4;
+    padding: 32px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 5px 13px 14px 1px rgba(0,0,0,0.3);
+}
+
+.message__container .right-col .contact-info{
+   font-weight: 700;
+   font-size: 26px;
+   line-height: 39px;
+   border-width: 253px;
+   margin-bottom: 32.5px;
+}
+
+.message__container .right-col .phone{
+    margin-top: 0.5px;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.25px;
+    line-height: 23px;
+    border-width: 130px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.message__container .right-col .phone .iconify {
+    float:left;
+    font-size: 25px;
+    margin-right: 14px;
+}
+.message__container .right-col .phone .phone__number {
+    float: left;
+    font-size: 18px;
+}
+
+.message__container .right-col .email{
+    margin-top: 0.5px;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.25px;
+    height: 30px;
+    border-width: 186px;
+    margin-bottom: 32.5px;
+}
+
+.message__container .right-col .email .iconify{
+    float:left;
+    font-size: 25px;
+    margin-right: 14px;  
+}
+.message__container .right-col .email .email__address{
+    float: left;
+    font-size: 18px;
+}
+.message__container .right-col .icons {
+    display: flex;
+}
+.message__container .right-col .icons .iconify{
+    height: 24px;
+    width: 34px;
+    color: #000;
+}
+.message__container .right-col .contact-map{
+    margin-top: 139px;
+}
+.message__container .right-col .contact__map {
+    text-align: center;
+}
+
+/* end of contactus css */
+
+/* a{
+    text-decoration: none;
+    color: white;
+} */
+
+/* signup css */
+.signup-section{
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 40px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    font-family: 'josefin-sans';
+}
+lottie-player{
+    width: 770px;
+    height: 1024px;
+    background: url('static/images/reg-bckg.png');
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 62px;
+    width: 590px;
+    height: 800px;
+    max-width: 100%;
+    max-height: 100%;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.info .frame1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+    width: 525px;
+    height: 108px;
+    max-width: 100%;
+    max-height: 100%;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.info .frame1 h3{
+    width: 525px;
+    height: 84px;
+    max-width: 100%;
+    max-height: 100%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 150%;
+    text-align: center;
+    color: #000000;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.info .frame1 p{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 150%;
+    letter-spacing: 0.4px;
+    color: #000000;
+    text-align: center;
+    width: 336px;
+    height: 20px;
+    max-width: 100%;
+    max-height: 100%;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.info .frame2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    width: 590px;
+    height: 630px;
+    max-width: 100%;
+    max-height: 100%;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.login-form #full_name,.login-form #email, .login-form #password1, .login-form #password2{
+    box-sizing: border-box;
+    width: 590px;
+    height: 56px;
+    padding: 22px 20px;
+
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+}
+.signup-group #email{
+    margin: 0;
+    font-size:medium; 
+}
+
+.login-form label{
+    width: 100%;
+    height: 24px;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    display: flex;
+}
+.login-form li{
+    list-style:disc;
+}
+.login-form ul{
+    font-family: 'Lora'; 
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 16px;
+    margin: auto;
+    width: 115px;
+    height: 56px;
+    background: #4959E9;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1.25px;
+    line-height: 150%;
+    border: none;
+    cursor: pointer;
+}
+#pdown{
+    margin-left: 200px;
+}
+#pdown #btn{
+    color: #4959E9;
+}
+/* end of signup css */
+
+/* error page css*/
+
+.error-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.oops-message{
+    font-family: var(--Josefin_san);
+    font-size: var(--oops-font-size);
+    font-weight:var(--oops-font-weight);
+    font-style: var(--oops-font-style);
+    line-height: var(--oops-line-height);
+    background: var(--oops-color);
+    -webkit-background-clip: var(--oops-webkit-background-clip);
+    background-clip: var(--oops-background-clip);
+    -webkit-text-fill-color: var(--oops-fill-color);
+    -webkit-background-clip: text;
+}
+
+.status-message{
+    font-family: var(--Josefin_san);
+    font-style: var(--oops-status-font-style);
+    font-weight: var(--oops-status-font-weight);
+    font-size: var(--oops-status--size);
+    line-height: var(--oops-status-line-height);
+    letter-spacing: var(--oops-status-letter-spacing);
+    color: var(--oops-status-color);
+}
+
+.inner-error-404{
+    font-family: var(--Josefin_san);
+    font-style: var(--oops-inner-message-font-style);
+    font-weight: var(--oops-inner-message-font-weight);
+    font-style: var(--oops-inner-message-font-style);
+    text-align: var(--oops-inner-message-text-align);
+    letter-spacing: var(--oops-inner-message-letter-spacing);
+    color: black;
+}
+.error-404-button{
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    
+    font-family: var(--Josefin_san);
+    background-color: var(--button-background);
+    border-radius: var(--button-border-radius);
+    margin-top:  26px;
+}
+@media screen and (min-width:420px){
+    
+}

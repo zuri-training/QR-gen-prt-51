@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url();
+
+*{box-sizing: border-box;}
+
+body{
+    height: 1024px;
+    width: 100%;
+    border-radius: 0px;
+    position: relative;
+}
+
+main{
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 62px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-family: 'josefin-sans';
+}
+.info h3{
+    width: 525px;
+    height: 34px;
+
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 100%;
+}
+
+.info p{
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    width: 336px;
+    height: 20px;
+}
+
+
+.login #fname{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 16px;
+
+    width: 590px;
+    height: 56px;
+
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+}
+.login #email{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 16px;
+
+    width: 590px;
+    height: 56px;
+
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+}
+
+.login #password{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 16px;
+    width: 590px;
+    height: 56px;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px; 
+}
+.login label{
+    width: 76px;
+    height: 24px;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    display: flex;
+}
+.login ul{
+    font-family: 'Lora'; 
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 16px;
+    margin-left: 240px;
+    width: 115px;
+    height: 56px;
+    Top: 534px;
+    Left: 237.5px;
+    background: #4959E9;
+    border-radius: 8px;
+    color: white;
+    font-size: small;
+    border: none;
+    cursor: pointer;
+}
+#pdown{
+    margin-left: 200px;
+}
+#pdown #btn{
+    color: #4959E9;
+}

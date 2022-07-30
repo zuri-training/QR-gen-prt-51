@@ -1,27 +1,86 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    {% load static %}
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;0,700;1,200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/font-awesome.min.css">
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <title>{% block title %}QR code generator{% endblock %}</title>
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/9ec3a209f4.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 </head>
-<body>
-    <header>
-        <h1>welcome to qrcode scanner</h1>
-    </header>
-   <main>
-    {% block content %}
 
-    {% endblock %}
-   </main>
-   <footer>
-    <h1>
-        footer
-    </h1>
-   </footer>
+<body>
+    <header id="header">
+        <div>
+            <img class="logo" src="{% static 'images/logo.png' %}" alt="logo">
+        </div>
+        <nav class="noth">
+            <ul id="ul">
+                <li><a class="li" href="landingPage.html">HOME</a></li>
+                <li><a class="li" href="aboutUs.html">ABOUT US</a></li>
+                <li><a class="li" href="contactus.html">CONTACT US</a></li>
+                <li><a class="li" href="faq.html">RESOURCES</a></li>
+                <li><a class="li" href="#">PRODUCT</a></li>
+                <div id="sub">
+                    <li><button class="login"><a id="log" href="login.html">SIGN IN</a></button></li>
+                    <li><button class="signin"><a id="sign" href="signup.html">REGISTER</a></button></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+
+        {% endblock content %}
+    </main>
+    <footer id="footer">
+        <div class="social-icons">
+            <a class="icon-links" href="#"><i class="fa-brands fa-facebook fa-3x"></i></a>
+            <a class="icon-links" href="#"><i class="iconify-inline" data-icon="entypo-social:twitter-with-circle"
+                    data-width="50" data-height="50"></i></a>
+            <a class="icon-links" href="#"><i class="fa-brands fa-linkedin fa-3x"></i></a>
+            <span></span>
+        </div>
+        <div id="flex-footer">
+            <div>
+                <img class="footer-logo" src="{% static 'images/logo.png' %}" alt="logo">
+                <p id="footer-p1">HAVE A QUESTIONS? SAY HELLO!</p>
+                <a id="footer-li" href="#">Support@ProjectName.com</a>
+                <div id="footer-sub">
+                    <li><button id="footer-login"><a id="log" href="login.html">SIGN IN</a></button></li>
+                    <li><button id="footer-signin"><a id="sign" href="signup.html">REGISTER</a></button></li>
+                </div>
+            </div>
+            <div>
+
+                <ul id="footer-ul">
+                    <h2 id="footer-h2">Pages</h2>
+                    <li><a class="footer-li2" href="landingPage.html">Homepage</a></li>
+                    <li><a class="footer-li2" href="aboutUs.html">About us</a></li>
+                    <li><a class="footer-li2" href="contactus.html">Contact us</a></li>
+                    <li><a class="footer-li2" href="faq.html">FAQ</a></li>
+                    <li><a class="footer-li2" href="#">Create Qr code</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <p id="footer-p2"> © Project name . All rights reserved. QR Code is a registered trademark of DENSO WAVE
+                INCORPORATED</p>
+        </div>
+    </footer>
 </body>
 
 </html>
