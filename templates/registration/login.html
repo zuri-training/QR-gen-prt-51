@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="log.css" />
+    <link rel="stylesheet" href="{% static 'login.css' %}" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
@@ -40,7 +40,7 @@
       </div>
       <div class="right">
         <div class="logo" style="display: none">
-          <img src="Logo.png" alt="" srcset="" />
+          <img src="{% static 'images/Logo.png' %}" alt="" srcset="" />
         </div>
         <div class="top">
           <div class="wel">Welcome</div>
@@ -49,13 +49,13 @@
         <div class="bottom">
           <div class="bottom-top">
             <button>
-              <img style="margin-right: 5px" src="gg.png" alt="" srcset="" />
+              <img style="margin-right: 5px" src="{% static 'images/gg.png' %}" alt="" srcset="" />
               Sign in with Google
             </button>
           </div>
           <div class="bottom-top">
             <button>
-              <img style="margin-right: 5px" src="fb.png" alt="" srcset="" />
+              <img style="margin-right: 5px" src="{% static 'images/fb.png' %}" alt="" srcset="" />
               Sign in with Facebook
             </button>
           </div>
