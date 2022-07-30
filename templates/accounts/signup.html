@@ -1,60 +1,78 @@
-{% extends 'base.html' %}
+{% load static %}
 {% load widget_tweaks %}
-<head>
-    <title>
-        {% block title %}Register
-        {% endblock %}
-    </title>
-    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
-</head>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            {% block title %}Register
+            {% endblock %}
+        </title>
+        <link rel="stylesheet" href="{% static 'accounts.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+        <script src="{% static 'script.js' %}">
+        </script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-<!-- <link rel="stylesheet" href="signup.css"> -->
-{% block content %}
-    <section class="signup-section">
-        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_d7uvq2w6.json" background="transparent" speed="1" style="width: 770px; height: 770px;" loop autoplay></lottie-player>
-
-        <div class="info">
-            <h1>Register to QR GEN</h1>
-            <h6>Complete your registration and create your QR code</h6>
-            <form method="post" class="login">
-                {% csrf_token %}
-                <div class="signup-group">
-                    <label for="full_name">Full Name</label>
-                    {% render_field form.full_name class="form-signup" placeholder="Full Name" type="text" %}
-                    <!-- <input type="text" name="fname" id="fname" placeholder="Anjola Akinosun" required> -->
-                </div>
-
-                <div class="signup-group">
-                    <label for="email">Email
-                    </label>
-                    {% render_field form.email class="form-signup" placeholder="Email" type="email" %}
-                    <!-- <input type="email" name="email" id="email" placeholder="AnjolaAkinosun@gmail.com" required> -->
-                </div>
-
-                <div class="signup-group">
-                    <label for="password1">Password</label>
-                    {% render_field form.password1 class="form-signup" placeholder="Password" type="password" %}
-                    <!-- <input type="password" name="password" id="password" placeholder="" required> -->
-                </div>
-                <ul>
-                    <li>Mininmum of 8 characters</li>
-                    <li>Must contain an uppercase</li>
-                    <li>Must be Alphanumeric</li>
-                </ul>
-
-                <div class="signup-group">
-                    <label for="password2">Confirm Password</label>
-                    {% render_field form.password2 class="form-signup" placeholder="Confirm Password" type="password" %}
-                    <!-- <input type="password" name="password" id="password"> -->
-                </div>
-
-                <button type="submit">SUBMIT</button>
-
-                <h6>Already have an account?
-                    <a href="{% url 'accounts:login' %}">Sign in</a>
-                </h6>
-            </form>
-        </div>
-    </section>
-{% endblock content %}
-<script src="script.js"></script>
+    </head>
+    <body>
+        <main class="container">
+            <div class="left">
+                <lottie-player
+                    src="https://assets5.lottiefiles.com/packages/lf20_d7uvq2w6.json"
+                    background="transparent"
+                    speed="1"
+                    style="width: 755px; height: auto"
+                    loop
+                    autoplay
+                ></lottie-player>
+            </div>
+            <div class="right">
+                <section class="logo" style="display:none">
+                    <img src="{% static 'images/Logo.png' %}" alt="" srcset="" />
+                </section>
+                <section class="top">
+                    <h3 class="wel">Register to QR GEN</h3>
+                    <p class="reg">Complete your registration and create your QR code</p>
+                </section>
+                <section class="bottom">
+                    <form method="POST" name="form" class="login-form">
+                        {% csrf_token %}
+                        <div class="bottom-last">
+                            <div class="input-box">
+                                <label for="full_name">Full Name</label>
+                                {% render_field form.full_name id="full_name" class="form-signup" placeholder="Anjola Akinosun" type="text" %}
+                            </div>
+                            <div class="input-box">
+                                <label for="email">Email
+                                </label>
+                                {% render_field form.email id="email" class="form-signup" placeholder="AnjolaAkinosun@gmail.com" type="email" %}
+                            </div>
+                            <div class="input-box">
+                                <label for="password1">Password</label>
+                                {% render_field form.password1 id="password1" class="form-signup" placeholder="************" type="password" %}
+                                <span class="fa fa-eye" id="toggle" onclick="togglePassword1()"></span>
+                            </div>
+                            <ul>
+                                <li>Mininmum of 8 characters</li>
+                                <li>Must contain an uppercase</li>
+                                <li>Must be Alphanumeric</li>
+                            </ul>
+                            <div class="input-box">
+                                <label for="password2">Confirm Password</label>
+                                {% render_field form.password2 id="password2" class="form-signup" placeholder="************" type="password"%}
+                                <span class="fa fa-eye" id="toggle" onclick="togglePassword2()"></span>
+                            </div>    
+                        </div>
+                        <div class="last">
+                            <button type="submit">SUBMIT</button>
+                            <p>Already have an account?<a href="{% url 'accounts:login' %}">Sign in</a></p>
+                        </div>  
+                    </form>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>
