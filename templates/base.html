@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <title>{% block title %}QR code generator{% endblock %}</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/9ec3a209f4.js" crossorigin="anonymous"></script>
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
@@ -25,7 +24,7 @@
 <body>
     <header id="header">
         <div>
-            <img class="logo" src="logo.png" alt="logo">
+            <img class="logo" src="{% static 'images/logo.png' %}" alt="logo">
         </div>
         <nav class="noth">
             <ul id="ul">
@@ -44,7 +43,6 @@
     <main>
         {% block content %}
 
-        {% endblock %}
         {% endblock content %}
     </main>
     <footer id="footer">
@@ -57,7 +55,7 @@
         </div>
         <div id="flex-footer">
             <div>
-                <img class="footer-logo" src="logo.png" alt="logo">
+                <img class="footer-logo" src="{% static 'images/logo.png' %}" alt="logo">
                 <p id="footer-p1">HAVE A QUESTIONS? SAY HELLO!</p>
                 <a id="footer-li" href="#">Support@ProjectName.com</a>
                 <div id="footer-sub">
