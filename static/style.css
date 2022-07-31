@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans');
 
 :root{
+
     --button-background:#4959E9;
     --button-border-radius:8px;
     --Josefin_san:'Josefin Sans';
@@ -48,64 +49,102 @@ height: 72px; */
 
 --oops-inner-message-text-align: center;
 --oops-inner-message-letter-spacing: 0.5px;
+
+/*  header rebrand*/
+--header--display: flex;
+--header--flex-direction: row;
+--header--justify-content: space-between;
+--header--align-items: center;
+--header--gap: 45px;
+
+--header--width: 1203px;
+--header--height: 96px;
+
+
 }
+/* css rest */
 
-
-*,body, main ,::before, ::after {
-    margin:0px;
-    padding: 0px;
+*,body,::before, ::after {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
 }
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+
+/* end of css reset */
+
 /* Beginning of base css */
-#header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-    height: 120px;
-    width: 100%;
-    background: #FFFFFF;
-    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    }
-    .logo{
+header{
+display: var(--header--display);
+flex-direction: column;
+justify-content: var(--header--justify-content);
+align-items: var(--header--align-items);
+padding: 20px 10px;
+gap: 10px;
+box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
+border-radius: 8px;
+
+}
+.headerContainer {
+   display: var(--header--display);
+   flex-direction: row;
+   justify-content: var(--header--justify-content);
+   align-content: var(--header--align-items);
+   gap: var(--header--gap);
+   padding: 0px;
+   align-items: var(--header--align-items);
+   
+}
+
+/* .logo{
         margin-left: -118px;
         margin-right: 40px;
+} */
+    
+.navbar-list {
+align-content: var(--header--align-items);
+display: var(--header--display);
+flex-direction: var(--header--flex-direction);
+justify-content: space-between;
+align-items: center;
+margin-right: 199px;
+gap: 35px;
     }
     
-    #ul {
-    font-family: 'Josefin Sans', sans-serif;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-right: 199px;
-    gap: 35px;
+.subnav{
+        display: var(--header--display);
+        justify-content: space-around;
+        align-items: var(--header--align-items);
     }
     
-    #sub{
-        display: flex;
-    }
-    
-    li {
+li, a{
         list-style: none;
         text-decoration: none;
     
     }
-    .li{
-        margin-left: 30px;
-        margin-right: 30px;
+.list-item{
+        /* margin-left: 30px;
+        margin-right: 30px; */
         font-size: 16px;
         letter-spacing: 1.25px;
         text-decoration: none;
         color: #000000;
     }
-    .li:active{
+.list-item:active{
         color: #4959E9;
     }
     
-    .login {
+.login-btn {
         font-family: 'Josefin Sans', sans-serif;
         padding: 16px 24px;
         gap: 16px;
@@ -114,97 +153,17 @@ height: 72px; */
         background-color: #FFFFFF;
         margin-right: 10px;
     }
-    #log{
+ .login-link{
         color: #000000;
         text-decoration: none;
     }
-    
-    .signin{
-        font-family: 'Josefin Sans', sans-serif;
-        padding: 16px 24px;
-        gap: 16px;
-        margin-left: 10px;
-        margin-right: -50px;
-        background: #4959E9;
-        border-radius: 8px;
-        border: none;
-    }
-    #sign{
+        .signin-link{
         color: #FFFFFF;
         text-decoration: none;
     }
     
-    #footer{
-        width: 100%;
-        height: 600px;
-        left: 0px;
-        bottom: 0px;
-        background-color: #A4ACF4;
-        border-radius: 8px;
-        font-family: 'Josefin Sans', sans-serif;
-    }
-    
-    .social-icons{
-        position: relative;
-        display: flex;
-        text-align: center;
-        justify-content: right;
-        margin-left: 82%;
-        height: 116px;
-        margin-bottom: 44px;
-        background: #DBDEFB;
-        opacity: 0.8;
-        box-shadow: 0px 12px 17px 2px rgba(0, 0, 0, 0.14);
-        border-radius: 0px 0px 0px 8px;
-    }
-    .icon-links{
-        margin: 20px;
-        padding-top: 10px;
-        width: 75px;
-        height: 60px;
-        background: #8690F0;
-        box-shadow: 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
-        border-radius: 8px;
-        color: #000000;
-        text-decoration: none;
-    }
-    
-    #flex-footer{
-        display: flex;
-        margin-left: 90px;
-    
-    }
-    .footer-logo{
-        width: 150px;
-        height: 150px;
-    }
-    #footer-p1{
-        width: 411px;
-        height: 39px;
-        font-weight: 400;
-        font-size: 24px;
-        margin-bottom: 0px;
-    }
-    #footer-li{
-         color: #000000;
-    
-    }
-    #footer-sub{
-        margin-top: 10px;
-        margin-bottom: 20px;
-        display: flex;
-    }
-    #footer-login{
-        font-family: 'Josefin Sans', sans-serif;
-        padding: 16px 24px;
-        gap: 16px;
-        border: 1px solid #4959E9;
-        border-radius: 8px;
-        background-color: #A4ACF4;
-        margin-right: 10px;
-    }
-    #footer-signin{
-        font-family: 'Josefin Sans', sans-serif;
+    .signin-btn{
+        /* font-family: 'Josefin Sans', sans-serif; */
         padding: 16px 24px;
         gap: 16px;
         margin-left: 10px;
@@ -213,45 +172,15 @@ height: 72px; */
         border-radius: 8px;
         border: none;
     }
-    .footer-li2{
-        text-decoration: none;
-        color: #000000;
-        
-    }
-    #footer-h2{
-        margin-top: -20px;
-        margin-bottom: 15px;
-        font-weight: 700;
-        font-size: 45px;
-        line-height: 150%;
-        letter-spacing: 0.25px;
-    }
-    #footer-ul{
-        font-weight: 700;
-        font-size: 16px;
-        letter-spacing: 0.5px;
-        line-height: 250%;
-        margin-left: 750px;
-    }
-    hr{
-        width: 90%;
-        margin-bottom: 50px;
-    }
-    #footer-p2{
-        width: 790px;
-        font-weight: 400;
-        font-size: 15px;
-        letter-spacing: 0.4px;
-        margin-left: 30%;
-    }    
-/* End of base css */
+ 
+
 
 /* Beginning of contactus css */
 
-body, html{
+/* body, html{
     height: 100%;
     background-color: #ffffff;
-}
+} */
 .hero-image{
     height: 40%;
 }
@@ -410,6 +339,94 @@ body, html{
 
 /* end of contactus css */
 
+
+/* custome qrcode gen page  */
+
+.section1 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.qr-logo{
+    margin:20px 0;
+}
+.section2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 20px; 
+}
+.section2 li{
+    list-style: none;
+    font-size: 26px;
+    font-weight: 400;
+    margin-top: 4px;
+}
+.section3 {
+    justify-content: center;
+    align-items: center;
+}
+.section3 h3 {
+    margin-left: 140px;
+    font-size: 56px;
+    font-weight:400;
+}
+.section3 h5 {
+    font-size: 26px;
+    font-weight: 700;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.box1 {
+    box-sizing: border-box;
+    background-color: #DBDEFB; 
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-right: 100px;
+}
+.media {
+    margin: 20px;
+}
+.media-content {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:10px;
+}
+.media-content button{
+    display: flex;
+    flex-direction: row;
+    outline: none;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 16px;
+    background-color: #DBDEFB; 
+    box-shadow: 0px 12px 17px 2px rgba(0, 0, 0, 0.14);
+    border-radius: 8px;
+}
+.button{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 1.25px;
+    color: #181818;
+}
+.box2 {
+    border: solid 1px;
+    height: fit-content;
+    background-color: rgb(226, 218, 218);
+    border: none;
+    border-radius: 5px;
+    box-shadow:0px 12px 17px 2px rgba(226, 218, 218, 0.5); 
+    padding: 1rem;
+}
+/* custome qrcode gen page */
+
 /* error page css*/
 
 .error-container{
@@ -464,6 +481,140 @@ body, html{
     border-radius: var(--button-border-radius);
     margin-top:  26px;
 }
+
+/* footer css */
+
+    
+footer{
+    width: 100%;
+    /* height: 600px; */
+    left: 0px;
+    bottom: 0px;
+    background-color: var(--footer-background);
+    border-radius: 8px;
+}
+
+.social-icons{
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: right;
+    margin-left: 82%;
+    height: 116px;
+    margin-bottom: 44px;
+    background: #DBDEFB;
+    opacity: 0.8;
+    box-shadow: 0px 12px 17px 2px rgba(0, 0, 0, 0.14);
+    border-radius: 0px 0px 0px 8px;
+}
+.icon-links{
+    margin: 20px;
+    padding-top: 10px;
+    width: 75px;
+    height: 60px;
+    background: var(--footer-background);
+    box-shadow: 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    color: #000000;
+    text-decoration: none;
+}
+.footer-container{
+    display: flex;
+    flex-direction: column;
+}
+.flex-footer{
+    display: flex;
+    margin-left: 90px;
+    justify-content: space-between
+
+}
+.footer-logo{
+    /* width: 150px;
+    height: 150px; */
+}
+.footer-p1{
+    width: 411px;
+    height: 39px;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+.footer-li{
+     color: #000000;
+
+}
+.footer-sub{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+}
+.footer-login{
+    padding: 16px 24px;
+    gap: 16px;
+    border: 1px solid #4959E9;
+    border-radius: 8px;
+    background-color: #A4ACF4;
+    margin-right: 10px;
+}
+.footer-signin{
+    padding: 16px 24px;
+    gap: 16px;
+    margin-left: 10px;
+    margin-right: -50px;
+    background: #4959E9;
+    border-radius: 8px;
+    border: none;
+}
+.footer-li2{
+    text-decoration: none;
+    color: #000000;
+    
+}
+.footer-h2{
+    margin-top: -20px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 150%;
+    letter-spacing: 0.25px;
+}
+.footer-ul{
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 250%;
+}
+hr{
+    width: 90%;
+    margin-bottom: 50px;
+    align-items: center;
+    align-self: center;
+}
+.footer-p2{
+   
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+    margin-left: 30%;
+}   
+.footer-hr{
+
+width: 1200px;
+height: 1px;
+left: 120px;
+top: 499px;
+
+/* Grey/100 */
+
+background: #E4E4E4;
+border-radius: 8px;
+}
+.seprator{
+    display: flex;
+    justify-content: center;
+}
+/* end of footer css */
+
 @media screen and (max-width:420px){
     /* error page */
 
@@ -478,9 +629,9 @@ body, html{
 font-weight: 300;
 font-size: 15px;
 line-height: 150%;
-    text-align: center;
-    letter-spacing: -1.2px;
-    width: screen;
+text-align: center;
+letter-spacing: -1.2px;
+width: screen;
     }
     .status-message{
         font-weight: 700;

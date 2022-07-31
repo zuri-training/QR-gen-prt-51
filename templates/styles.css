@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+{% comment %} @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
 
 body{
     width: 100%;
@@ -189,4 +189,4 @@ hr{
     font-size: 15px;
     letter-spacing: 0.4px;
     margin-left: 30%;
-}
+} {% endcomment %}
