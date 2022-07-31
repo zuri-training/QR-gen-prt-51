@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
 
+*{
+    box-sizing: border-box;
+}
+
 body{
-    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 #header {
@@ -30,6 +35,15 @@ margin-right: 199px;
 gap: 35px;
 }
 
+#ul li a{
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 16px;
+    letter-spacing: 1.25px;
+    text-decoration: none;
+    color: #000000;
+}
+
 #sub{
     display: flex;
 }
@@ -39,14 +53,7 @@ li {
     text-decoration: none;
 
 }
-.li{
-    margin-left: 30px;
-    margin-right: 30px;
-    font-size: 16px;
-    letter-spacing: 1.25px;
-    text-decoration: none;
-    color: #000000;
-}
+
 .li:active{
     color: #4959E9;
 }
@@ -103,11 +110,11 @@ li {
     box-shadow: 0px 12px 17px 2px rgba(0, 0, 0, 0.14);
     border-radius: 0px 0px 0px 8px;
 }
-.icon-links{
+.social-icons a{
     margin: 20px;
     padding-top: 10px;
     width: 75px;
-    height: 60px;
+    height: 70px;
     background: #8690F0;
     box-shadow: 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
     border-radius: 8px;
@@ -138,7 +145,6 @@ li {
 #footer-sub{
     margin-top: 10px;
     margin-bottom: 20px;
-    margin-left: -40px;
     display: flex;
 }
 #footer-login{
@@ -160,7 +166,7 @@ li {
     border-radius: 8px;
     border: none;
 }
-.footer-li2{
+#footer-ul li a{
     text-decoration: none;
     color: #000000;
     
@@ -185,9 +191,12 @@ hr{
     margin-bottom: 50px;
 }
 #footer-p2{
-    width: 790px;
+    text-align: center;
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 0.4px;
-    margin-left: 30%;
 }
+
+    @media screen and (max-width: 450px) {
+        
+    }
