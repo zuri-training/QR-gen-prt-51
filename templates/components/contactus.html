@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static %} 
-<body>
-    <main>
+{% block content %}
         <div class="hero-image">
             <img src="{% static 'images/background.png' %}" alt="computer" style="width: 100%;" class="contact__image">
             <div class="hero-text">
@@ -69,12 +68,9 @@
                 <div class="contact-map">
                     <div class="contact__map">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3963.039723372923!2d3.363691580950916!3d6.641989501681672!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1658942598316!5m2!1sen!2sng" 
-                    width="322px" height="198px" style="border: 2px;;"></iframe>
+                    width="322px" height="198px" style="border: 2px;"></iframe>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
-</body>
-{% block content %}
 {% endblock %}

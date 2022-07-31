@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     
     # new app installed
     'accounts',
-    'qrCode_Project',
+    'qrCode_App',
     'widget_tweaks',
 ]
 
