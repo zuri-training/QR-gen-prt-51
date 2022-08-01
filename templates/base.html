@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     {% load static %}
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <title>{% block title %}QR code generator{% endblock %}</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>welcome to qrcode scanner</h1>
+      <h1>welcome to qrcode scanner</h1>
     </header>
-   <main>
-    {% block content %}
-
-    {% endblock %}
-   </main>
-   <footer>
-    <h1>
-        footer
-    </h1>
-   </footer>
-</body>
-
+    <main>{% block content %} {% endblock %}</main>
+    <footer>
+      <h1>footer</h1>
+    </footer>
+  </body>
 </html>
