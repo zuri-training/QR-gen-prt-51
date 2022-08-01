@@ -63,6 +63,7 @@ db.sqlite3-journal
 local
 .env
 db.sqlite3
+__pycache__
 
 # Flask stuff:
 instance/
@@ -131,3 +132,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.vscode
