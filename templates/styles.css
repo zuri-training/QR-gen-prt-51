@@ -9,7 +9,7 @@ body{
     padding: 0;
 }
 
-#header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,7 +64,7 @@ body{
     border-radius: 10px;
 }
 
-#sub{
+.subnav{
     display: flex;
 }
 
@@ -79,7 +79,6 @@ li {
 }
 
 .login {
-    font-family: 'Josefin Sans', sans-serif;
     padding: 16px 24px;
     gap: 16px;
     border: 1px solid #4959E9;
@@ -87,13 +86,13 @@ li {
     background-color: #FFFFFF;
     margin-right: 10px;
 }
-#log{
+.log{
+    font-family: 'Josefin Sans', sans-serif;
     color: #000000;
     text-decoration: none;
 }
 
 .signin{
-    font-family: 'Josefin Sans', sans-serif;
     padding: 16px 24px;
     gap: 16px;
     margin-left: 10px;
@@ -102,12 +101,14 @@ li {
     border-radius: 8px;
     border: none;
 }
-#sign{
+
+.sign{
+    font-family: 'Josefin Sans', sans-serif;
     color: #FFFFFF;
     text-decoration: none;
 }
 
-#footer{
+.footer{
     width: 100%;
     height: 600px;
     left: 0px;
@@ -142,32 +143,57 @@ li {
     text-decoration: none;
 }
 
-#flex-footer{
-    display: flex;
-    margin-left: 90px;
+.social-icons2{
+    position: relative;
+    display: none;
+    text-align: center;
+    justify-content: right;
+    margin-left: 82%;
+    height: 116px;
+    margin-bottom: 44px;
+    background: #DBDEFB;
+    opacity: 0.8;
+    box-shadow: 0px 12px 17px 2px rgba(0, 0, 0, 0.14);
+    border-radius: 0px 0px 0px 8px;
+}
+.social-icons2 a{
+    margin: 20px;
+    padding-top: 10px;
+    width: 75px;
+    height: 70px;
+    background: #8690F0;
+    box-shadow: 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    color: #000000;
+    text-decoration: none;
+}
 
+.flex-footer{
+    display: flex;
+}
+.footer-section1{
+    margin-left: 90px;
 }
 .footer-logo{
     width: 150px;
     height: 150px;
 }
-#footer-p1{
+.footer-p1{
     width: 411px;
     height: 39px;
     font-weight: 400;
     font-size: 24px;
     margin-bottom: 0px;
 }
-#footer-li{
+.footer-li{
      color: #000000;
-
 }
-#footer-sub{
+.footer-sub{
     margin-top: 10px;
     margin-bottom: 20px;
     display: flex;
 }
-#footer-login{
+.footer-login{
     font-family: 'Josefin Sans', sans-serif;
     padding: 16px 24px;
     gap: 16px;
@@ -176,7 +202,13 @@ li {
     background-color: #A4ACF4;
     margin-right: 10px;
 }
-#footer-signin{
+.footer-log{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer-signin{
     font-family: 'Josefin Sans', sans-serif;
     padding: 16px 24px;
     gap: 16px;
@@ -186,12 +218,18 @@ li {
     border-radius: 8px;
     border: none;
 }
-#footer-ul li a{
+.footer-sign{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer-ul li a{
     text-decoration: none;
     color: #000000;
     
 }
-#footer-h2{
+.footer-h2{
     margin-top: -20px;
     margin-bottom: 15px;
     font-weight: 700;
@@ -199,18 +237,18 @@ li {
     line-height: 150%;
     letter-spacing: 0.25px;
 }
-#footer-ul{
+.footer-ul{
     font-weight: 700;
     font-size: 16px;
     letter-spacing: 0.5px;
-    line-height: 250%;
+    line-height: 220%;
     margin-left: 750px;
 }
 hr{
     width: 90%;
     margin-bottom: 50px;
 }
-#footer-p2{
+.footer-p2{
     text-align: center;
     font-weight: 400;
     font-size: 15px;
@@ -223,15 +261,15 @@ hr{
         }
         
         .noth{
-            /* display: none; */
+            display: none;
             z-index: 10;
             top: 0;
             width: 100%;
             height: 100%;
-            margin-top: 4%;
+            /* margin-top: 4%; */
         }
 
-        #header{
+        .header{
             flex-direction: column;
             align-items: flex-start;
             height: 90px;
@@ -241,6 +279,7 @@ hr{
             margin: 1rem;
             width: 60px;
             height: 60px;
+            margin-left: 40px;
         }
 
         .noth ul{
@@ -254,20 +293,95 @@ hr{
             display: flex;
         }
 
-        #footer{
-            height: 900px;
+        .footer{
+            height: 85%;
         }
 
-        #flex-footer{
+        .social-icons{
+            display: none;
+        }
+        .social-icons2{
+            display: flex;
+            margin-left: 45%;
+            height: 70px;
+            margin-bottom: 50px;
+            background: #DBDEFB;
+            opacity: 0.8;
+            box-shadow: 0px 12px 17px 2px rgba(0, 0, 0, 0.14);
+            border-radius: 0px 0px 0px 8px;
+        }
+        .social-icons2 a{
+            margin: 10px;
+            height: 50px;
+        }
+
+        .flex-footer{
             flex-direction: column;
-            margin: 1rem;
         }
 
-        #footer-ul{
-            /* font-weight: 700;
-            font-size: 16px;
-            letter-spacing: 0.5px;
-            line-height: 250%; */
-            margin-left: 0px;
+        .footer-logo{
+            width: 120px;
+            height: 120px;
         }
+
+        .footer-p1{
+            font-weight: 500;
+            font-size: 18px;
+            height: 20px;
+        }
+
+        .footer-h2{
+            font-size: 30px;
+            margin-top: 20px;
+        }
+
+        .footer-li{
+            font-size: 11;
+        }
+
+        .footer-login{
+            padding: 20px 35px;
+        }
+        .footer-signin{
+            padding: 20px 35px;
+        }
+
+        .footer-log{
+            color: #000000;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        .footer-sign{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .footer-section1{
+            margin-left: 40px;
+        }
+        .footer-section2{
+            margin-left: 0px;
+            padding-left: 0px;
+        }
+        .footer-ul{
+            margin: 0;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            margin-top: 20px;
+        }
+        .footer-hr{
+            display: none;
+        }
+        .footer-p2{
+            text-align: center;
+            line-height: 20px;
+            margin-left: 44px;
+            margin-top: 30px;
+        }
+
     }

@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <header id="header">
+    <header class="header">
         <div>
             <img class="logo" src="logo.png" alt="logo">
         </div>
@@ -40,9 +40,9 @@
                 <li><a href="contactus.html">CONTACT US</a></li>
                 <li><a href="faq.html">RESOURCES</a></li>
                 <li><a href="#">PRODUCT</a></li>
-                <div id="sub">
-                    <button class="login"><a id="log" href="login.html">SIGN IN</a></button>
-                    <button class="signin"><a id="sign" href="signup.html">REGISTER</a></button>
+                <div class="subnav">
+                    <button class="login"><a class="log" href="login.html">SIGN IN</a></button>
+                    <button class="signin"><a class="sign" href="signup.html">REGISTER</a></button>
                 </div>
             </ul>
         </nav>
@@ -53,28 +53,36 @@
         {% endblock %}
         {% endblock content %}
     </main>
-    <footer id="footer">
+    <footer class="footer">
         <div class="social-icons">
             <a href="#"><i class="iconify" data-icon="cib:facebook" data-width="50" data-height="50"></i></a>
             <a href="#"><i class="iconify" data-icon="entypo-social:twitter-with-circle" data-width="50"
-                    data-height="50">yj</i></a>
+                    data-height="50"></i></a>
             <a href="#"><i class="iconify" data-icon="brandico:linkedin-rect" data-width="50" data-height="50"></i></a>
             <span></span>
         </div>
-        <div id="flex-footer">
-            <div>
+        <div class="social-icons2">
+            <a href="#"><i class="iconify" data-icon="cib:facebook" data-width="30" data-height="30"></i></a>
+            <a href="#"><i class="iconify" data-icon="entypo-social:twitter-with-circle" data-width="30"
+                    data-height="30"></i></a>
+            <a href="#"><i class="iconify" data-icon="brandico:linkedin-rect" data-width="30" data-height="30"></i></a>
+            <span></span>
+        </div>
+        <div class="flex-footer">
+            <div class="footer-section1">
                 <img class="footer-logo" src="logo.png" alt="logo">
-                <p id="footer-p1">HAVE A QUESTIONS? SAY HELLO!</p>
-                <a id="footer-li" href="#">Support@ProjectName.com</a>
-                <div id="footer-sub">
-                    <button id="footer-login"><a id="log" href="login.html">SIGN IN</a></button>
-                    <button id="footer-signin"><a id="sign" href="signup.html">REGISTER</a></button>
+                <p class="footer-p1">HAVE A QUESTIONS? SAY HELLO!</p>
+                <a class="footer-li" href="#">Support@QR-GEN.com</a>
+                <div class="footer-sub">
+                    <button class="footer-login"><a class="footer-log" href="login.html">SIGN IN</a></button>
+                    <button class="footer-signin"><a class="footer-sign" href="signup.html">REGISTER</a></button>
                 </div>
             </div>
-            <div>
-                <ul id="footer-ul">
-                    <h2 id="footer-h2">Pages</h2>
+            <div class="footer-section2">
+                <ul class="footer-ul">
+                    <h2 class="footer-h2">Pages</h2>
                     <li><a href="landingPage.html">Homepage</a></li>
+                    <li><a href="#">Dashboard</a></li>
                     <li><a href="aboutUs.html">About us</a></li>
                     <li><a href="contactus.html">Contact us</a></li>
                     <li><a href="faq.html">FAQ</a></li>
@@ -82,25 +90,16 @@
                 </ul>
             </div>
         </div>
-        <hr>
+        <div class="seprator">
+            <hr class='footer-hr'>
+        </div>
         <div>
-            <p id="footer-p2"> © Project name . All rights reserved. QR Code is a registered trademark of DENSO WAVE
+            <p class="footer-p2"> © QR GEN . All rights reserved. QR Code is a registered trademark of DENSO WAVE
                 INCORPORATED</p>
         </div>
     </footer>
     <script src="/script.js"></script>
-    <!-- <script>
-        console.log("hello world")
-        const toggleButton = document.getElementsById('#toggle-button')
-        const navbarLinks = documennt.getElementsByClassName('.noth')
 
-        // toggleButton.addEventListener('click', () => {
-        //   navbarLinks.classList.toggle('active')
-        //   console.log ("clicked")
-        // })
-        toggleButton.addEventListener("click", message)
-        function message() { console.log("click") }
-    </script> -->
 </body>
 
 </html>
