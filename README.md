@@ -20,11 +20,45 @@
     <br> 
 </p>
 
+
+
 ## 📝 Table of Contents
 
+### Links to Documents
+[Figma board](https://www.figma.com/file/Iwa6c7uuZmtmvMQiXzjSq4?)<br>
+[Google Docs](https://docs.google.com/document/d/1CR0OWttM92_KzSb2btf34lFwD4Tz6wopEoSTMZp_euA/edit)
+
+### Getting Started 
+
+What things you need to install the software and how to install them.
+
+```
 - Fork the repository
 - clone  repository to you local machine 
 - create a new virtual environment 
 - install dependencies using ## pip3 install -r requirements.txt
 - run migrations 
 - python manage.py  runserver
+```
+
+### Contributing
+
+How to contribute to the project
+
+```
+- create new branch  ## using git branch <branch name>
+- switch branch ## git checkout <branch_name>
+- git add . 
+- git commit -m "commit message"
+- git fetch origin upstream
+- git pull
+- git push <branch_name>
+```
+
+Lastly
+
+```
+Open pull request
+```
+
+
