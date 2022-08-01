@@ -22,9 +22,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
     # new app installed
     'accounts',
-    'qrCode_Project',
+    'qrCode_App',
     'widget_tweaks',
 ]
 
