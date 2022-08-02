@@ -13,7 +13,9 @@ class ABOUTPageView(TemplateView):
     template_name = 'components/aboutus.html'
 class DATAPageview(TemplateView):
     template_name = 'components/datatype.html'
-    
+class CUSTOMPageview(TemplateView):
+    template_name = "components/customizeqr.html"
+
     
 # custom views for error pages
 def custom_page_not_found_view(request, exception):
