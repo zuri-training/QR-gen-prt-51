@@ -7,16 +7,23 @@
   --footer-background: #a4acf4;
 }
 
-body, html {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 16px;
-  height: 100%;
-  display: block;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: block;
 
+}
+a,p,h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  line-height:150%;
+  letter-spacing: 0.15px;
+  font-size: 16px;
 }
 
 @media only screen and (max-width: 900px) {
