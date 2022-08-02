@@ -78,7 +78,7 @@ li {
     color: #4959E9;
 }
 
-.nav-login {
+.login {
     padding: 16px 24px;
     gap: 16px;
     border: 1px solid #4959E9;
@@ -92,7 +92,7 @@ li {
     text-decoration: none;
 }
 
-.nav-signin{
+.signin{
     padding: 16px 24px;
     gap: 16px;
     margin-left: 10px;
