@@ -13,6 +13,9 @@ class ABOUTPageView(TemplateView):
     template_name = 'components/aboutus.html'
 class DATAPageview(TemplateView):
     template_name = 'components/datatype.html'
+
+class CUSTOMView(TemplateView):
+    template_name = 'components/customizeqr.html'
     
     
 # custom views for error pages

@@ -20,7 +20,7 @@ body{
     border-radius: 8px;
 }
 
-.logo{
+.nav-logo{
     margin: 6rem;
 }
 
@@ -275,7 +275,7 @@ hr{
             height: 90px;
         }
 
-        .logo{
+        .nav-logo{
             margin: 1rem;
             width: 60px;
             height: 60px;
