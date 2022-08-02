@@ -7,40 +7,64 @@
   --footer-background: #a4acf4;
 }
 
-@media only screen and (max-width: 360px) {
+body, html {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  height: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+}
+
+@media only screen and (max-width: 900px) {
   .logo {
-    text-align: center;
     display: block !important;
+  }
+  .logo img{
+    margin: auto;
+    display: block;
   }
 
   .left {
     display: none;
   }
   .right {
-    max-width: 360px;
-    height: 800px;
-    padding: 10px;
+    width: 100%;
+    height: 100%;
+    margin: 40px 24px 46px 24px;
   }
-  .top .sign,
-  .top .wel {
-    font-size: 10px;
+  .top .wel{
+    font-size: 2.3rem;
+  }
+  .top .sign{
+    font-size: 1.3rem;
+  }
+  .top .sign, .top .wel{
     font-weight: 600;
     letter-spacing: -1.5px;
+    text-align: center;
   }
   .top .reg{
-    font-size: 7px;
     font-weight: 600;
     letter-spacing: -1.5px;
-    margin-bottom: 14px;
+    margin-bottom: 6px;
+    text-align: center;
+  }
+  .input-box label{
+    margin: 8px 0 12px 0;
   }
   .input-box input {
     height: 40px;
-    max-width: 300px;
-    padding-left: 10px;
-    margin: 3px;
+    width: 100%;
+    padding: 8px 16px;
+    margin: 8px;
   }
+
   .bottom .bottom-top button {
-    max-width: 300px;
+    width: 100%;
   }
 }
 
@@ -54,33 +78,31 @@
 .container {
   display: flex;
   align-items: center;
-  max-width: 1440px;
+  justify-content: space-around;
+  width: 100%;
   background-color: white;
   gap: 40px;
 }
 
 .right {
-  gap: 62px;
-  width: 590px;
-  margin-left: 10px;
-  margin-top: 20px;
+  margin: 20px 40px 0 10px;
 }
 
 .top .wel {
   font-weight: 700;
-  font-size: 56px;
+  font-size: 3.5rem;
   line-height: 150%;
 }
 
 .top .sign {
   font-weight: 400;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 150%;
   letter-spacing: 0.25px;
 }
 .top .reg{
   font-weight: 600;
-  font-size: 13px;
+  font-size: 0.8rem;
   line-height: 150%;
   letter-spacing: 0.4px;
   margin-bottom: 63px;
@@ -93,7 +115,6 @@
 .bottom .bottom-top button {
   display: flex;
   justify-content: center;
-  font-size: 16px;
   align-items: center;
   padding: 16px 50px;
   width: 100%;
@@ -122,7 +143,6 @@
 .bottom-last .input-box label,
 input {
   width: 100%;
-  font-size: 16px;
 }
 
 .bottom-last .input-box label {
@@ -131,7 +151,6 @@ input {
   font-style: normal;
   font-weight: 500;
   padding-left: 5px;
-  font-size: 16px;
   line-height: 150%;
   text-align: center;
   letter-spacing: 1.25px;
@@ -140,7 +159,7 @@ input {
   list-style-type:disc;
   font-family: 'Lora';
   font-weight: 400;
-  font-size: 12px;
+  font-size: 0.8rem;
   line-height: 18px;
 }
 .bottom-last ul{
@@ -149,7 +168,7 @@ input {
 
 .input-box input {
   height: 50px;
-  width: 590px;
+  width: 100%;
   padding-left: 20px;
   border: 1px solid #d9d9d9;
   border-radius: 8px;
@@ -175,7 +194,6 @@ input {
 }
 
 .last p {
-  font-size: 15px;
   line-height: 150%;
   letter-spacing: 0.25px;
   text-align: center;

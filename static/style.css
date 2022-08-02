@@ -297,6 +297,70 @@ header {
         margin-left: -118px;
         margin-right: 40px;
 } */
+    
+.navbar-list {
+align-content: var(--header--align-items);
+display: var(--header--display);
+flex-direction: var(--header--flex-direction);
+justify-content: space-between;
+align-items: center;
+margin-right: 199px;
+gap: 35px;
+    }
+    
+.subnav{
+        display: var(--header--display);
+        justify-content: space-around;
+        align-items: var(--header--align-items);
+    }
+    
+li, a{
+        list-style: none;
+        text-decoration: none;
+    
+    }
+.list-item{
+        /* margin-left: 30px;
+        margin-right: 30px; */
+        font-size: 16px;
+        letter-spacing: 1.25px;
+        text-decoration: none;
+        color: #000000;
+    }
+.list-item:active{
+        color: #4959E9;
+    }
+    
+.login-btn {
+        font-family: 'Josefin Sans', sans-serif;
+        padding: 16px 24px;
+        gap: 16px;
+        border: 1px solid #4959E9;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        margin-right: 10px;
+    }
+ .login-link{
+        color: #000000;
+        text-decoration: none;
+    }
+        .signin-link{
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    
+    .signin-btn{
+        /* font-family: 'Josefin Sans', sans-serif; */
+        padding: 16px 24px;
+        gap: 16px;
+        margin-left: 10px;
+        margin-right: -50px;
+        background: #4959E9;
+        border-radius: 8px;
+        border: none;
+    }
+ 
+/* Landing page CSS */
 
 .navbar-list {
     align-content: var(--header--align-items);
@@ -363,6 +427,305 @@ a {
     border-radius: 8px;
     border: none;
 }
+
+.container {
+    width: 83%;
+    margin: auto;
+    margin-top: 40px;
+    position: relative;
+
+}
+
+.one {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    width: 100%;
+}
+
+.Head {
+    background-image: url(Group\ 11.png);
+    background-size: 95%;
+    width: 52%;
+}
+
+.Head h1 {
+    width: 100%;
+    font-family: 'Josefin Sans';
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 150%;
+}
+
+.Head p {
+    width: 79%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.5px;
+    color: #000000;
+    text-shadow: #000000;
+}
+
+.Head button {
+    background-color: transparent;
+    border: none;
+    display: inline-block;
+    margin-top: 60px;
+}
+
+.Head button a {
+    background: #4959E9;
+    border-radius: 8px;
+    align-items: center;
+    padding: 16px 24px;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+.animation {
+    width: 40%;
+    height: 100%;
+}
+
+.two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 46px;
+    margin-top: 60px;
+}
+
+.info {
+    width: 50%;
+    height: 16%;
+
+}
+
+.info p {
+    width: 70%;
+    font-family: 'Josefin Sans';
+    line-height: 150%;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 150%;
+    letter-spacing: 0.25px;
+    color: #000000;
+}
+
+.info p span {
+    color: #4959E9;
+}
+
+.info button {
+    background-color: transparent;
+    border: none;
+    display: inline-block;
+    margin-top: 60px;
+}
+
+.info button a {
+    background-color: #4959E9;
+    border-radius: 8px;
+    border: none;
+    padding: 16px 24px;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.image1 img {
+    display: flex;
+    flex-direction: row;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.three {
+    text-align: center;
+    margin: 60px auto;
+    font-family: 'Josefin Sans';
+}
+
+.three h1 {
+    padding: 10px;
+}
+
+.containertwo {
+    font-family: 'Josefin Sans';
+    position: relative;
+}
+
+.containertwo .centerline {
+    position: absolute;
+    height: 100%;
+    width: 8px;
+    background: #E4E4E4;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.icon {
+    position: absolute;
+    background: #4959E9;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    border-radius: 50%;
+    color: #FFFFFF;
+    border: #FFFFFF 10px solid;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.four .icon,
+.six .icon {
+    right: 50%;
+}
+
+.five .icon {
+    left: 50%;
+}
+
+.four,
+.five,
+.six {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.textfour,
+.textsix {
+    align-items: flex-end;
+    width: 370px;
+    text-align: right;
+    line-height: 150%;
+
+}
+
+.textfour p,
+.textfive p,
+.textsix p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.textfive {
+    width: 350px;
+    text-align: left;
+    line-height: 150%;
+}
+
+.buttonsix {
+    text-align: center;
+}
+
+.buttonsix a {
+    background: #4959E9;
+    border-radius: 8px;
+    align-items: center;
+    padding: 16px 24px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.buttonsix button {
+    background-color: transparent;
+    border: none;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.last {
+    display: flex;
+    font-family: 'Josefin Sans';
+    margin: 50px auto;
+    justify-content: space-between;
+}
+
+.lastheading {
+    width: 50%;
+    font-size: 20px;
+    line-height: 300%;
+}
+
+.lastdetail {
+    margin-top: 90px;
+    align-items: flex-end;
+    width: 400px;
+    line-height: 150%;
+}
+
+.lastdetail button {
+    background-color: transparent;
+    border: none;
+    display: inline-block;
+    margin-top: 60px;
+}
+
+.lastdetail button a {
+    border: 1px solid #4959E9;
+    border-radius: 8px;
+    align-items: center;
+    padding: 16px 24px;
+    color: #181818;
+    text-decoration: none;
+
+}
+
+@media screen and (max-width :375px) {
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+
+    .one {
+        flex-direction: column;
+    }
+
+    .Head {
+        width: 100%;
+        background-image: none;
+    }
+
+    .Head h1 {
+        font-size: 36px;
+    }
+
+    .Head button {
+        flex: none;
+        order: 3;
+    }
+
+    .animation {
+        width: 100%;
+    }
+
+    .two {
+        flex-direction: column;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .info p {
+        width: 100%;
+        font-weight: bolder;
+        font-size: 25px;
+    }
+}
+
+/* End of landing page CSS */
 
 /* Beginning of contactus css */
 
