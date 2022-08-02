@@ -1,9 +1,8 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
+    {% load static %}
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,24 +18,14 @@
 
     <link rel="stylesheet" href="{% static 'style.css' %}" />
 
+    <link rel="shortcut icon" href="" type="image/x-icon" />
     <title>{% block title %}QR code generator{% endblock %}</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap"
-      rel="stylesheet"
-    />
   </head>
 
   <body>
     <header class="header">
       <div>
-        <img class="logo" src="logo.png" alt="logo" />
+        <img class="{% static 'images/logo.png' %}" src="" alt="logo" />
       </div>
       <a href="#" id="toggle-button" class="toggle-button">
         <span class="bar"></span>
@@ -46,10 +35,10 @@
       </a>
       <nav class="noth">
         <ul id="ul">
-          <li><a href="landingPage.html">HOME</a></li>
-          <li><a href="aboutUs.html">ABOUT US</a></li>
-          <li><a href="contactus.html">CONTACT US</a></li>
-          <li><a href="faq.html">RESOURCES</a></li>
+          <li><a href="">HOME</a></li>
+          <li><a href="">ABOUT US</a></li>
+          <li><a href="">CONTACT US</a></li>
+          <li><a href="">RESOURCES</a></li>
           <li><a href="#">PRODUCT</a></li>
           <div class="subnav">
             <button class="login">
@@ -62,7 +51,7 @@
         </ul>
       </nav>
     </header>
-    <main>{% block content %} {% endblock %} {% endblock content %}</main>
+    <main>{% block content %} {% endblock content %}</main>
     <footer class="footer">
       <div class="social-icons">
         <a href="#"
