@@ -1,0 +1,24 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}" />
+<section class="url-main-container">
+  <div class="url-section">
+    <div class="url-logo-container">
+      <img src="{% static 'images/logo.png' %}" alt="" srcset="" />
+    </div>
+    <div class="url-input-container">
+      <label for="url" class="url-gen-label">URL</label>
+      <input
+        type="tel"
+        name="tel"
+        id="tel-link"
+        class="tel-input-link"
+        placeholder="https://www.QR-Gen.com"
+      />
+    </div>
+    <div class="error-404-button left-align">
+      <a style="color: white" href="{% url 'index' %}"
+        >Create <span class="right-arrow"> &RightArrow;</span>
+      </a>
+    </div>
+  </div>
+</section>
