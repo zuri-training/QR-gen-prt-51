@@ -16,6 +16,9 @@ class DATAPageview(TemplateView):
 
 class CUSTOMView(TemplateView):
     template_name = 'components/customizeqr.html'
+
+class DASHBOARDView(TemplateView):
+    template_name = 'components/dashboard.html'
     
     
 # custom views for error pages
