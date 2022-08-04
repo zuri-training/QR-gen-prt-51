@@ -424,7 +424,7 @@ button[type="reset"]:hover {
 .code-list{
     display: flex;
     flex-direction: column;
-    height: 750px;
+    height: 850px;
     align-items: flex-start;
     justify-content: flex-start;
     padding: 39px 12px 39px 12px;
