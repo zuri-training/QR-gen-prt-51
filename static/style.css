@@ -84,6 +84,7 @@ p, h1, h2, h3, h4, h5, h6 {
 /* end of css reset */
 
 /* Beginning of base css */
+<<<<<<< HEAD
 header{
 display: var(--header--display);
 flex-direction: column;
@@ -93,6 +94,255 @@ padding: 20px 10px;
 gap: 10px;
 box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
 border-radius: 8px;
+=======
+nav {
+    background: #FFFFFF;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+nav::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav .logo {
+    float: left;
+    padding-left: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 120px;
+}
+
+nav ul {
+    font-family: 'Josefin Sans', sans-serif;
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+    display: flex;
+}
+
+nav ul li {
+    float: left;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    line-height: 100px;
+    font-size: 16px;
+    padding: 8px 15px;
+    letter-spacing: 1.25px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.icon {
+    display: none;
+    position: absolute;
+    right: 40px;
+}
+
+.subnav {
+    margin: auto;
+    margin-right: 150px;
+}
+
+.nav-login {
+    padding: 16px 24px;
+    gap: 16px;
+    border: 1px solid #4959E9;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    margin-right: 10px;
+}
+
+.nav-log {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #000000;
+    text-decoration: none;
+}
+
+.nav-signin {
+    padding: 16px 24px;
+    gap: 16px;
+    margin-left: 10px;
+    margin-right: -50px;
+    background: #4959E9;
+    border-radius: 8px;
+    border: none;
+}
+
+.nav-sign {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.show2,
+input {
+    display: none;
+}
+
+.footer {
+    width: 100%;
+    height: 600px;
+    left: 0px;
+    bottom: 0px;
+    background-color: #A4ACF4;
+    border-radius: 8px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.social-icons {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: right;
+    margin-left: 82%;
+    height: 116px;
+    margin-bottom: 44px;
+    background: #DBDEFB;
+    opacity: 0.8;
+    box-shadow: 0px 12px 17px 2px rgba(0, 0, 0, 0.14);
+    border-radius: 0px 0px 0px 8px;
+}
+
+.social-icons a {
+    margin: 20px;
+    padding-top: 10px;
+    width: 75px;
+    height: 70px;
+    background: #8690F0;
+    box-shadow: 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.social-icons2 {
+    position: relative;
+    display: none;
+    text-align: center;
+    justify-content: right;
+    margin-left: 82%;
+    height: 116px;
+    margin-bottom: 44px;
+    background: #DBDEFB;
+    opacity: 0.8;
+    box-shadow: 0px 12px 17px 2px rgba(0, 0, 0, 0.14);
+    border-radius: 0px 0px 0px 8px;
+}
+
+.social-icons2 a {
+    margin: 20px;
+    padding-top: 10px;
+    width: 75px;
+    height: 70px;
+    background: #8690F0;
+    box-shadow: 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.flex-footer {
+    display: flex;
+}
+
+.footer-section1 {
+    margin-left: 90px;
+    float: left;
+}
+
+.footer-logo {
+    width: 150px;
+    height: 150px;
+}
+
+.footer-p1 {
+    width: 411px;
+    height: 39px;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.footer-li {
+    color: #000000;
+}
+
+.footer-sub {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.footer-login {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 16px 24px;
+    gap: 16px;
+    border: 1px solid #4959E9;
+    border-radius: 8px;
+    background-color: #A4ACF4;
+    margin-right: 10px;
+}
+
+.footer-log {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer-signin {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 16px 24px;
+    gap: 16px;
+    margin-left: 10px;
+    margin-right: -50px;
+    background: #4959E9;
+    border-radius: 8px;
+    border: none;
+}
+
+.footer-sign {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+.footer-h2 {
+    margin-top: -20px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 150%;
+    letter-spacing: 0.25px;
+}
+
+.footer-ul {
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 250%;
+    margin-right: 200px;
+    margin-left: 750px;
+}
+
+.footer-ul li {
+    list-style: none;
+}
+
+.footer-ul li a {
+    text-decoration: none;
+    color: #000000;
+>>>>>>> 98e5c8603f264841a8952f7bdb39cafd86ffdee7
 
 }
 .headerContainer {
