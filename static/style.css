@@ -788,7 +788,7 @@ li, a{
     color: #181818;
 }
 
-@media screen and (max-width :375px) {
+@media screen and (max-width :450px) {
     .containerone {
         width: 90%;
         margin: auto;
