@@ -1,78 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Data Type</title>
+    <link rel="stylesheet" href="datatypestyle.css"/>
+  </head>
+  <body>
+  <header></header>
+  <main>
+  <section class="custom-section"> 
+      <!-- section1 -->
+    <div class="custom-container">
+      <div class="logo-container">
+        <div class="qr-logo">
+            <img class="logo" src="qr-gen-logo.png" alt="logo" />
+        </div>
+        <div class="icon-content">
+              <div><img src="clock.png" alt="clock"></div>
+              <div class="message">Generate your QR code in under 45 seconds</div>
 
-{% extends "base.html" %} 
-{% load static %} 
-{% block content %}
+              <div><img src="scan.png" alt="scan"></div>
+              <div class="message">Unlimited use of our QR code scanner</div>      
+        </div>
+      </div>
 
-<div class="section1">
-  <img
-  src="{% static 'images/logo.png' %}"
-    alt="logo"
-    class="qr-logo"
-    width="300px"
-    height="300px"
-  />
-</div>
-<div class="section2">
-  <ul class="first">
-    <li>
-      <span
-        class="iconify"
-        data-icon="cil:clock"
-        style="color: gray"
-      ></span
-      >Generate your QR code in under 45 seconds
-    </li>
-  </ul>
-  <ul class="second">
-    <li>
-      <span
-        class="iconify"
-        data-icon="material-symbols:qr-code-scanner-rounded"
-        style="color: gray"
-      ></span
-      >Unlimited use of our QR code scanner
-    </li>
-  </ul>
-</div>
-<div class="section3">
-  <h3>Data Type</h3>
-  <div class="container">
-    <div class="box1">
-      <div class="media">
-        <h5>Popular</h5>
-        <div class="media-content">
-          <button class="button">WEBSITE URL</button>
-          <button  class="button">PDF FILE</button>
-          <button  class="button">PLAIN TEXT</button>
-          <button  class="button">SOCIAL LINK</button>
-        </div>
-        <h5>Social Links</h5>
-        <div class="media-content">
-          <button  class="button">YOUTUBE</button>
-          <button  class="button">INSTAGRAM</button>
-          <button  class="button">WHATSAPP</button>
-          <button  class="button">FACEBOOK</button>
-          <button  class="button">LINKEDIN</button>
-          <button  class="button">TWITTER</button>
-        </div>
-        <h5>Business Links</h5>
-        <div class="media-content">
-          <button  class="button">PHONE NUMBER</button>
-          <button  class="button">EMAIL ADDRESS</button>
-        </div>
-        <h5>File QR Codes</h5>
-        <div class="media-content">
-          <button  class="button">IMAGE FILE</button>
-          <button  class="button">AUDIO</button>
-          <button  class="button">VIDEO</button>
+      <!-- section2 -->
+      <div class="data-heading">
+        <h3>Data Type</h3>
+      </div>
+      <div class="custom-section2">
+        <div class="media">
+        <div class="media-container">
+          <div class="media-title">
+              <h5>Popular</h5>
+          </div>
+          <div class="media-content">
+                <button>WEBSITE URL</button>
+                <button>PDF FILE</button>
+                <button>PLAIN TEXT</button>
+                <button>SOCIAL LINK</button>
+          </div>
+          <div class="media-title">
+              <h5>Social Links</h5>
+          </div>
+              <div class="media-content">
+                <button>YOUTUBE</button>
+                <button>INSTAGRAM</button>
+                <button>WHATSAPP</button>
+                <button>FACEBOOK</button>
+                <button>LINKEDIN</button>
+                <button>TWITTER</button>
+              </div>
+              <div class="media-title">
+              <h5>Business Links</h5>
+              </div>
+              <div class="media-content">
+                <button>PHONE NUMBER</button>
+                <button>EMAIL ADDRESS</button>
+              </div>
+              <div class="media-title">
+              <h5>File QR Codes</h5>
+              </div>
+              <div class="media-content">
+                <button>IMAGE FILE</button>
+                <button>AUDIO</button>
+                <button>VIDEO</button>
+              </div>
+          </div>
+          </div>
+          <div class="qr-code">
+          <div class="qr-code-container">
+             <img src="Qr-image.png" alt="code" srcset="" class="qr-image"/>
+          </div>
+          </div>
         </div>
       </div>
     </div>
-  <div class="box2">
-    <img  src="{% static 'images/logo.png' %}" alt="image" width="400px" height="400px" />
-  </div>
-</div>
-</div>
-{% endblock %}
-
- 
+  </section>
+</main>
+</body>
+</html>
