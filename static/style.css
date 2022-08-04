@@ -579,7 +579,8 @@ button[type="reset"]:hover {
 /* customize qr gen page */
 
 .genPage-section {
-    margin: 5% auto;
+   
+    width:fit-content;
 }
 
 .gen-section2 {
@@ -589,8 +590,6 @@ button[type="reset"]:hover {
     justify-content: center;
     gap: 5vh;
     grid-template-columns: auto auto;
-
-
 }
 
 .genPage-container {
@@ -2358,9 +2357,7 @@ textarea {
     margin-top: 26px;
 }
 
-
-
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 460px) and  (max-width: 768px){
     /* error page */
 
     .error-container {
@@ -2376,11 +2373,8 @@ textarea {
         font-size: 20px;
         line-height: 150%;
         text-align: center;
-
         width: screen;
         word-wrap: break-word;
-
-
     }
 
     .status-message {
