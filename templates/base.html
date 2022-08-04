@@ -31,35 +31,35 @@
       <nav>
         <img class="logo" src="{% static 'images/logo.png' %}" alt="logo" />
         <label for="btn" class="icon">
-          <span class="fa fa-bars"></span>
+          <span class="iconify" data-icon="fa6-solid:bars"></span>
         </label>
         <input type="checkbox" id="btn" />
         <ul>
-          <li><a class="show1" href="#">HOME</a></li>
-          <li><a class="show1" href="#">ABOUT US</a></li>
-          <li><a class="show1" href="#">CONTACT US</a></li>
-          <li><a class="show1" href="#">RESOURCES</a></li>
-          <li><a class="show1" href="#">PRODUCT</a></li>
+          <li><a class="show1" href="{%url 'index' %}">HOME</a></li>
+          <li><a class="show1" href="{%url 'about' %}">ABOUT US</a></li>
+          <li><a class="show1" href="{%url 'contact-us' %}">CONTACT US</a></li>
+          <li><a class="show1" href="{%url 'faq' %}">RESOURCES</a></li>
+          <li><a class="show1" href="{%url 'dashboard' %}">PRODUCT</a></li>
           <li>
-            <a class="show2" href="#"
+            <a class="show2" href="{%url 'index' %}"
               ><span class="iconify" data-icon="eva:home-outline"></span>
               Home</a
             >
           </li>
           <li>
-            <a class="show2" href="#"
+            <a class="show2" href="{%url 'about' %}"
               ><span class="iconify" data-icon="bx:purchase-tag"></span> About
               Us</a
             >
           </li>
           <li>
-            <a class="show2" href="#"
+            <a class="show2" href="{%url 'contact-us' %}"
               ><span class="iconify" data-icon="carbon:phone-outgoing"></span>
               Contact Us</a
             >
           </li>
           <li>
-            <a class="show2" href="#"
+            <a class="show2" href="{%url 'faq' %}"
               ><span
                 class="iconify"
                 data-icon="ic:round-question-answer"
@@ -68,16 +68,16 @@
             >
           </li>
           <li>
-            <a class="show2" href="#"
+            <a class="show2" href="{%url 'dashboard' %}"
               ><span class="iconify" data-icon="bi:qr-code"></span> Product</a
             >
           </li>
           <div class="subnav">
             <button class="nav-login">
-              <a class="nav-log" href="login.html">SIGN IN</a>
+              <a class="nav-log" href="{%url 'accounts:login' %}">SIGN IN</a>
             </button>
             <button class="nav-signin">
-              <a class="nav-sign" href="signup.html">REGISTER</a>
+              <a class="nav-sign" href="{%url 'accounts:signup' %}">REGISTER</a>
             </button>
           </div>
         </ul>
@@ -160,11 +160,11 @@
         <div class="footer-section2">
           <ul class="footer-ul">
             <h2 class="footer-h2">Pages</h2>
-            <li><a href="#">Homepage</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Contact us</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Create Qr code</a></li>
+            <li><a href="{%url 'index' %}">Homepage</a></li>
+            <li><a href="{%url 'about' %}">About us</a></li>
+            <li><a href="{%url 'contact-us' %}">Contact us</a></li>
+            <li><a href="{%url 'faq' %}">FAQ</a></li>
+            <li><a href="{%url 'dashboard' %}">Create Qr code</a></li>
           </ul>
         </div>
       </div>
