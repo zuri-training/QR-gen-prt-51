@@ -74,6 +74,10 @@ height: 72px; */
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
 }
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
   }
