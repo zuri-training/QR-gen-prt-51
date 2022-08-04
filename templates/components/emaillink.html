@@ -1,0 +1,28 @@
+{% load static %} 
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="{% static 'style.css' %}" />
+
+<section class="url-main-container">
+    <div class="url-section ">
+      <div class="url-logo-container">
+        <img src="{% static 'images/logo.png' %}" alt="" srcset="" />
+      </div>
+      <div class="url-input-container">
+        <label for="url" class="url-gen-label">EMAIL</label>
+        <input
+          type="email"
+          name="email"
+          id="email-link"
+          class="email-input-link"
+          placeholder="AnjolaAkinosun@gmail.com"
+        />
+      </div>
+      <div class="error-404-button left-align">
+        <a style="color: white" href="{% url 'index' %}"
+          >Create <span class="right-arrow"> &RightArrow;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
