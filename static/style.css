@@ -84,17 +84,6 @@ p, h1, h2, h3, h4, h5, h6 {
 /* end of css reset */
 
 /* Beginning of base css */
-<<<<<<< HEAD
-header{
-display: var(--header--display);
-flex-direction: column;
-justify-content: var(--header--justify-content);
-align-items: var(--header--align-items);
-padding: 20px 10px;
-gap: 10px;
-box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
-border-radius: 8px;
-=======
 nav {
     background: #FFFFFF;
     box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
@@ -125,7 +114,7 @@ nav ul {
 }
 
 nav ul li {
-    float: left;
+    /* float: left; */
     display: inline-block;
     margin: 0 5px;
 }
@@ -342,7 +331,6 @@ input {
 .footer-ul li a {
     text-decoration: none;
     color: #000000;
->>>>>>> 98e5c8603f264841a8952f7bdb39cafd86ffdee7
 
 }
 .headerContainer {
@@ -427,7 +415,7 @@ li, a{
 
 
 
-.container {
+.containerone {
     width: 83%;
     margin: auto;
     margin-top: 40px;
@@ -445,7 +433,8 @@ li, a{
 }
 
 .Head {
-    background-image:url("{%static 'Group\ 11.png'%}");
+    background-image:url("/images/backgroundgroup.png");
+    background-repeat: no-repeat;
     background-size: 90%;
     width: 50%;
 }
@@ -800,7 +789,7 @@ li, a{
 }
 
 @media screen and (max-width :375px) {
-    .container {
+    .containerone {
         width: 90%;
         margin: auto;
     }
@@ -1371,10 +1360,7 @@ footer{
     justify-content: space-between
 
 }
-.footer-logo{
-    /* width: 150px;
-    height: 150px; */
-}
+
 .footer-p1{
     width: 411px;
     height: 39px;

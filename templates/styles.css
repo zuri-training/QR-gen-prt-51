@@ -1,32 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-nav {
+nav{
     background: #FFFFFF;
     box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
 }
-
-nav::after {
+nav::after{
     content: '';
     clear: both;
     display: table;
 }
 
-nav .logo {
+nav .logo{
     float: left;
     padding-left: 60px;
     padding-top: 10px;
     padding-bottom: 10px;
     height: 120px;
 }
-
-nav ul {
+nav ul{
     font-family: 'Josefin Sans', sans-serif;
     float: right;
     list-style: none;
@@ -35,13 +33,13 @@ nav ul {
     display: flex;
 }
 
-nav ul li {
-    float: left;
+nav ul li{
+    /* float: left; */
     display: inline-block;
     margin: 0 5px;
 }
 
-nav ul li a {
+nav ul li a{
     color: white;
     text-decoration: none;
     line-height: 100px;
@@ -52,14 +50,14 @@ nav ul li a {
     color: #000000;
 }
 
-.icon {
+.icon{
     display: none;
     position: absolute;
     right: 40px;
 }
 
-.subnav {
-    margin: auto;
+.subnav{
+    line-height: 100px;
     margin-right: 150px;
 }
 
@@ -71,14 +69,13 @@ nav ul li a {
     background-color: #FFFFFF;
     margin-right: 10px;
 }
-
-.nav-log {
+.nav-log{
     font-family: 'Josefin Sans', sans-serif;
     color: #000000;
     text-decoration: none;
 }
 
-.nav-signin {
+.nav-signin{
     padding: 16px 24px;
     gap: 16px;
     margin-left: 10px;
@@ -88,18 +85,17 @@ nav ul li a {
     border: none;
 }
 
-.nav-sign {
+.nav-sign{
     font-family: 'Josefin Sans', sans-serif;
     color: #FFFFFF;
     text-decoration: none;
 }
 
-.show2,
-input {
+.show2, input{
     display: none;
 }
 
-.footer {
+.footer{
     width: 100%;
     height: 600px;
     left: 0px;
@@ -109,7 +105,7 @@ input {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.social-icons {
+.social-icons{
     position: relative;
     display: flex;
     text-align: center;
@@ -122,8 +118,7 @@ input {
     box-shadow: 0px 12px 17px 2px rgba(0, 0, 0, 0.14);
     border-radius: 0px 0px 0px 8px;
 }
-
-.social-icons a {
+.social-icons a{
     margin: 20px;
     padding-top: 10px;
     width: 75px;
@@ -135,7 +130,7 @@ input {
     text-decoration: none;
 }
 
-.social-icons2 {
+.social-icons2{
     position: relative;
     display: none;
     text-align: center;
@@ -148,8 +143,7 @@ input {
     box-shadow: 0px 12px 17px 2px rgba(0, 0, 0, 0.14);
     border-radius: 0px 0px 0px 8px;
 }
-
-.social-icons2 a {
+.social-icons2 a{
     margin: 20px;
     padding-top: 10px;
     width: 75px;
@@ -161,21 +155,18 @@ input {
     text-decoration: none;
 }
 
-.flex-footer {
+.flex-footer{
     display: flex;
 }
-
-.footer-section1 {
+.footer-section1{
     margin-left: 90px;
     float: left;
 }
-
-.footer-logo {
+.footer-logo{
     width: 150px;
     height: 150px;
 }
-
-.footer-p1 {
+.footer-p1{
     width: 411px;
     height: 39px;
     font-weight: 400;
@@ -183,18 +174,15 @@ input {
     margin-bottom: 10px;
     margin-top: 10px;
 }
-
-.footer-li {
-    color: #000000;
+.footer-li{
+     color: #000000;
 }
-
-.footer-sub {
+.footer-sub{
     margin-top: 10px;
     margin-bottom: 20px;
     display: flex;
 }
-
-.footer-login {
+.footer-login{
     font-family: 'Josefin Sans', sans-serif;
     padding: 16px 24px;
     gap: 16px;
@@ -203,14 +191,13 @@ input {
     background-color: #A4ACF4;
     margin-right: 10px;
 }
-
-.footer-log {
+.footer-log{
     font-family: 'Josefin Sans', sans-serif;
     color: #000000;
     text-decoration: none;
 }
 
-.footer-signin {
+.footer-signin{
     font-family: 'Josefin Sans', sans-serif;
     padding: 16px 24px;
     gap: 16px;
@@ -220,15 +207,14 @@ input {
     border-radius: 8px;
     border: none;
 }
-
-.footer-sign {
+.footer-sign{
     font-family: 'Josefin Sans', sans-serif;
     color: #FFFFFF;
     text-decoration: none;
 }
 
 
-.footer-h2 {
+.footer-h2{
     margin-top: -20px;
     margin-bottom: 15px;
     font-weight: 700;
@@ -236,8 +222,7 @@ input {
     line-height: 150%;
     letter-spacing: 0.25px;
 }
-
-.footer-ul {
+.footer-ul{
     font-weight: 700;
     font-size: 16px;
     letter-spacing: 0.5px;
@@ -245,24 +230,20 @@ input {
     margin-right: 200px;
     margin-left: 750px;
 }
-
-.footer-ul li {
+.footer-ul li{
     list-style: none;
 }
-
-.footer-ul li a {
+.footer-ul li a{
     text-decoration: none;
     color: #000000;
-
+    
 }
-
-hr {
+hr{
     width: 90%;
     margin: auto;
     margin-bottom: 50px;
 }
-
-.footer-p2 {
+.footer-p2{
     text-align: center;
     font-weight: 400;
     font-size: 15px;
@@ -271,251 +252,238 @@ hr {
 
 
 @media all and (max-width: 1250px) {
-    nav ul {
+    nav ul{
         margin-right: 0px;
-        float: none;
+        float:none;
         display: block;
     }
-
-    nav .logo {
+    nav .logo{
         padding-left: 30px;
         float: none;
         height: 110px;
         /* display: none; */
     }
-
-    nav ul li {
+    nav ul li{
         display: block;
         width: 100%;
         float: none;
         text-align: center;
     }
 
-    .icon {
+    .icon{
         margin-top: 50px;
         display: inline-block;
     }
 
-    .subnav {
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        justify-content: center;
-        width: 100%;
-        margin-bottom: 50px;
+    .subnav{
+       margin: auto;
+       display: flex;
+       justify-content: center;
+       justify-content: center;
+       width: 100%;
+       margin-bottom: 50px;
     }
 
-    .show1 {
+    .show1{
         display: none;
     }
-
-    .show2 {
+    .show2{
         display: inline;
     }
 
-    nav ul li a:hover {
+    nav ul li a:hover{
         box-shadow: none;
     }
 
-    nav ul {
+    nav ul{
         display: none;
     }
-
-    [id^=btn]:checked+ul {
+    [id^=btn]:checked + ul{
         display: block;
     }
 
 }
 
 @media screen and (max-width: 1640px) {
-    .social-icons {
+    .social-icons{
         margin-left: 80%;
     }
 
-    .footer-ul {
+    .footer-ul{
         margin-left: 450px;
     }
 }
 
 @media screen and (max-width: 1350px) {
-    .social-icons {
+    .social-icons{
         margin-left: 75%;
     }
 
-    .footer-ul {
+    .footer-ul{
         margin-left: 250px;
     }
 
-    .footer-section1 {
+    .footer-section1{
         margin-left: 60px;
     }
 }
 
 @media screen and (max-width: 1170px) {
-    .social-icons {
+    .social-icons{
         margin-left: 70%;
     }
 
-    .footer-ul {
+    .footer-ul{
         margin-left: 150px;
     }
 
-    .footer-section1 {
+    .footer-section1{
         margin-left: 50px;
     }
 }
 
 @media screen and (max-width: 1023px) {
-    .social-icons {
+    .social-icons{
         margin-left: 70%;
     }
-
-    .footer-ul {
+    
+    .footer-ul{
         margin-left: 100px;
     }
 
-    .footer-section1 {
+    .footer-section1{
         margin-left: 30px;
     }
 }
 
 @media screen and (max-width: 894px) {
-    .social-icons {
+    .social-icons{
         margin-left: 60%;
     }
-
-    .footer-ul {
+    
+    .footer-ul{
         margin-left: 50px;
     }
 
-    .footer-section1 {
+    .footer-section1{
         margin-left: 30px;
     }
 }
 
 @media screen and (max-width: 650px) {
-    .social-icons {
+    .social-icons{
         margin-left: 55%;
     }
-
-    .footer-ul {
+    
+    .footer-ul{
         margin-left: 40px;
     }
 
-    .footer-section1 {
+    .footer-section1{
         margin-left: 20px;
     }
 }
 
 @media screen and (max-width: 630px) {
+        /* for mobile */
+        nav .logo{
+            padding-left: 30px;
+            float: none;
+            height: 90px;
+        }
 
-    /* for mobile */
-    nav .logo {
-        padding-left: 30px;
-        float: none;
-        height: 90px;
+        .icon{
+            margin-top: 40px;
+            display: inline-block;
+        }
+
+        .footer{
+            height: 80%;
+        }
+
+        .social-icons{
+            display: none;
+        }
+        .social-icons2{
+            display: flex;
+            margin-left: 50%;
+            height: 70px;
+        }
+        .social-icons2 a{
+            margin: 10px;
+            height: 50px;
+        }
+
+        .flex-footer{
+            flex-direction: column;
+        }
+
+        .footer-logo{
+            width: 120px;
+            height: 120px;
+        }
+
+        .footer-p1{
+            font-weight: 500;
+            font-size: 18px;
+            height: 20px;
+        }
+
+        .footer-h2{
+            font-size: 30px;
+            margin-top: 20px;
+        }
+
+        .footer-li{
+            font-size: 11;
+        }
+
+        .footer-login{
+            padding: 20px 35px;
+        }
+        .footer-signin{
+            padding: 20px 35px;
+        }
+
+        .footer-log{
+            color: #000000;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        .footer-sign{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .footer-section1{
+            margin-left: 30px;
+        }
+        .footer-section2{
+            margin-left: 0px;
+            padding-left: 0px;
+        }
+        .footer-ul{
+            margin: 0;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            margin-top: 20px;
+            float: left;
+            margin-left: 30px;
+        }
+        .footer-hr{
+            display: none;
+        }
+        .footer-p2{
+            text-align: center;
+            line-height: 20px;
+            margin-left: 55px;
+            margin-right: 55px;
+            margin-top: 30px;
+        }
+
     }
-
-    .icon {
-        margin-top: 40px;
-        display: inline-block;
-    }
-
-    .footer {
-        height: 80%;
-    }
-
-    .social-icons {
-        display: none;
-    }
-
-    .social-icons2 {
-        display: flex;
-        margin-left: 50%;
-        height: 70px;
-    }
-
-    .social-icons2 a {
-        margin: 10px;
-        height: 50px;
-    }
-
-    .flex-footer {
-        flex-direction: column;
-    }
-
-    .footer-logo {
-        width: 120px;
-        height: 120px;
-    }
-
-    .footer-p1 {
-        font-weight: 500;
-        font-size: 18px;
-        height: 20px;
-    }
-
-    .footer-h2 {
-        font-size: 30px;
-        margin-top: 20px;
-    }
-
-    .footer-li {
-        font-size: 11;
-    }
-
-    .footer-login {
-        padding: 20px 35px;
-    }
-
-    .footer-signin {
-        padding: 20px 35px;
-    }
-
-    .footer-log {
-        color: #000000;
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: 500;
-        letter-spacing: 1px;
-    }
-
-    .footer-sign {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: 500;
-        letter-spacing: 1px;
-    }
-
-    .footer-section1 {
-        margin-left: 30px;
-    }
-
-    .footer-section2 {
-        margin-left: 0px;
-        padding-left: 0px;
-    }
-
-    .footer-ul {
-        margin: 0;
-        font-size: 15px;
-        letter-spacing: 0.5px;
-        margin-top: 20px;
-        float: left;
-        margin-left: 30px;
-    }
-
-    .footer-hr {
-        display: none;
-    }
-
-    .footer-p2 {
-        text-align: center;
-        line-height: 20px;
-        margin-left: 55px;
-        margin-right: 55px;
-        margin-top: 30px;
-    }
-
-}
