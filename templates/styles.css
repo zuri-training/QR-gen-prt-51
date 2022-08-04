@@ -34,7 +34,7 @@ nav ul{
 }
 
 nav ul li{
-    float: left;
+    /* float: left; */
     display: inline-block;
     margin: 0 5px;
 }
@@ -57,7 +57,7 @@ nav ul li a{
 }
 
 .subnav{
-    line-height: 100px;
+    margin: auto;
     margin-right: 150px;
 }
 
