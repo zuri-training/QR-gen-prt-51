@@ -59,12 +59,12 @@ nav ul li a {
 }
 
 .subnav {
-    line-height: 100px;
+    margin: auto;
     margin-right: 150px;
 }
 
 .nav-login {
-    padding: 16px 24px;
+    padding: 16px 15px;
     gap: 16px;
     border: 1px solid #4959E9;
     border-radius: 8px;
@@ -79,7 +79,7 @@ nav ul li a {
 }
 
 .nav-signin {
-    padding: 16px 24px;
+    padding: 16px 15px;
     gap: 16px;
     margin-left: 10px;
     margin-right: -50px;
