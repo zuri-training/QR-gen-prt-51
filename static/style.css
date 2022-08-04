@@ -1731,7 +1731,7 @@ a {
     border: none;
 }
 
-.container {
+.landingpage-container {
     width: 83%;
     margin: auto;
     margin-top: 40px;
@@ -2026,7 +2026,7 @@ a {
         font-weight: bolder;
         font-size: 25px;
     }
-}
+} 
 
 /* End of landing page CSS */
 
