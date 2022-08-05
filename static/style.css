@@ -184,6 +184,12 @@ li, a{
 .hero-image{
     height: 40%;
 }
+@media only screen and (min-width: 320px) and (max-width:768px) {
+    .hero-image{
+        height: auto;
+        width: 360px;
+    }
+}
 .contact__image {
     z-index: 1;
 }
