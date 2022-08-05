@@ -642,14 +642,15 @@ hr {
 }
 
 .Head {
-    background: url("../img/backgroundgroup.png") 50% 0 no-repeat fixed;
-    background-repeat: no-repeat;
     background-size: 90%;
     width: 50%;
 }
+.backgroundimage {
+    position: absolute;
+}
 
 .Head h1 {
-    margin-top: 40px;
+    margin-top: 50px;
     width: 85%;
     font-family: 'Josefin Sans';
     font-weight: 700;
@@ -674,7 +675,7 @@ hr {
     background-color: transparent;
     border: none;
     display: inline-block;
-    margin-top: 80px;
+    margin-top: 90px;
 }
 
 .Head button a {
@@ -994,7 +995,7 @@ hr {
     text-decoration: none;
     color: #181818;
 }
-@media screen and (max-width :700px) {
+@media screen and (max-width :768px) {
     .containerone {
         width: 90%;
         margin: auto;
@@ -1007,6 +1008,9 @@ hr {
     .Head {
         width: 80%;
         background-image: none;
+    }
+    .backgroundimage{
+        visibility: hidden;
     }
 
     .Head h1 {
