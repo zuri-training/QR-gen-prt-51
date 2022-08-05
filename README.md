@@ -37,25 +37,27 @@
 
 ## 🧐 Problem Statement <a name = "problem_statement"></a>
 
-It is useful to design and follow a specific format when writing a problem statement. While there are several options
-for doing this, the following is a simple and straightforward template often used in Business Analysis to maintain
-focus on defining the problem.
+QR codes are fast becoming popular these days. Most people are drifting away from the traditional mode of advertising/marketing and just storing their digital information online in QR codes. QR codes are everywhere we go now; banks, hospitals, hotels, restaurants etc. But the question on everyone’s lips is how do they come about these codes?
 
-- IDEAL: This section is used to describe the desired or “to be” state of the process or product. At large, this section
-  should illustrate what the expected environment would look like once the solution is implemented.
-- REALITY: This section is used to describe the current or “as is” state of the process or product.
-- CONSEQUENCES: This section is used to describe the impacts on the business if the problem is not fixed or improved upon.
-  This includes costs associated with loss of money, time, productivity, competitive advantage, and so forth.
-
-Following this format will result in a workable document that can be used to understand the problem and elicit
-requirements that will lead to a winning solution.
+These codes are generated online by an online software called QR code generator. From secondary research, a lot of these platforms are not simplified enough for beginners to use. And to tackle that problem, we will be following the popular saying: “Less is more.” We will design a platform that allows users to generate QR codes with less hassle. The QR code generated can be downloaded, shared online amongst many other features and when scanned will lead to the user’s portfolio website or catalogue.
 
 ## 💡 Idea / Solution <a name = "idea"></a>
 
-This section is used to describe potential solutions.
+A platform that allows users generate QR code for data inputted while also providing analytics and metrics.
 
-Once the ideal, reality, and consequences sections have been
-completed, and understood, it becomes easier to provide a solution for solving the problem.
+The challenge
+User: Unauthenticated
+
+Visit the platform to view basic information about it
+View and Interact with the documentation
+Register to view more details
+No access to use until registered
+User: Authenticated
+
+Full access to the platform
+Allow setting on what should happen when qr is scanned - give at least 2 options
+Allow user to download (allow png, jpeg and pdf download format), or share code by email or social media
+Allow user save data and come back to it.
 
 ## ⛓️ Dependencies / Limitations <a name = "limitations"></a>
 
@@ -67,9 +69,7 @@ completed, and understood, it becomes easier to provide a solution for solving t
   appropriate, describe how these limitations could point to the need for further research.
 
 ## 🚀 Future Scope <a name = "future_scope"></a>
-
-Write about what you could not develop during the course of the Hackathon; and about what your project can achieve
-in the future.
+ To get to the point where QR codes can be used for almost everything(like transfer of fund, sharing of account details e.t.c)
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
