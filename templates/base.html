@@ -21,8 +21,10 @@
     />
 
     <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link rel="stylesheet" href="{% static 'datatypestyle.css' %}" />
 
     <link rel="shortcut icon" href="" type="image/x-icon" />
+    <script src="{% static 'script.js' %}"></script>
     <title>{% block title %}QR code generator{% endblock %}</title>
   </head>
 
@@ -68,18 +70,31 @@
             >
           </li>
           <li>
-            <a class="show2" href="{%url 'dashboard' %}"
+            <a class="show2" href="#"
               ><span class="iconify" data-icon="bi:qr-code"></span> Product</a
             >
           </li>
+          <!-- end of mobile view -->
           <div class="subnav">
+          {% if user.is_authenticated %}
+          <span class="nav-log">
+          {{ user.full_name }}!
+          </span>
+          <button class="nav-login">
+            <a class="nav-log"  href="{% url 'accounts:logout' %}">Log Out</a>
+          </button>
+          {% else %}
+         
             <button class="nav-login">
-              <a class="nav-log" href="{%url 'accounts:login' %}">SIGN IN</a>
+              <a class="nav-log" href="{% url 'accounts:login' %}">SIGN IN</a>
             </button>
             <button class="nav-signin">
-              <a class="nav-sign" href="{%url 'accounts:signup' %}">REGISTER</a>
+              <a class="nav-sign" href="{% url 'accounts:signup' %}"
+                >REGISTER</a
+              >
             </button>
           </div>
+          {% endif %}
         </ul>
       </nav>
     </header>
