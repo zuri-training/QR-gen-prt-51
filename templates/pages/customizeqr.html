@@ -2,23 +2,29 @@
 <section class="genPage-section">
   <!-- section1 -->
   <div class="genPage-container">
+    <div class="centralize-content">
+      <img class="gen-logo" src="{% static 'images/logo.png' %}" alt="logo" />
+    </div>
     <div class="gen-container-flex">
-      <div class="logo-image">
-        <img class="gen-logo" src="{% static 'images/logo.png' %}" alt="logo" />
-      </div>
+      
       <div class="inner-icon-message">
+       <div class="align-widthin">
         <img src="{% static 'images/clock.png' %}" alt="clock" />
         <span class="icon-message"
           >Generate your QR code in under 45 seconds</span
         >
-
+       </div>
+      </div>
+      <div class="inner-icon-message">
+       <div class="align-widthin">
         <img src="{% static 'images/scan.png' %}" alt="scan" />
         <span class="icon-message">Unlimited use of our QR code scanner</span>
-      </div>
-      <div role="heading">
+       </div>
+      </div> </div></div>
+      <div role="heading centralize-content">
         <p class="sub-heading">Style your code</p>
       </div>
-    </div>
+   
     <!-- end of section1 -->
     <!-- section2 -->
     <div class="gen-heading" role="heading">Shape</div>
@@ -144,9 +150,10 @@
       <label class="upload-subtitle"> JPEG,PNG files are accepted </label>
     </div>
     <div class="spacer">
-      <div class="error-404-button">
-        <a style="color:white" href="{% url 'index' %}">DOWNLOAD OR SHARE</a>
-    </div>
+      <button class="nav-signin">
+        <a style="color:white" href="{% url 'index' %}" class="nav-log">DOWNLOAD OR SHARE</a>
+      </button>
+     
     </div>
     <!-- end of section4 div  -->
   </div>
