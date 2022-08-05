@@ -647,6 +647,7 @@ hr {
 }
 .backgroundimage {
     position: absolute;
+    z-index: -1;
 }
 
 .Head h1 {
