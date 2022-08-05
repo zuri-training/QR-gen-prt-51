@@ -1,9 +1,8 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
+    {% load static %}
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,56 +15,79 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/font-awesome.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link rel="stylesheet" href="{% static 'datatypestyle.css' %}" />
 
+    <link rel="shortcut icon" href="" type="image/x-icon" />
     <title>{% block title %}QR code generator{% endblock %}</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap"
-      rel="stylesheet"
-    />
   </head>
 
   <body>
-    <header class="header">
-      <div>
-        <img class="logo" src="logo.png" alt="logo" />
-      </div>
-      <a href="#" id="toggle-button" class="toggle-button">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </a>
-      <nav class="noth">
-        <ul id="ul">
-          <li><a href="landingPage.html">HOME</a></li>
-          <li><a href="aboutUs.html">ABOUT US</a></li>
-          <li><a href="contactus.html">CONTACT US</a></li>
-          <li><a href="faq.html">RESOURCES</a></li>
-          <li><a href="#">PRODUCT</a></li>
+    <header>
+      <nav>
+        <img class="logo" src="{% static 'images/logo.png' %}" alt="logo" />
+        <label for="btn" class="icon">
+          <span class="iconify" data-icon="fa6-solid:bars"></span>
+        </label>
+        <input type="checkbox" id="btn" />
+        <ul>
+          <li><a class="show1" href="{%url 'index' %}">HOME</a></li>
+          <li><a class="show1" href="{%url 'about' %}">ABOUT US</a></li>
+          <li><a class="show1" href="{%url 'contact-us' %}">CONTACT US</a></li>
+          <li><a class="show1" href="{%url 'faq' %}">RESOURCES</a></li>
+          <li><a class="show1" href="{%url 'dashboard' %}">PRODUCT</a></li>
+          <li>
+            <a class="show2" href="{%url 'index' %}"
+              ><span class="iconify" data-icon="eva:home-outline"></span>
+              Home</a
+            >
+          </li>
+          <li>
+            <a class="show2" href="{%url 'about' %}"
+              ><span class="iconify" data-icon="bx:purchase-tag"></span> About
+              Us</a
+            >
+          </li>
+          <li>
+            <a class="show2" href="{%url 'contact-us' %}"
+              ><span class="iconify" data-icon="carbon:phone-outgoing"></span>
+              Contact Us</a
+            >
+          </li>
+          <li>
+            <a class="show2" href="{%url 'faq' %}"
+              ><span
+                class="iconify"
+                data-icon="ic:round-question-answer"
+              ></span>
+              Resources</a
+            >
+          </li>
+          <li>
+            <a class="show2" href="{%url 'dashboard' %}"
+              ><span class="iconify" data-icon="bi:qr-code"></span> Product</a
+            >
+          </li>
           <div class="subnav">
-            <button class="login">
-              <a class="log" href="login.html">SIGN IN</a>
+            <button class="nav-login">
+              <a class="nav-log" href="{%url 'accounts:login' %}">SIGN IN</a>
             </button>
-            <button class="signin">
-              <a class="sign" href="signup.html">REGISTER</a>
+            <button class="nav-signin">
+              <a class="nav-sign" href="{%url 'accounts:signup' %}">REGISTER</a>
             </button>
           </div>
         </ul>
       </nav>
     </header>
-    <main>{% block content %} {% endblock %} {% endblock content %}</main>
+    <main>{% block content %} {% endblock content %}</main>
     <footer class="footer">
       <div class="social-icons">
-        <a href="#"
+        <a href="https://www.facebook.com/ingressiveforgood/"
           ><i
             class="iconify"
             data-icon="cib:facebook"
@@ -73,7 +95,7 @@
             data-height="50"
           ></i
         ></a>
-        <a href="#"
+        <a href="https://twitter.com/thezuriteam?lang=en"
           ><i
             class="iconify"
             data-icon="entypo-social:twitter-with-circle"
@@ -81,7 +103,7 @@
             data-height="50"
           ></i
         ></a>
-        <a href="#"
+        <a href="https://ng.linkedin.com/company/zuri-team"
           ><i
             class="iconify"
             data-icon="brandico:linkedin-rect"
@@ -92,7 +114,7 @@
         <span></span>
       </div>
       <div class="social-icons2">
-        <a href="#"
+        <a href="https://www.facebook.com/ingressiveforgood/"
           ><i
             class="iconify"
             data-icon="cib:facebook"
@@ -100,7 +122,7 @@
             data-height="30"
           ></i
         ></a>
-        <a href="#"
+        <a href="https://twitter.com/thezuriteam?lang=en"
           ><i
             class="iconify"
             data-icon="entypo-social:twitter-with-circle"
@@ -108,7 +130,7 @@
             data-height="30"
           ></i
         ></a>
-        <a href="#"
+        <a href="https://ng.linkedin.com/company/zuri-team"
           ><i
             class="iconify"
             data-icon="brandico:linkedin-rect"
@@ -120,27 +142,30 @@
       </div>
       <div class="flex-footer">
         <div class="footer-section1">
-          <img class="footer-logo" src="logo.png" alt="logo" />
+          <img
+            class="footer-logo"
+            src="{% static 'images/logo.png' %}"
+            alt="logo"
+          />
           <p class="footer-p1">HAVE A QUESTIONS? SAY HELLO!</p>
           <a class="footer-li" href="#">Support@QR-GEN.com</a>
           <div class="footer-sub">
             <button class="footer-login">
-              <a class="footer-log" href="login.html">SIGN IN</a>
+              <a class="footer-log" href="#">SIGN IN</a>
             </button>
             <button class="footer-signin">
-              <a class="footer-sign" href="signup.html">REGISTER</a>
+              <a class="footer-sign" href="#">REGISTER</a>
             </button>
           </div>
         </div>
         <div class="footer-section2">
           <ul class="footer-ul">
             <h2 class="footer-h2">Pages</h2>
-            <li><a href="landingPage.html">Homepage</a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="aboutUs.html">About us</a></li>
-            <li><a href="contactus.html">Contact us</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="#">Create Qr code</a></li>
+            <li><a href="{%url 'index' %}">Homepage</a></li>
+            <li><a href="{%url 'about' %}">About us</a></li>
+            <li><a href="{%url 'contact-us' %}">Contact us</a></li>
+            <li><a href="{%url 'faq' %}">FAQ</a></li>
+            <li><a href="{%url 'dashboard' %}">Create Qr code</a></li>
           </ul>
         </div>
       </div>
@@ -154,14 +179,11 @@
         </p>
       </div>
     </footer>
-    <script src="/script.js"></script>
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script
       src="https://kit.fontawesome.com/9ec3a209f4.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </body>
 </html>
