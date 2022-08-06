@@ -4,15 +4,24 @@ from django.urls import reverse_lazy
 # Create your views here.
 
 class LandingPageView(TemplateView):
-    template_name = "components/landingPage.html"
+    template_name = "pages/landingPage.html"
 class FAQPageView(TemplateView):
-    template_name = 'components/faq.html'
+    template_name = 'pages/faq.html'
 class CONTACTPageView(TemplateView):
-    template_name = 'components/contactus.html'
+    template_name = 'pages/contactus.html'
 class ABOUTPageView(TemplateView):
-    template_name = 'components/aboutus.html'
+    template_name = 'pages/aboutus.html'
 class DATAPageview(TemplateView):
-    template_name = 'components/datatype.html'
+    template_name = 'pages/datatype.html'
+
+class CUSTOMView(TemplateView):
+    template_name = 'pages/customizeqr.html'
+
+class DASHBOARDView(TemplateView):
+    template_name = 'pages/dashboard.html'
+class TestView(TemplateView):
+    template_name = "components/emaillink.html"
+
     
     
 # custom views for error pages

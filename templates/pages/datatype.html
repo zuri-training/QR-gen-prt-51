@@ -1,0 +1,71 @@
+{% extends "base.html" %}{% load static %} {% block content %}
+  <section class="custom-section"> 
+      <!-- section1 -->
+    <div class="custom-container">
+      <div class="logo-container">
+        <div class="qr-logo">
+            <img class="logo" src="{% static 'images/qr-gen-logo.png' %}" alt="logo" />
+        </div>
+        <div class="icon-content">
+              <div><img src="{% static 'images/clock.png' %}" alt="clock"></div>
+              <div class="message">Generate your QR code in under 45 seconds</div>
+
+              <div><img src="{% static 'images/scan.png' %}" alt="scan"></div>
+              <div class="message">Unlimited use of our QR code scanner</div>      
+        </div>
+      </div>
+
+      <!-- section2 -->
+      <div class="data-heading">
+        <h3>Data Type</h3>
+      </div>
+      <div class="custom-section2">
+        <div class="media">
+        <div class="media-container">
+          <div class="media-title">
+              <h5>Popular</h5>
+          </div>
+          <div class="media-content">
+                <button>WEBSITE URL</button>
+                <button>PDF FILE</button>
+                <button>PLAIN TEXT</button>
+                <button>SOCIAL LINK</button>
+          </div>
+          <div class="media-title">
+              <h5>Social Links</h5>
+          </div>
+              <div class="media-content">
+                <button>YOUTUBE</button>
+                <button>INSTAGRAM</button>
+                <button>WHATSAPP</button>
+                <button>FACEBOOK</button>
+                <button>LINKEDIN</button>
+                <button>TWITTER</button>
+              </div>
+              <div class="media-title">
+              <h5>Business Links</h5>
+              </div>
+              <div class="media-content">
+                <button>PHONE NUMBER</button>
+                <button>EMAIL ADDRESS</button>
+              </div>
+              <div class="media-title">
+              <h5>File QR Codes</h5>
+              </div>
+              <div class="media-content">
+                <button>IMAGE FILE</button>
+                <button>AUDIO</button>
+                <button>VIDEO</button>
+              </div>
+          </div>
+          </div>
+          <div class="qr-code">
+          <div class="qr-code-container">
+             <img src="{% static 'images/Qr-image.png' %}" alt="code" srcset="" class="qr-image"/>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endblock %}
