@@ -1222,20 +1222,11 @@ hr{
 
 /* Beginning of contactus css */
 
-/* body, html{
-    height: 100%;
-    background-color: #ffffff;
-} */
 .hero-image{
     height: 40%;
 }
-@media only screen and (min-width: 320px) and (max-width:768px) {
-    .hero-image{
-        height: auto;
-        width: 360px;
-    }
-}
 .contact__image {
+    
     z-index: 1;
 }
 
@@ -1247,7 +1238,7 @@ hr{
     left: 25%;
     transform: translate(-30%, -30%);
     color: #ffffff;
-    font-size: 700;
+    font-weight: 700;
     padding-bottom: 0%;
     width:30% ;
 }
@@ -1271,7 +1262,6 @@ hr{
     margin-top: -200px;
     margin-bottom: 120px;
 }
-
 .message__container .left-col{
     flex-basis: 62%;
     border-top-left-radius: 8px;
@@ -1299,8 +1289,12 @@ hr{
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 18px;
-  }
-
+}
+.message__container .left-col textarea {
+    height: 200px;
+    width: 540px;
+    resize: none;
+}
 .message__container .left-col .submit button {
     display: flex;
     flex-direction: row;
@@ -1384,8 +1378,176 @@ hr{
 .message__container .right-col .contact-map{
     margin-top: 139px;
 }
-.message__container .right-col .contact__map {
-    text-align: center;
+.message__container .right-col .contact__map iframe {
+    padding: 0;
+    width: 322px;
+    height: 198px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 900px) {
+    .hero-image{
+        width: 100%;
+    }
+    .hero-text{
+        top: 10%;
+        position: absolute;
+        left: 5%;
+        transform: translate(-12%, -12%);
+    }
+    .hero-text h1{
+        margin-top: 1em;
+        font-size: 10vw;
+        min-width: 200%;
+    }
+    .hero-text p {
+        min-width: 200%;
+    }
+    .contact__image {
+        height: 650px;
+    }
+    .message__container {
+        display: flex;
+        margin-top: -60px;
+        min-width: 92%;
+        height: 540px;
+    }
+    .message__container .left-col {
+        min-width: 191px;
+        padding: 20px;
+    }
+    .message__container .left-col h3{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 39px;
+        width: 204px;
+        margin-bottom: 24px;
+    }
+    .message__container .left-col input[type=text], input[type=email], textarea {
+        width: 100%;
+        padding: 14px 15px;
+        margin: 15px 0 22px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 18px;
+    }
+    .message__container .left-col textarea {
+        height: 110px;
+        width: 400px;
+    }
+    .message__container .left-col .submit button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 24px;
+        width: 78px;
+        height: 46px;
+        background: #4959E9;
+        border-radius: 8px;
+        border: 1px solid #4959E9;
+        color: white;
+    }
+    
+    .message__container .right-col {
+        min-width: 133px;
+        padding: 0 20px;
+    }
+    .message__container .right-col .contact-info{
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 39px;
+        border-width: 253px;
+        padding: 20px 0 2px 0;
+        margin-bottom: 22.5px;
+    }
+    .message__container .right-col .phone .iconify {
+        float:left;
+        font-size: 18px;
+        margin-right: 14px;
+    }
+    .message__container .right-col .phone .phone__number {
+        float: left;
+        font-size: 12px;
+    }
+    
+    .message__container .right-col .email .iconify {
+        float:left;
+        font-size: 18px;
+    }
+    .message__container .right-col .email{
+        font-weight: 400;
+        font-size: 15px;
+        letter-spacing: 0.25px;
+        margin-top: -15px;
+        border-width: 186px;
+        margin-bottom: 5.5px;
+    }
+    
+    .message__container .right-col .email .email__address{
+        float: left;
+        font-size: 12px;
+    }
+    
+    .message__container .right-col .email .iconify p {
+        font-size: 12px;
+    }
+    .message__container .right-col .icons {
+        display: flex;
+        margin-left: -5px;
+    }
+    .message__container .right-col .icons .iconify{
+        height: 24px;
+        width: 34px;
+        color: #000;
+    }
+    .message__container .contact-map .contact__map iframe {
+        padding: 0;
+        margin: 0;
+        width: 238px;
+        height: 158px;
+        margin-top: 4px;
+    }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1500px) {
+    .hero-image{
+        width: 100%;
+    }
+    .hero-text{
+        top: 10%;
+        position: absolute;
+        left: 10%;
+    }
+    .hero-text h1{
+        margin-top: 1em;
+        font-size: 10vw;
+        min-width: 200%;
+    }
+    .hero-text p {
+        min-width: 300%;
+    }
+    .contact__image {
+        height: 600px;
+    }
+    .message__container {
+        display: flex;
+        width: 93%;
+        height: 690px;
+    }
+    .message__container .left-col {
+        min-width: 191px;
+    }
+    .message__container .right-col {
+        min-width: 121px;
+    }
+    .message__container .contact-map .contact__map iframe {
+        width: 234px;
+        height: 168px;
+        margin-top: -34px;
+    }
 }
 
 /* end of contactus css */
