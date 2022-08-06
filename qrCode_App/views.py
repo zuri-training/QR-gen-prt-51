@@ -36,3 +36,7 @@ def custom_permission_denied_view(request, exception=None):
 
 def custom_bad_request_view(request, exception=None):
     return render(request, "404.html")
+
+# CBV for contact us page
+class ContactUsView(TemplateView):
+    template_name = 'contactus.html'

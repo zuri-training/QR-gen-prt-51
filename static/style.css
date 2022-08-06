@@ -1861,32 +1861,29 @@ button[type="reset"]:hover {
 
 /* Beginning of contactus css */
 
-/* body, html{
-    height: 100%;
-    background-color: #ffffff;
-} */
-.hero-image {
+.hero-image{
     height: 40%;
 }
 
-.contact__image {
+.contact__image {   
     z-index: 1;
 }
 
 .hero-text {
     position: absolute;
     top: 30%;
-    padding-left: 6%;
+    padding-left: 7%;
     z-index: 99999;
     left: 25%;
     transform: translate(-30%, -30%);
     color: #ffffff;
-    font-size: 700;
+    font-weight: 700;
     padding-bottom: 0%;
-    width: 30%;
+    width: 40%;
 }
 
 .hero-text h1 {
+    margin-top: 1.5em;
     font-size: 64px;
     margin-bottom: 24px;
 }
@@ -1894,7 +1891,7 @@ button[type="reset"]:hover {
 .hero-text p {
     font-size: 24px;
     line-height: 150%;
-    width: 85%;
+    width: 488px;
 }
 
 .message__container {
@@ -1937,6 +1934,11 @@ textarea {
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 18px;
+}
+.message__container .left-col textarea {
+    height: 140px;
+    width: 540px;
+    resize: none;
 }
 
 .message__container .left-col .submit button {
@@ -2027,9 +2029,188 @@ textarea {
 .message__container .right-col .contact-map {
     margin-top: 139px;
 }
+.message__container .right-col .contact__map iframe {
+    padding: 0;
+    width: 322px;
+    height: 198px;
+}
 
-.message__container .right-col .contact__map {
-    text-align: center;
+@media screen and (min-width: 320px) and (max-width: 900px) {
+    .hero-image{
+        width: 100%;
+    }
+    .hero-text{
+        top: 10%;
+        position: absolute;
+        left: 5%;
+        transform: translate(-12%, -12%);
+    }
+    .hero-text h1{
+        margin-top: 2.5em;
+        font-size: 36px;
+        width: 368px;
+        margin-bottom: 2px;
+    }
+    .hero-text p {
+        min-width: 100%;
+        font-size: 8px;
+        width: 314px;
+    }
+    .contact__image {
+        height: 211px;
+        width: 368px;
+    }
+    .message__container {
+        display: flex;
+        margin-top: -60px;
+        min-width: 92%;
+        height: 400px;
+    }
+    .message__container .left-col {
+        min-width: 191px;
+        padding: 20px;
+    }
+    .message__container .left-col h3{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 39px;
+        width: 204px;
+        margin-top: -10px;
+        margin-bottom: 4px;
+    }
+    .message__container .left-col input[type=text], input[type=email], textarea {
+        width: 100%;
+        padding: 5px;
+        margin: 5px 0 12px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 12px;
+    }
+    .message__container .left-col textarea {
+        height: 110px;
+        width: 100%;
+    }
+    .message__container .left-col label {
+        font-size: 10px;
+    }
+    .message__container .left-col .submit button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 24px;
+        width: 58px;
+        height: 26px;
+        background: #4959E9;
+        border-radius: 5px;
+        border: 1px solid #4959E9;
+        color: white;
+        font-size: 8px;
+    }
+    
+    .message__container .right-col {
+        min-width: 133px;
+        padding: 0 10px;
+    }
+    .message__container .right-col .contact-info{
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 39px;
+        border-width: 253px;
+        padding: 20px 0 2px 0;
+        margin-bottom: 20px;
+    }
+    .message__container .right-col .contact-info h3 {
+        font-size: 10px;
+    }
+    .message__container .right-col .phone .iconify {
+        float:left;
+        font-size: 8px;
+        margin-right: 4px;
+        margin-bottom: 0;
+    }
+    .message__container .right-col .phone .phone__number {
+        float: left;
+        font-size: 8px;
+    }
+    
+    .message__container .right-col .email .iconify {
+        float:left;
+        font-size: 9px;
+        margin-right: 4px;
+    }
+    .message__container .right-col .email{
+        font-weight: 400;
+        letter-spacing: 0.25px;
+        margin-top: -30px;
+        border-width: 186px;
+        margin-bottom: .5px;
+    }
+    
+    .message__container .right-col .email .email__address{
+        float: left;
+        font-size: 8px;
+    }
+    
+    .message__container .right-col .email .iconify p {
+        font-size: 12px;
+    }
+    .message__container .right-col .icons {
+        display: flex;
+    }
+    .message__container .right-col .icons .iconify{
+        height: 14px;
+        width: 14px;
+        color: #000;
+    }
+    .message__container .contact-map .contact__map iframe {
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+        height: 138px;
+        margin-top: -50px;
+    }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1500px) {
+    .hero-image{
+        width: 100%;
+    }
+    .hero-text{
+        top: 10%;
+        position: absolute;
+        left: 10%;
+    }
+    .hero-text h1{
+        margin-top: 4em;
+        font-size: 64px;
+        min-width: 200%;
+    }
+    .hero-text p {
+        min-width: 300%;
+    }
+    .contact__image {
+        height: 600px;
+    }
+    .message__container {
+        display: flex;
+        width: 93%;
+        height: 690px;
+    }
+    .message__container .left-col {
+        min-width: 191px;
+    }
+    .message__container .right-col {
+        min-width: 121px;
+    }
+    .message__container .contact-map .contact__map iframe {
+        width: 234px;
+        height: 168px;
+        margin-top: -34px;
+    }
 }
 
 /* end of contactus css */
@@ -2041,16 +2222,9 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: center;
-<<<<<<< HEAD
     margin:3% 5%;
     font-family: 'Josefin Sans', sans-serif;
 }
-=======
-    margin: 3% 5%;
-    font-family: 'Josefin Sans', sans-serif;
-}
-
->>>>>>> 80d2863a72f8cfd5afc9d05b67d785720566bfca
 .logo-container {
     display: flex;
     flex-direction: column;
@@ -2058,28 +2232,16 @@ textarea {
     justify-content: center;
     gap: 20px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 80d2863a72f8cfd5afc9d05b67d785720566bfca
 .custom-section2 {
     display: flex;
     justify-content: center;
     margin: auto;
     gap: 8vh;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 80d2863a72f8cfd5afc9d05b67d785720566bfca
 .custom-container {
     display: flex;
     flex-direction: column;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 80d2863a72f8cfd5afc9d05b67d785720566bfca
 .message {
     text-align: center;
     font-size: 20px;
@@ -2087,35 +2249,21 @@ textarea {
     line-height: 150%;
     gap: 50px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 80d2863a72f8cfd5afc9d05b67d785720566bfca
 .icon-content {
     display: grid;
     align-items: center;
     grid-template-columns: auto auto auto auto;
     gap: 20px;
 }
-<<<<<<< HEAD
-.data-heading {
-    font-size: 50px;
-    font-weight:600;
-=======
 
 .data-heading {
     font-size: 50px;
     font-weight: 600;
->>>>>>> 80d2863a72f8cfd5afc9d05b67d785720566bfca
     line-height: 150%;
     font-style: normal;
     margin-left: 7.5%;
 
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 80d2863a72f8cfd5afc9d05b67d785720566bfca
 .media-container {
     border: solid 1px;
     border: none;
@@ -2123,10 +2271,6 @@ textarea {
     background-color: #DBDEFB;
     padding: 37px 20px 30px 30px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 80d2863a72f8cfd5afc9d05b67d785720566bfca
 .qr-code-container {
     border: solid 1px;
     height: fit-content;
@@ -2134,31 +2278,15 @@ textarea {
     background-color: rgb(226, 218, 218);
     border: none;
     border-radius: 6px;
-<<<<<<< HEAD
-    box-shadow:0px 12px 17px 2px rgba(226, 218, 218, 0.5); 
-}
-.media-title {
-=======
     box-shadow: 0px 12px 17px 2px rgba(226, 218, 218, 0.5);
 }
 
 .media-title h5 {
->>>>>>> 80d2863a72f8cfd5afc9d05b67d785720566bfca
     display: block;
     font-size: 26px;
     font-weight: 700;
     letter-spacing: 0.25px;
     flex-direction: column;
-<<<<<<< HEAD
-}
-.media-content {
-    display: grid;
-    grid-template-columns:1fr 1fr 1fr;
-    grid-template-rows: auto;
-    gap:10px;
-}
-.media-content .media-btn {
-=======
     margin-top: 20px;
     margin-bottom: 30px;
 }
@@ -2171,7 +2299,6 @@ textarea {
 }
 
 .media-content button {
->>>>>>> 80d2863a72f8cfd5afc9d05b67d785720566bfca
     display: flex;
     flex-direction: row;
     outline: none;
@@ -2184,12 +2311,8 @@ textarea {
     box-shadow: 0px 12px 17px 2px rgba(0, 0, 0, 0.14);
     border-radius: 8px;
 }
-<<<<<<< HEAD
-.media-btn {
-=======
 
 button {
->>>>>>> 80d2863a72f8cfd5afc9d05b67d785720566bfca
     font-family: 'Josefin Sans', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -2205,7 +2328,6 @@ button {
 @media screen and (max-width: 600px) {
     .logo-container {
         display: grid;
-<<<<<<< HEAD
        flex-direction: row;
        place-content: center;
        place-items: center;
@@ -2248,24 +2370,16 @@ button {
 @media screen and (max-width: 496px) {
     .logo-container {
          display: grid;
-=======
->>>>>>> 80d2863a72f8cfd5afc9d05b67d785720566bfca
         flex-direction: row;
         place-content: center;
         place-items: center;
         grid-template-columns: auto;
     }
-<<<<<<< HEAD
-    .custom-section2{
-        flex-direction: column;
-    }
-=======
 
     .custom-section2 {
         flex-direction: column;
     }
 
->>>>>>> 80d2863a72f8cfd5afc9d05b67d785720566bfca
     .qr-logo {
         width: 100%;
         display: flex;
@@ -2273,14 +2387,6 @@ button {
         align-items: center;
         margin-top: 10%;
     }
-<<<<<<< HEAD
-    .qr-logo .logo {
-        width: 40%;
-    }
-    .data-heading {
-        font-size: 30px;
-    }
-=======
 
     .qr-logo .logo {
         width: 60%;
@@ -2290,7 +2396,6 @@ button {
         font-size: 30px;
     }
 
->>>>>>> 80d2863a72f8cfd5afc9d05b67d785720566bfca
     .icon-content {
         display: flex;
         align-items: center;
@@ -2298,7 +2403,6 @@ button {
         width: 80%;
         gap: 10px;
     }
-<<<<<<< HEAD
     .media {
         margin-right: 2%;
     }
@@ -2308,7 +2412,6 @@ button {
     .qr-code {
         width: 95%;
     }
-=======
 
     .media {
         margin-right: 2%;
@@ -2372,7 +2475,6 @@ button {
         width: 95%;
     }
 
->>>>>>> 80d2863a72f8cfd5afc9d05b67d785720566bfca
     .qr-code-container .qr-image {
         width: 95%;
     }
