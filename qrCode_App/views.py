@@ -10,7 +10,7 @@ class FAQPageView(TemplateView):
 class CONTACTPageView(TemplateView):
     template_name = 'pages/contactus.html'
 class ABOUTPageView(TemplateView):
-    template_name = 'pages/aboutus.html'
+    template_name = 'pages/aboutUs.html'
 class DATAPageview(TemplateView):
     template_name = 'pages/datatype.html'
 
