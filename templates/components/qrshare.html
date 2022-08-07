@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      @media screen and (max-width: 400px) {
+        section {
+          position: relative;
+          width: 360px;
+          height: 800px;
+          overflow-x: hidden;
+        }
+      }
+
+      #modal {
+        background: white;
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        max-width: 826px;
+        height: 967px;
+        border: 1px solid maroon;
+        padding: 2rem;
+        margin: auto;
+        /* display: none; */
+      }
+      #modal::backdrop {
+        background: rgb(0 0 0 / 0.4);
+      }
+
+      .first,
+      .first:hover {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 150%;
+        color: #2b2b2b;
+        cursor: pointer;
+      }
+      .first span {
+        width: 1px;
+        height: 10px;
+        margin-right: 10px;
+      }
+      .middle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+        margin-left: 10px;
+        margin-top: 50px;
+      }
+      .middle p {
+        margin-top: 30px;
+      }
+
+      .last {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 24px;
+        gap: 16px;
+        width: 200px;
+        height: 56px;
+        margin-top: 50px;
+        margin-left: 100px;
+      }
+      select {
+        font-size: 16px;
+        background-color: #4959e9;
+        color: white;
+        font-weight: 500;
+        line-height: 150%;
+        padding: 10px 20px;
+        border-radius: 8px;
+        border: none;
+      }
+      option {
+        color: #2b2b2b !important;
+        background: white !important;
+        margin: 5px;
+      }
+    </style>
+    <script>
+      function model() {
+        let modal = document.querySelector("#modal");
+        modal.style.display = "block"
+      }
+      function back() {
+        let modal = document.querySelector("#modal");
+        modal.style.display = "none"
+      }
+    </script>
+  </head>
+  <body>
+    <dialog id="modal">
+      <div class="first" onclick="back()"><span>&leftarrow;</span>Back</div>
+      <div class="middle">
+        <img src="qr-design.png" style="width: 500px; height: 500px" alt="" />
+        <p>Your <strong>QR Code</strong> is ready to be used!</p>
+      </div>
+      <div class="last">
+        <select name="dowload" id="">
+          <option value="download" class="button">DOWNLOAD</option>
+          <option value="">JPEG <img src="frame.png" alt="" /></option>
+          <option value="">PNG <img src="frame.png" alt="" /></option>
+          <option value="">SVG <img src="frame.png" alt="" /></option>
+          <option value="">PDF <img src="frame.png" alt="" /></option>
+        </select>
+        <p>OR</p>
+        <select name="share" id="">
+          <option value="share" class="button">SHARE</option>
+          <option value="">Twitter <img src="twitter.png" alt="" /></option>
+          <option value="">Instagram <img src="insta.png" alt="" /></option>
+          <option value="">Whatsapp <img src="whatsapp.png" alt="" /></option>
+          <option value="">Facebook <img src="fb.png" alt="" /></option>
+          <option value="">Email <img src="email.png" alt="" /></option>
+          <option value="">Copy URL <img src="url.png" alt="" /></option>
+        </select>
+      </div>
+    </dialog>
+  </body>
+</html>
