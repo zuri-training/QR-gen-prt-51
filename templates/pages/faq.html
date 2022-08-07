@@ -1,4 +1,143 @@
 {% extends "base.html" %} 
-
 {% block content %}
+<main>
+    <div class="faq__container">
+        <section class="faq__intro">
+            <div class="faq__hero-text">
+            <h1>Hello there 👋. How can we help? </h1>
+            <p>Have an inquiry? Start by searching here</p>
+            </div>
+            <div class="faq__search-bar">
+            <form class="faq__search">
+                <input type="text" class="searchText" placeholder="&#x2315; Questions, keywords, topics">
+                <input type="submit" class="searchButton" value="Search" disabled></input>
+            </form>
+            </div>
+            <div class="faq__suggestion">
+            <p>Or choose a category to quickly find what you need.</p>
+            </div>
+            <div class="faq__choice-box">
+            <div class="faq__getting-started">
+                <span class="iconify" data-icon="akar-icons:flag"></span>
+                <h2>Getting Started</h2>
+            </div>
+            <div class="faq__customer-service">
+                <span class="iconify" data-icon="akar-icons:chat-question"></span>
+                <h2>Customer Service</h2>
+            </div>
+        </div>
+        </section>
+        <section class="faq__questions">
+        <div class="container text-control-1">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faqs-section">
+            <div class="faq accordion">
+                <div class="question-wrapper">
+                <div class="d-flex align-items-center">
+                    <h5 class="question" title="">
+                    What are QR codes?
+                    </h5>
+                    <hr class="faq__1">
+                </div>
+                <span class="iconify" data-icon="akar-icons:plus"></span>
+                </div>
+                <div class="answer-wrapper">
+                <p class="answer">QR code stands for Quick Response Code and is barcode type that was invented by Denso Wave
+                    in 1994. Get more information at
+                    <a href="https://en.wikipedia.org/wiki/QR_code" class="qr-code-wiki">Wikipedia.</a>
+                </p>
+                </div>
+            </div>
+            <div class="faq accordion">
+                <div class="question-wrapper">
+                <div class="d-flex align-items-center">
+                    <h5 class="question" title="">
+                    Uses of QR Codes?</h5>
+                    <hr class="faq__2">
+                </div>
+                <span class="iconify" data-icon="akar-icons:plus"></span>
+                </div>
+                <div class="answer-wrapper">
+                <p class="answer">Discounts vary depending on a number of factors, like the size of your group, duration of
+                    stay, special activities and more. Discuss your group travel requirements with your agent and they’ll be
+                    sure to find you all the discounts your group is eligible for.</p>
+                </div>
+            </div>
+            <div class="faq accordion">
+                <div class="question-wrapper">
+                <div class="d-flex align-items-center">
+                    <h5 class="question" title="">Are the QR Codes generated on this site restricted to personal use?</h5>
+                    <hr class="faq__3">
+                </div>
+                <span class="iconify" data-icon="akar-icons:plus"></span>
+                </div>
+                <div class="answer-wrapper">
+                <p class="answer">You name it! We has booked all kinds of group travel. We’re happy to arrange friends and
+                    family trips, destination weddings, group golf getaways, anniversaries and vow renewals, as well as
+                    get-togethers for clubs and other special interest groups.</p>
+                </div>
+            </div>
+            <div class="faq accordion">
+                <div class="question-wrapper">
+                <div class="d-flex align-items-center">
+                    <h5 class="question" title="">
+                    Do the created QR Codes expire?</h5>
+                    <hr class="faq__4">
+                </div>
+                <span class="iconify" data-icon="akar-icons:plus"></span>
+                </div>
+                <div class="answer-wrapper">
+                <p class="answer">Yes! For starters, groups can take advantage of flexible payment options, often with lower
+                    deposits required to secure each booking. In addition to discounts up-front, your group may be eligible
+                    for complimentary passengers, and qualify for more flexible terms. Be sure to ask your agent for details!
+                    Ask your Travel Professional for details!</p>
+                </div>
+            </div>
+            <div class="faq accordion">
+                <div class="question-wrapper">
+                <div class="d-flex align-items-center">
+                    <h5 class="question" title="">
+                    Is there a scan limit for the QR Codes?</h5>
+                    <hr class="faq__5">
+                </div>
+                <span class="iconify" data-icon="akar-icons:plus"></span>
+                </div>
+                <div class="answer-wrapper">
+                <p class="answer">Yes! For starters, groups can take advantage of flexible payment options, often with lower
+                    deposits required to secure each booking. In addition to discounts up-front, your group may be eligible
+                    for complimentary passengers, and qualify for more flexible terms. Be sure to ask your agent for details!
+                    Ask your Travel Professional for details!</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+    </div>
+  </main>
+  <script>
+    $(".question-wrapper").click(function () {
+      let container = $(this).parents(".accordion");
+      let answer = container.find(".answer-wrapper");
+      let trigger = container.find(".material-icons.drop");
+      let state = container.find(".question-wrapper");
+  
+      answer.animate({ height: "toggle" }, 100);
+  
+      if (trigger.hasClass("icon-expend")) {
+        trigger.removeClass("icon-expend");
+        // state.removeClass("active");
+      }
+      else {
+        trigger.addClass("icon-expend");
+        // state.addClass("active");
+      }
+  
+      if (container.hasClass("expanded")) {
+        container.removeClass("expanded");
+      }
+      else {
+        container.addClass("expanded");
+      }
+    });
+  </script>  
 {% endblock %}
