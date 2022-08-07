@@ -2573,9 +2573,10 @@ button {
     /* end of error page */
 }
 
+/* customize generator page*/
+
 img.gen-img {
     width: -webkit-fill-available;
-
 }
 
 .genPage-section {
@@ -2604,16 +2605,16 @@ img.gen-img {
 
 .gen-section2 {
     display: flex;
-   
+    justify-content: center;
     flex-direction: row;
     gap: 23px;
 
 }
 
 .qr-container {
-    padding-left: 25px;
-    top: 842px;
-    background: var(--gray-background);
+    /* padding-left: 25px;
+    top: 842px; */
+    background:#D9D9D9;
     /* Penumbra shadow */
     align-items: center;
     box-shadow: var(--shadow);
@@ -2624,8 +2625,7 @@ img.gen-img {
     background: var(--footer-background);
     box-shadow: var(--shadow);
     border-radius: 10px;
-    height: 100%;
-    width:100%;
+    width:50%;
 
 }
 
@@ -3145,6 +3145,7 @@ input[id="upload-file"] {
 .drag-section {
     /* width: 1059px;
         height: 680px; */
+    
     border: 5px dotted gray;
     display: flex;
     justify-content: center;
@@ -3158,7 +3159,7 @@ input[id="upload-file"] {
 @media screen and (max-width:712px) {
     .qr-container {
         top: 842px;
-        background: var(--gray-background);
+        background:#D9D9D9;
         /* Penumbra shadow */
         align-items: center;
         box-shadow: var(--shadow);
@@ -3187,7 +3188,13 @@ input[id="upload-file"] {
         gap: 3px;
 
     }
-
+    .shape-container {
+        background: var(--footer-background);
+        box-shadow: var(--shadow);
+        border-radius: 10px;
+        width: initial;
+        margin-bottom: 30px;
+    }
     .shapes-title {
         font-size: 20px;
         line-height: 90%;

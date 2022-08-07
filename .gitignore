@@ -64,7 +64,7 @@ local
 .env
 db.sqlite3
 __pycache__
-qr_codesApi/
+
 # Flask stuff:
 instance/
 .webassets-cache
