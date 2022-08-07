@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+   <section>
+    <div class='error-container'>
+        <div class="error-404-message">
+            <h1 class="oops-message">Oops</h1>
+        </div>
+        <div>
+            <div class="status-message">404 - PAGE NOT FOUND</div>
+            <P class="inner-error-404">
+                This page you are looking for might have have been remove had <br> 
+                its name name changed or temporarily unavailable
+            </P>
+        </div>
+        <div class="error-404-button">
+            <a style="color:white" href="{% url 'index' %}">GO TO HOMEPAGE</a>
+        </div>
+    </div>
+   </section>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+{% extends "base.html" %} {% block content %}{% load static %}
+<div class="containerone">
+  <div class="one">
+    <div class="Head">
+      <img src="{%static 'images/backgroundgroup.png'%}" class="backgroundimage" />
+      <h1>Perform that action in codes.</h1>
+      <p>
+        Qr gen is a platform you can get your qr-code generation done in a
+        secure, easy and fast method. Customize each QR-code just to fit you
+        personal need.
+      </p>
+      <button><a href="#"> GENERATE QR CODE</a></button>
+    </div>
+    <div class="animation">
+      <lottie-player
+        src="https://assets4.lottiefiles.com/packages/lf20_eruot0pp.json"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay
+      ></lottie-player>
+      <div class="extra">
+        <button><a href="#"> GENERATE QR CODE</a></button>
+      </div>
+    </div>
+  </div>
+  <div class="two">
+    <div class="info">
+      <p>What should you know about <span>QR-CODE</span> and our services.</p>
+      <button><a href="#">RESOURCES</a></button>
+    </div>
+    <div class="image1">
+      <img src="{%static 'images/undraw_teaching_re_g7e3 1.png'%}" />
+      <div class="extra2">
+        <button><a href="#">RESOURCES</a></button>
+      </div>
+    </div>
+  </div>
+  <div class="three">
+    <h1>How do I create a QR Code?</h1>
+    <p>We will show you how in just three simple steps</p>
+  </div>
+  <div class="containertwo">
+    <div class="centerline"></div>
+    <div>
+      <div class="numbericon">
+        <div>1</div>
+      </div>
+      <div class="four">
+        <div class="framefour">
+          <img src="{%static 'images/Frame 81.png'%}" />
+        </div>
+        <div class="section">
+          <div class="textfour">
+            <h1>Select which type</h1>
+          </div>
+          <div class="text">
+            <p>
+              Your may choose from website URL, plain text, PDF file, social
+              links,phone number and email.However. these free QR codes are not
+              editable and trackable
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="numbericon">
+        <div>2</div>
+      </div>
+      <div class="five">
+        <div class="section">
+          <div class="textfive">
+            <h1>Design QR code</h1>
+          </div>
+          <div class="text" id="textfive">
+            <p>
+              You can make your QR code look like what you want, we allow you to
+              change the shape,color and add a logo to the center of the QR code
+            </p>
+          </div>
+        </div>
+        <div class="framefive">
+          <img src="{%static 'images/Frame 82.png'%}" />
+        </div>
+      </div>
+      <div class="numbericon" id="iconthree">
+        <div>3</div>
+      </div>
+      <div class="six">
+        <div class="framesix">
+          <img src="{%static 'images/Frame 83.png'%}" />
+        </div>
+        <div class="section">
+          <div class="textsix">
+            <h1>Download or share code</h1>
+          </div>
+          <div class="text">
+            <p>
+              You can download QR code in the different format like png,jpeg and
+              pdf or share your code via social media and email
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="buttonsix">
+    <button><a href="#">GENERATE QR CODE</a></button>
+  </div>
+
+  <div class="last">
+    <div class="lastheading">
+      <h1>Did we state that we’re avaliable always?</h1>
+    </div>
+    <div class="lastdetail">
+      <p>
+        We’re proud to provide our customers with always-on, 24/7 support.
+        Morning, noon, or night our team is logged on and ready to help. if
+        you’ve got a question, we’re here to answer it.
+      </p>
+      <button>
+        <a href="#">Contact Us </a><span class="iconify" data-icon="bytesize:arrow-right"></span></i>
+      </button>
+    </div>
+  </div>
+</div>
+{% endblock content %}

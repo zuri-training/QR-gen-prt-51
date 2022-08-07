@@ -1,0 +1,194 @@
+{% extends "base.html" %}{% load static %} {% block content %}
+  <section class="custom-section"> 
+      <!-- section1 -->
+    <div class="custom-container">
+      <div class="logo-container">
+        <div class="qr-logo">
+            <img class="logo" src="{% static 'images/qr-gen-logo.png' %}" alt="logo" />
+        </div>
+        <div class="icon-content">
+              <div><img src="{% static 'images/clock.png' %}" alt="clock"></div>
+              <div class="message">Generate your QR code in under 45 seconds</div>
+
+              <div><img src="{% static 'images/scan.png' %}" alt="scan"></div>
+              <div class="message">Unlimited use of our QR code scanner</div>      
+        </div>
+      </div>
+
+      <!-- section2 -->
+      <div class="data-heading">
+        <h3>Data Type</h3>
+      </div>
+      <div class="custom-section2">
+        <div class="media">
+        <div class="media-container">
+          <div class="media-title">
+              <h5>Popular</h5>
+          </div>
+          <div class="media-content">
+<<<<<<< HEAD
+                <button class="media-btn">WEBSITE URL</button>
+                <button class="media-btn">PDF FILE</button>
+                <button class="media-btn">PLAIN TEXT</button>
+                <button class="media-btn">SOCIAL LINK</button>
+=======
+                <button onclick="document.getElementById('form01').style.display='block'">WEBSITE URL</button>
+                <button onclick="document.getElementById('form01').style.display='block'">PDF FILE</button>
+                <button onclick="document.getElementById('form02').style.display='block'">PLAIN TEXT</button>
+>>>>>>> 80d2863a72f8cfd5afc9d05b67d785720566bfca
+          </div>
+          <div class="media-title">
+              <h5>Social Links</h5>
+          </div>
+              <div class="media-content">
+<<<<<<< HEAD
+                <button class="media-btn">YOUTUBE</button>
+                <button class="media-btn">INSTAGRAM</button>
+                <button class="media-btn">WHATSAPP</button>
+                <button class="media-btn">FACEBOOK</button>
+                <button class="media-btn">LINKEDIN</button>
+                <button class="media-btn">TWITTER</button>
+=======
+                <button onclick="document.getElementById('form01').style.display='block'">YOUTUBE</button>
+                <button onclick="document.getElementById('form01').style.display='block'">INSTAGRAM</button>
+                <button onclick="document.getElementById('form01').style.display='block'">WHATSAPP</button>
+                <button onclick="document.getElementById('form01').style.display='block'">FACEBOOK</button>
+                <button onclick="document.getElementById('form01').style.display='block'">LINKEDIN</button>
+                <button onclick="document.getElementById('form01').style.display='block'">TWITTER</button>
+>>>>>>> 80d2863a72f8cfd5afc9d05b67d785720566bfca
+              </div>
+              <div class="media-title">
+              <h5>Business Links</h5>
+              </div>
+              <div class="media-content">
+<<<<<<< HEAD
+                <button class="media-btn">PHONE NUMBER</button>
+                <button class="media-btn">EMAIL ADDRESS</button>
+              </div>
+              <div class="media-title">
+              <h5>Predefined Messages</h5>
+              </div>
+              <div class="media-content">
+                <button class="media-btn">PREDEFINED SMS</button>
+                <button class="media-btn">PREDEFINED EMAIL</button>
+=======
+                <button onclick="document.getElementById('form03').style.display='block'">PHONE NUMBER</button>
+                <button onclick="document.getElementById('form04').style.display='block'">EMAIL ADDRESS</button>
+              </div>
+              <div class="media-title">
+              <h5>Predefined Message</h5>
+              </div>
+              <div class="media-content">
+                <button onclick="document.getElementById('form06').style.display='block'">PREDEFINED SMS</button>
+                <button onclick="document.getElementById('form05').style.display='block'">PREDEFINED EMAIL</button>
+>>>>>>> 80d2863a72f8cfd5afc9d05b67d785720566bfca
+              </div>
+          </div>
+          </div>
+          <div class="qr-code">
+          <div class="qr-code-container">
+             <img src="{% static 'images/Qr-image.png' %}" alt="code" srcset="" class="qr-image"/>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="qr-overlay" id="form01">
+      <form action="" method="post" class="content-overlay animate">
+        <div class="img-container">
+          <span onclick="document.getElementById('form01').style.display='none'" class="close" title="Close Form">&times;</span>
+          <img src="{% static 'images/qr-gen-logo.png' %}" alt="qr-gen logo" class="web-logo">
+        </div>
+        <div class="form-container">
+          <label for="url-for-code">URL</label><br>
+          <input type="url" id="qr-content" placeholder="https://www.QR-Gen.com" name="url-for-code" required>
+          <h3>Insert a URL to a website or a page</h3>
+          <div class="btn-container">
+            <button type="submit" class="btn-overlay">CREATE  &RightArrow;</button>
+          </div>
+        </div>
+      </form>
+  </div>
+  <div class="qr-overlay" id="form02">
+      <form action="" method="post" class="content-overlay animate">
+        <div class="img-container">
+          <span onclick="document.getElementById('form02').style.display='none'" class="close" title="Close Form">&times;</span>
+          <img src="{% static 'images/qr-gen-logo.png' %}" alt="qr-gen logo" class="web-logo">
+        </div>
+        <div class="form-container">
+          <label for="text-for-code">TEXT</label><br>
+          <textarea name="text-for-code" id="qr-content"></textarea>
+          <div class="btn-container">
+            <button type="submit" class="btn-overlay">CREATE  &RightArrow;</button>
+          </div>
+        </div>
+      </form>
+  </div>
+  <div class="qr-overlay" id="form03">
+      <form action="" method="post" class="content-overlay animate">
+        <div class="img-container">
+          <span onclick="document.getElementById('form03').style.display='none'" class="close" title="Close Form">&times;</span>
+          <img src="{% static 'images/qr-gen-logo.png' %}" alt="qr-gen logo" class="web-logo">
+        </div>
+        <div class="form-container">
+          <label for="phone-for-code">Phone Number</label><br>
+          <input type="tel" name="phone-for-code" id="qr-content" placeholder="000-0000-0000" required>
+          <div class="btn-container">
+            <button type="submit" class="btn-overlay">CREATE  &RightArrow;</button>
+          </div>
+        </div>
+      </form>
+  </div>
+  <div class="qr-overlay" id="form04">
+      <form action="" method="post" class="content-overlay animate">
+        <div class="img-container">
+          <span onclick="document.getElementById('form04').style.display='none'" class="close" title="Close Form">&times;</span>
+          <img src="{% static 'images/qr-gen-logo.png' %}" alt="qr-gen logo" class="web-logo">
+        </div>
+        <div class="form-container">
+          <label for="email-for-code">Email Address</label><br>
+          <input type="email" name="email-for-code" id="qr-content" placeholder="AnjolaAkinosun@gmail.com" required>
+          <div class="btn-container">
+            <button type="submit" class="btn-overlay">CREATE  &RightArrow;</button>
+          </div>
+        </div>
+      </form>
+  </div>
+  <div class="qr-overlay" id="form05">
+      <form action="" method="post" class="content-overlay animate">
+        <div class="img-container">
+          <span onclick="document.getElementById('form05').style.display='none'" class="close" title="Close Form">&times;</span>
+          <img src="{% static 'images/qr-gen-logo.png' %}" alt="qr-gen logo" class="web-logo">
+        </div>
+        <div class="form-container">
+          <label for="email-for-code">Email Address</label><br>
+          <input type="email" name="email-for-code" id="qr-content" placeholder="AnjolaAkinosun@gmail.com" required><br>
+          <label for="email-subject">Email Subject</label><br>
+          <input type="text" name="email-subject" id="qr-content"><br>
+          <label for="email-message">Message</label><br>
+          <textarea name="email-message" id="qr-content"></textarea><br>
+          <div class="btn-container">
+            <button type="submit" class="btn-overlay">CREATE  &RightArrow;</button>
+          </div>
+        </div>
+      </form>
+  </div>
+  <div class="qr-overlay" id="form06">
+      <form action="" method="post" class="content-overlay animate">
+        <div class="img-container">
+          <span onclick="document.getElementById('form06').style.display='none'" class="close" title="Close Form">&times;</span>
+          <img src="{% static 'images/qr-gen-logo.png' %}" alt="qr-gen logo" class="web-logo">
+        </div>
+        <div class="form-container">
+          <label for="number-for-code">Phone Number</label><br>
+          <input type="tel" name="number-for-code" id="qr-content" placeholder="000-0000-0000" required><br>
+          <label for="sms-message">Message</label><br>
+          <textarea name="sms-message" id="qr-content"></textarea><br>
+          <div class="btn-container">
+            <button type="submit" class="btn-overlay">CREATE  &RightArrow;</button>
+          </div>
+        </div>
+      </form>
+  </div>
+  {% endblock %}

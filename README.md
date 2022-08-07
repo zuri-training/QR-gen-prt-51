@@ -1,30 +1,113 @@
 <p align="center">
   <a href="" rel="noopener">
- <img src=""></a>
+ <img src="static/images/logo.png" alt="Project logo"></a>
 </p>
-<h3 align="center">QR Code Generator </h3>
+<h3 align="center">QR-CODE GEN</h3>
 
 <div align="center">
 
-
-[![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
-
+### Links to Documents
+[Figma board](https://www.figma.com/file/Iwa6c7uuZmtmvMQiXzjSq4?)<br>
+[Google Docs](https://docs.google.com/document/d/1CR0OWttM92_KzSb2btf34lFwD4Tz6wopEoSTMZp_euA/edit)
 </div>
 
 ---
 
-<p align="center"> DJANGO PROJECT QR-CODE GENERATOR
+<p align="center"> QR-CODE GENERATING PLAFORM 
     <br> 
 </p>
 
 ## 📝 Table of Contents
 
+- [📝 Table of Contents](#-table-of-contents)
+- [🧐 Problem Statement <a name = "problem_statement"></a>](#-problem-statement-)
+- [💡 Idea / Solution <a name = "idea"></a>](#-idea--solution-)
+- [⛓️ Dependencies / Limitations <a name = "limitations"></a>](#️-dependencies--limitations-)
+- [🚀 Future Scope <a name = "future_scope"></a>](#-future-scope-)
+- [🏁 Getting Started <a name = "getting_started"></a>](#-getting-started-)
+  - [How to run project](#how-to-run-project)
+- [🎈 Usage <a name="usage"></a>](#-usage-)
+- [⛏️ Built With <a name = "tech_stack"></a>](#️-built-with-)
+- [✍️ Authors <a name = "authors"></a>](#️-authors-)
+- [🎉 Acknowledgments <a name = "acknowledgments"></a>](#-acknowledgments-)
+
+- [🎈 Usage <a name="usage"></a>](#-usage-)
+- [⛏️ Built With <a name = "tech_stack"></a>](#️-built-with-)
+- [🎉 Acknowledgments <a name = "acknowledgments"></a>](#-acknowledgments-)
+
+## 🧐 Problem Statement <a name = "problem_statement"></a>
+
+QR codes are fast becoming popular these days. Most people are drifting away from the traditional mode of advertising/marketing and just storing their digital information online in QR codes. QR codes are everywhere we go now; banks, hospitals, hotels, restaurants etc. But the question on everyone’s lips is how do they come about these codes?
+
+These codes are generated online by an online software called QR code generator. From secondary research, a lot of these platforms are not simplified enough for beginners to use. And to tackle that problem, we will be following the popular saying: “Less is more.” We will design a platform that allows users to generate QR codes with less hassle. The QR code generated can be downloaded, shared online amongst many other features and when scanned will lead to the user’s portfolio website or catalogue.
+
+## 💡 Idea / Solution <a name = "idea"></a>
+
+A platform that allows users generate QR code for data inputted while also providing analytics and metrics.
+
+The challenge
+User: Unauthenticated
+
+Visit the platform to view basic information about it
+View and Interact with the documentation
+Register to view more details
+No access to use until registered
+User: Authenticated
+
+Full access to the platform
+Allow setting on what should happen when qr is scanned - give at least 2 options
+Allow user to download (allow png, jpeg and pdf download format), or share code by email or social media
+Allow user save data and come back to it.
+
+## ⛓️ Dependencies / Limitations <a name = "limitations"></a>
+
+- What are the dependencies of your project?
+- Describe each limitation in detailed but concise terms
+- Explain why each limitation exists
+- Provide the reasons why each limitation could not be overcome using the method(s) chosen to acquire.
+- Assess the impact of each limitation in relation to the overall findings and conclusions of your project, and if
+  appropriate, describe how these limitations could point to the need for further research.
+
+## 🚀 Future Scope <a name = "future_scope"></a>
+ To get to the point where QR codes can be used for almost everything(like transfer of fund, sharing of account details e.t.c)
+
+## 🏁 Getting Started <a name = "getting_started"></a>
+
+These instructions will get you a copy of the project up and running on your local machine for development
+and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+
+### How to run project
+
+What things you need to install the software and how to install them.
+
+```
 - Fork the repository
 - clone  repository to you local machine 
 - create a new virtual environment 
 - install dependencies using ## pip3 install -r requirements.txt
 - run migrations 
 - python manage.py  runserver
+```
+## 🎈 Usage <a name="usage"></a>
+
+Add notes about how to use the system.
+
+## ⛏️ Built With <a name = "tech_stack"></a>
+
+- [mysqli]() - mysqli -Database
+- [Django]() - Django rest Framework
+- [Html]() -HTML, Css
+- [NodeJs]() - Java Scripts
+
+## ✍️ Authors <a name = "authors"></a>
+
+- []() - Idea & Initial work
+
+See also the list of [contributors]()
+who participated in this project.
+
+## 🎉 Acknowledgments <a name = "acknowledgments"></a>
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- References
