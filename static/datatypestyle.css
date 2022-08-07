@@ -187,7 +187,7 @@ textarea{
 
 @media screen and (max-width: 600px) {
     .logo-container {
-        display: grid;
+       display: grid;
        flex-direction: row;
        place-content: center;
        place-items: center;
@@ -212,7 +212,7 @@ textarea{
    .icon-content {
        display: flex;
        align-items: center;
-       flex-direction: column-reverse;
+       flex-direction: column;
        width: 80%;
        gap: 10px;
    }
@@ -220,10 +220,10 @@ textarea{
        margin-right: 2%;
    }
    .qr-code {
-       width: 100%;
+       width: 80%;
    }
    .qr-code-container .qr-image {
-       width: 100%;
+       width: 80%;
    }
 }
    
@@ -254,7 +254,7 @@ textarea{
     .icon-content {
         display: flex;
         align-items: center;
-        flex-direction: column-reverse;
+        flex-direction: column;
         width: 80%;
         gap: 10px;
     }
@@ -265,9 +265,9 @@ textarea{
         grid-template-columns: 1fr 1fr;
     }
     .qr-code {
-        width: 95%;
+        width: 80%;
     }
     .qr-code-container .qr-image {
-        width: 95%;
+        width: 80%;
     }
 }
