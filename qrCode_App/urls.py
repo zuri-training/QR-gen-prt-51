@@ -10,4 +10,6 @@ urlpatterns = [
     path('custom/', CUSTOMView.as_view(), name='custom'),
     path('dashboard/', DASHBOARDView.as_view(), name='dashboard'),
      path('test/', TestView.as_view(), name='test_page'),
+
+    
 ]
