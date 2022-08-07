@@ -22,7 +22,7 @@
 - [📝 Table of Contents](#-table-of-contents)
 - [🧐 Problem Statement <a name = "problem_statement"></a>](#-problem-statement-)
 - [💡 Idea / Solution <a name = "idea"></a>](#-idea--solution-)
-- [⛓️ Dependencies / Limitations <a name = "limitations"></a>](#️-dependencies--limitations-)
+- [⛓️ Dependencies <a name = "limitations"></a>](#️-dependencies-)
 - [🚀 Future Scope <a name = "future_scope"></a>](#-future-scope-)
 - [🏁 Getting Started <a name = "getting_started"></a>](#-getting-started-)
   - [How to run project](#how-to-run-project)
@@ -59,14 +59,12 @@ Allow setting on what should happen when qr is scanned - give at least 2 options
 Allow user to download (allow png, jpeg and pdf download format), or share code by email or social media
 Allow user save data and come back to it.
 
-## ⛓️ Dependencies / Limitations <a name = "limitations"></a>
+## ⛓️ Dependencies  <a name = "limitations"></a>
 
-- What are the dependencies of your project?
-- Describe each limitation in detailed but concise terms
-- Explain why each limitation exists
-- Provide the reasons why each limitation could not be overcome using the method(s) chosen to acquire.
-- Assess the impact of each limitation in relation to the overall findings and conclusions of your project, and if
-  appropriate, describe how these limitations could point to the need for further research.
+- django third Party libarys
+- django rest framework for the api authentication
+- swagger libary for the api documentation 
+
 
 ## 🚀 Future Scope <a name = "future_scope"></a>
  To get to the point where QR codes can be used for almost everything(like transfer of fund, sharing of account details e.t.c)
@@ -97,7 +95,7 @@ Add notes about how to use the system.
 - [mysqli]() - mysqli -Database
 - [Django]() - Django rest Framework
 - [Html]() -HTML, Css
-- [NodeJs]() - Java Scripts
+- [Javascripts]() - Java Scripts
 
 ## ✍️ Authors <a name = "authors"></a>
 
