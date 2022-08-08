@@ -23,12 +23,17 @@ class QrCode(models.Model):
         return self.user.full_name
 
     def save(self, *args, **kwargs):
-        code_image = qrcode.make(self.qr_code_text)
-        canvas = Image.new('RGB', (800,800), 'white')
-        draw = ImageDraw.Draw(canvas)
-        canvas.paste(code_image)
+        qr = qrcode.QRCode(
+            version=1,
+            error_correction=qrcode.constants.ERROR_CORRECT_L,
+            box_size=10,
+            border=4,
+        )
+        qr.add_data(self.qr_code_text)
+        qr.make(fit=True)
+        img = qr.make_image()
+        img_io = BytesIO()
+        img.save(img_io, format='PNG')
         file_name = '{0}_{1}.png'.format(self.user.full_name.split(" ")[0], self.qr_code_date)
-        output = BytesIO()
-        canvas.save(output, format='PNG')
-        self.qr_code.save(file_name, File(output), save=False)
+        self.qr_code.save(file_name, File(img_io), save=False)
         super().save(*args, **kwargs)
