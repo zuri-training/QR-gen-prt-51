@@ -1,3 +1,4 @@
 Slack username : Mariam Aruna
+github username : Merocodes
 track : Product Design
 contribution : About us page (https://github.com/zuri-training/QR-gen-prt-51/issues/28)
