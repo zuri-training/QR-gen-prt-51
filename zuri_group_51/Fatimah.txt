@@ -1,0 +1,4 @@
+Slack username : Fatimah 
+track : product design
+contributions : research (https://github.com/zuri-training/QR-gen-prt-51/issues/22)
+		create QR page (https://github.com/zuri-training/QR-gen-prt-51/issues/30)
