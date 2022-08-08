@@ -130,7 +130,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-<<<<<<< HEAD
+
 # CLOUDINARY_STORAGE={
 #     'CLOUD_NAME':'dtyafclf3',
 #     'API_KEY':'866113161722838',
@@ -138,10 +138,9 @@ USE_TZ = True
 # }
 
 # DEFAULT_FILE_STORAGE='cloudinary_storage.storage.MediaCloudinaryStorage'
-=======
+
 # Session configuration
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
->>>>>>> 41d10f2a60e658be93f542a32ca994dc24da07b0
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
