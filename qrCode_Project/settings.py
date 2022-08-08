@@ -1,3 +1,4 @@
+from distutils.debug import DEBUG
 from pathlib import Path
 import os
 from wsgiref.simple_server import sys_version
@@ -13,7 +14,8 @@ SECRET_KEY = env.str(
     default="django-insecure-x0dp25v51=wfb3lo5wibvw=t32v13oof#-b(_!f@-=+293m9j-",
 )
 
-DEBUG = env.bool("DEBUG", default=False)
+# DEBUG = env.bool("DEBUG", default=False)
+DEBUG = True
 
 ALLOWED_HOSTS = [".herokuapp.com", "localhost", "127.0.0.1"]
 

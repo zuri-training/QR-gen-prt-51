@@ -9,7 +9,7 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('home')
+            return redirect('login')
     else:
         form = SignUpForm()
     return render(request, 'accounts/signup.html', {'form': form})
@@ -18,7 +18,7 @@ def signup(request):
 def log_in(request):
     error = False
     if request.user.is_authenticated:
-        return redirect('home')
+        return redirect('dashboard')
     if request.method == 'POST':
         form = LogInForm(request.POST)
         if form.is_valid():
@@ -27,7 +27,7 @@ def log_in(request):
             user = authenticate(email=email, password=password)
             if user:
                 login(request, user)
-                return redirect('home')
+                return redirect('dashboard')
             else:
                 error = True
     else:
