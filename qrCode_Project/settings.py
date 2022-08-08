@@ -3,6 +3,9 @@ from pathlib import Path
 import os
 from wsgiref.simple_server import sys_version
 from environs import Env
+# import cloudinary
+# import cloudinary.uploader
+# import cloudinary.api
 
 env = Env()
 env.read_env()
@@ -40,6 +43,7 @@ INSTALLED_APPS = [
     "qrcode",
     "drf_spectacular",
     "drf_yasg",
+    'cloudinary',
 ]
 
 # REST_FRAMEWORK SETTINGS
@@ -125,6 +129,15 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 
 USE_TZ = True
+
+
+# CLOUDINARY_STORAGE={
+#     'CLOUD_NAME':'dtyafclf3',
+#     'API_KEY':'866113161722838',
+#     'API_SECRET':'rW0QqAVEUQleXMw0RboCgLf6KrM'
+# }
+
+# DEFAULT_FILE_STORAGE='cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Session configuration
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
