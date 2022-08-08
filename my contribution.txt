@@ -1,4 +1,5 @@
 Slack username: Ayoposi
+Github username: malik200
 TRACK:PRODUCT DESIGN
 MY CONTRIBUTION TO THE QR-GEN PROJECT
 1) LANDING PAGE : https://github.com/zuri-training/QR-gen-prt-51/issues/23
