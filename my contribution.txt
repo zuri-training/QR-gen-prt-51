@@ -1,7 +1,7 @@
 Slack username: Ayoposi
 TRACK:PRODUCT DESIGN
 MY CONTRIBUTION TO THE QR-GEN PROJECT
-1) LANDING PAGE :https://github.com/zuri-training/QR-gen-prt-51/issues/23
-2) REGISTR AND SIGN IN PAGE:https://github.com/zuri-training/QR-gen-prt-51/issues/24
+1) LANDING PAGE : https://github.com/zuri-training/QR-gen-prt-51/issues/23
+2) REGISTR AND SIGN IN PAGE : https://github.com/zuri-training/QR-gen-prt-51/issues/24
 3) ERROR 404 PAGE : https://github.com/zuri-training/QR-gen-prt-51/issues/33
 4) RESEARCH : https://github.com/zuri-training/QR-gen-prt-51/issues/22
