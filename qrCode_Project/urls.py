@@ -1,5 +1,7 @@
 from django.contrib import admin
 from django.conf import settings
+from django.conf.urls.static import static
+from django.conf.urls import handler400, handler403,handler404,handler500
 from django.urls import path, include
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
@@ -37,7 +39,7 @@ urlpatterns = [
         schema_view.with_ui("swagger", cache_timeout=0),
         name="schema-swagger-ui",
     ),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # views for custom error page
 handler404 = "qrCode_App.views.custom_page_not_found_view"
