@@ -1,5 +1,7 @@
+from distutils.debug import DEBUG
 from pathlib import Path
 import os
+from wsgiref.simple_server import sys_version
 from environs import Env
 
 env = Env()
@@ -12,7 +14,8 @@ SECRET_KEY = env.str(
     default="django-insecure-x0dp25v51=wfb3lo5wibvw=t32v13oof#-b(_!f@-=+293m9j-",
 )
 
-DEBUG = env.bool("DEBUG", default=False)
+# DEBUG = env.bool("DEBUG", default=False)
+DEBUG = True
 
 ALLOWED_HOSTS = [".herokuapp.com", "localhost", "127.0.0.1"]
 
@@ -123,6 +126,8 @@ USE_I18N = True
 
 USE_TZ = True
 
+# Session configuration
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
@@ -134,11 +139,14 @@ STATIC_DIR = BASE_DIR / STATIC_URL
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 # media file
-MEDIA_URL = "/assets/"
-MEDIA_DIR = BASE_DIR / "assets/"
+MEDIA_URL = '/media_folder/'
+MEDIA_DIR= BASE_DIR /'media_folder'
 MEDIA_ROOT = MEDIA_DIR
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGOUT_REDIRECT_URL = 'index'
