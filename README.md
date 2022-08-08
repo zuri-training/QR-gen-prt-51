@@ -99,13 +99,23 @@ Add notes about how to use the system.
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- []() - Idea & Initial work
+- []() - Ayoposi
+- []() - Hephaestus
+- []() - saffie
+- []() - tochukwu
+- []() - mariam aruba
+- []() - lizbeth
+- []() - ifezko
+- []() - AJ
+- []() - oluwanifise odufuwa
+- []() - Ruth
+- []() - precious
+- []() - mariam adekunle
+- []() - mujerheed
+- []() - bieefilled
+- []() - Abdulhameed
+- []() - king atod
 
-See also the list of [contributors]()
-who participated in this project.
 
-## 🎉 Acknowledgments <a name = "acknowledgments"></a>
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+
