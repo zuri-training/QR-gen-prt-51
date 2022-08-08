@@ -21,9 +21,7 @@ class DASHBOARDView(TemplateView):
     template_name = 'pages/dashboard.html'
 class TestView(TemplateView):
     template_name = "components/emaillink.html"
-
-    
-    
+ 
 # custom views for error pages
 def custom_page_not_found_view(request, exception):
     return render(request, "404.html")
