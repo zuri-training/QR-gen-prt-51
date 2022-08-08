@@ -1,0 +1,3 @@
+Slack Username : LizBeth
+Track : Product design
+Contributions : Mobile and Web FAQ (https://github.com/zuri-training/QR-gen-prt-51/issues/25)
