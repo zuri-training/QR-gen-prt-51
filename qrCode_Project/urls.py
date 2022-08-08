@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 from django.conf.urls import handler400, handler403,handler404,handler500
 from django.urls import path, include
 from django.views.generic.base import TemplateView
@@ -8,7 +10,7 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='pages/landingPage.html'), name='home'),
     path('accounts/', include(('accounts.urls', 'accounts'), namespace='accounts')),
     path('', include('qrCode_App.urls')),
-]
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # views for custom error page
 handler404 = 'qrCode_App.views.custom_page_not_found_view'
