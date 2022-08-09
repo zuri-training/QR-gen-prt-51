@@ -1,9 +1,7 @@
-from tkinter import Canvas
 from django.db import models
 from io import BytesIO
 from django.utils import timezone
 from django.core.files import File
-from PIL import Image, ImageDraw
 import qrcode
 
 def get_upload_path(instance, filename):

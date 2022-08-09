@@ -11,22 +11,22 @@
     </div>
     <aside class="left-pane">
         <div class="selected-code">
-            <img class="qr-image" src="{% static 'images/dummy_image.png' %}" alt="">
+            <img class="qr-image" src="{{qr_code_selected.qr_code.url}}" alt="">
         </div>
         <div class="create-qr">
             <button type="button" onclick="location.href='{% url 'datatype' %}'">CREATE QR. CODE</button>
         </div>
         <div class="qr-type">
-            <p>Click a QR Code</p>
+            <p>{{qr_code_selected.qr_type}}</p>
         </div>
         <div class="link-content">
-            <h6>Click a QR code</h6>
+            <h6>{{qr_code_selected.qr_msg}}</h6>
         </div>
         <div class="edit-code">
-            <button type="button" disabled onclick="location.href='#'">Edit Code</button>
+            <button type="button" onclick="location.href='#'">Edit Code</button>
         </div>
         <div class="download-code">
-            <button type="button" disabled onclick="location.href='#'">Download Code</button>
+            <button download type="button" onclick="location.href='{% url 'code_download' pk=qr_code_selected.pk %}'">Download Code</button>
         </div>
         <table class="total-table">
             <tr>
