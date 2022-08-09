@@ -23,7 +23,7 @@
             <h6>{{qr_code_selected.qr_msg}}</h6>
         </div>
         <div class="edit-code">
-            <button type="button" onclick="location.href='#'">Edit Code</button>
+            <button type="button" onclick="location.href='{% url 'code_edit' pk=qr_code_selected.pk %}'">Edit Code</button>
         </div>
         <div class="download-code">
             <button download type="button" onclick="location.href='{% url 'code_download' pk=qr_code_selected.pk %}'">Download Code</button>
