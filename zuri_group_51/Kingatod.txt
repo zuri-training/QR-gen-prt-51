@@ -1,0 +1,23 @@
+Slack username: King Atod
+
+Github username : Kingatod
+
+Track : Full-stack 
+
+Contributions :
+
+I was assigned the frontend development of the header and footer of the webpages : https://github.com/zuri-training/QR-gen-prt-51/issues/1 
+
+Developed the header and footer: https://github.com/zuri-training/QR-gen-prt-51/pull/36 
+
+Worked on the mobile view as well to be web responsive: https://github.com/zuri-training/QR-gen-prt-51/pull/51/files 
+
+Developed a dropdown navbar for the mobile view: https://github.com/zuri-training/QR-gen-prt-51/pull/58/files 
+
+Fixed the Logo not displaying: https://github.com/zuri-training/QR-gen-prt-51/pull/55 
+
+Fixed the button overlay of the login and sign up: https://github.com/zuri-training/QR-gen-prt-51/pull/64 
+
+Linked the anchor tags in both the header and footer to their respective pages: https://github.com/zuri-training/QR-gen-prt-51/pull/67 
+
+Helped a teammate make changes to ___ page: Slack username: Anjola Akinsoun github username : anjolaakinosun track : product design Contributions : Research
