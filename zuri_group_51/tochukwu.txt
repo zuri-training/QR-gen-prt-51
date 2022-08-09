@@ -1,4 +1,4 @@
-Slack name : TochUkwu
+Slack name : ToChUkWu
 github Name: Tvybez
 track : product design
 contributions: 	create Qr page (https://github.com/zuri-training/QR-gen-prt-51/issues/30)
