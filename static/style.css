@@ -681,9 +681,13 @@ hr {
     box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
     padding: 24px 20px;
 }
+.selected-code{
+    filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.2));
+    border-radius: 15px;
+}
 .qr-image{
-    width: auto;
-    height: auto;
+    width: 245px;
+    height: 228px;
     border-radius: 8px;  
 }
 .left-pane .create-qr {
@@ -824,7 +828,7 @@ button[type="reset"]:hover {
 .code-list{
     display: flex;
     flex-direction: column;
-    height: 850px;
+    height: 750px;
     align-items: flex-start;
     justify-content: flex-start;
     padding: 39px 12px 39px 12px;
@@ -848,9 +852,9 @@ button[type="reset"]:hover {
     border-radius: 8px;
     flex-wrap: wrap;
 }
-.code-detail img{
+.code-detail a img{
     width: 190px;
-    height: 200px;
+    height: 190px;
     border-radius: 15px;
     flex: none;
     order: 0;
@@ -1024,7 +1028,7 @@ button[type="reset"]:hover {
         padding: 0px;   
         gap: 15px;
     }
-    .code-detail img{
+    .code-detail a img{
         width: 100px;
         height: 100px;
         border-radius: 15px;
