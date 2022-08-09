@@ -1,5 +1,8 @@
-{% extends "base.html" %}{% load static %} {% block content %}
-  <section class="custom-section"> 
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load static %} 
+{% block content %}
+<section class="custom-section"> 
       <!-- section1 -->
     <div class="custom-container">
       <div class="logo-container">
@@ -14,48 +17,58 @@
               <div class="message">Unlimited use of our QR code scanner</div>      
         </div>
       </div>
-
+    </div>
       <!-- section2 -->
-      <div class="data-heading">
-        <h3>Data Type</h3>
-      </div>
-      <div class="custom-section2">
-        <div class="media">
-        <div class="media-container">
-          <div class="media-title">
-              <h5>Popular</h5>
-          </div>
-          <div class="media-content">
-                <button>WEBSITE URL</button>
-                <button>PDF FILE</button>
-                <button>PLAIN TEXT</button>
-                <button>SOCIAL LINK</button>
-          </div>
-          <div class="media-title">
-              <h5>Social Links</h5>
-          </div>
-              <div class="media-content">
-                <button>YOUTUBE</button>
-                <button>INSTAGRAM</button>
-                <button>WHATSAPP</button>
-                <button>FACEBOOK</button>
-                <button>LINKEDIN</button>
-                <button>TWITTER</button>
+    <div class="data-heading">
+      <h3>Data Type</h3>
+    </div>
+    <div class="custom-section2">
+          <div class="media">
+            <div class="media-container">
+              <div class="media-title">
+                  <h5>Popular</h5>
+              </div>
+              <div>
+                <form action="popular" class="media-content" method="post">
+                  {% csrf_token %}
+                  <button name="website-url">WEBSITE URL</button>
+                  <button name="pdf-file">PDF FILE</button>
+                  <button name="plain-text">PLAIN TEXT</button>
+                </form>  
               </div>
               <div class="media-title">
-              <h5>Business Links</h5>
+                  <h5>Social Links</h5>
               </div>
-              <div class="media-content">
-                <button>PHONE NUMBER</button>
-                <button>EMAIL ADDRESS</button>
+              <div>
+                    <form class="media-content" action="social-links" method="post">
+                      {% csrf_token %}
+                      <button name="youtube">YOUTUBE</button>
+                      <button name="instagram">INSTAGRAM</button>
+                      <button name="whatsapp">WHATSAPP</button>
+                      <button name="facebook">FACEBOOK</button>
+                      <button name="linkedin">LINKEDIN</button>
+                      <button name="twitter">TWITTER</button>
+                    </form>
               </div>
               <div class="media-title">
-              <h5>File QR Codes</h5>
+                  <h5>Business Links</h5>
               </div>
-              <div class="media-content">
-                <button>IMAGE FILE</button>
-                <button>AUDIO</button>
-                <button>VIDEO</button>
+              <div>
+                <form class="media-content" action="business-links" method="post">
+                  {% csrf_token %}
+                  <button name="phone-number">PHONE NUMBER</button>
+                  <button name="email-address">EMAIL ADDRESS</button>
+                </form>
+              </div>
+              <div class="media-title">
+                  <h5>Predefined Message</h5>
+              </div>
+              <div>
+                <form class="media-content" action="predefined-message" method="post">
+                  {% csrf_token %}
+                  <button name="pre-sms">PREDEFINED SMS</button>
+                  <button name="pre-email">PREDEFINED EMAIL</button>
+                </form>
               </div>
           </div>
           </div>
@@ -64,8 +77,6 @@
              <img src="{% static 'images/Qr-image.png' %}" alt="code" srcset="" class="qr-image"/>
           </div>
           </div>
-        </div>
-      </div>
     </div>
-  </section>
-  {% endblock %}
+</section>
+{% endblock %}

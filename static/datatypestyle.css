@@ -54,7 +54,8 @@
 .qr-code-container {
     border: solid 1px;
     height: fit-content;
-    padding-left: 15px;
+    padding: 15px 15px;
+    box-sizing: border-box;
     background-color: rgb(226, 218, 218);
     border: none;
     border-radius: 6px;
@@ -75,7 +76,7 @@
     grid-template-rows: auto;
     gap:10px;
 }
-.media-content button{
+.media-content .media-btn {
     display: flex;
     flex-direction: row;
     outline: none;
@@ -87,23 +88,124 @@
     background-color: #DBDEFB; 
     box-shadow: 0px 12px 17px 2px rgba(0, 0, 0, 0.14);
     border-radius: 8px;
-}
-button{
+    cursor: pointer;
     font-family: 'Josefin Sans', sans-serif;
-    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 150%;
     text-align: center;
     letter-spacing: 1.25px;
+    text-decoration: none;
     color: #181818;
+}
+.media-content button a{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 1.25px;
+    text-decoration: none;
+    color: #181818;
+}
+.media-content button:hover{
+    background-color: #300871;
+    color: #fff;
+}
+.media-content button:hover a{
+    color: #fff;
+}
+
+.img-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.img-container span{
+    display: block;
+}
+img.web-logo{
+    width: 158px;
+    height: 158px;
+
+}
+.form-container label{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0.15px;
+    color: #000000;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+#qr-content{
+    width: 75%;
+    padding: 16px;
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: #FFFFFF;
+    margin-bottom: 12px;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
+}
+textarea{
+    height: 172px;
+}
+.btn-container{
+    text-align: right;
+}
+.btn-container .btn-overlay{
+    padding: 16px 24px;
+    background-color: #4959E9;
+    border-radius: 8px;
+}
+#form01 .btn-container, #form03 .btn-container, #form04 .btn-container{
+    margin-top: 275px;
+}
+#form02 .btn-container{
+    margin-top: 193px;
+}
+#form05 .btn-container, #form06 .btn-container{
+    margin-top: 50px;
+}
+.content-overlay{
+    background-color: #DBDEFB;
+    padding: 45px 40px;
+    margin: 5% auto 15% auto;
+    width: 80%;
+}
+.qr-overlay{
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+.animate{
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+@-webkit-keyframes animatezoom{
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+@keyframes animatezoom{
+    from {transform: scale(0)}
+    to {transform: scale(1)}
 }
 
 /* media responsiveness */
 
 @media screen and (max-width: 600px) {
     .logo-container {
-        display: grid;
+       display: grid;
        flex-direction: row;
        place-content: center;
        place-items: center;
@@ -128,7 +230,7 @@ button{
    .icon-content {
        display: flex;
        align-items: center;
-       flex-direction: column-reverse;
+       flex-direction: column;
        width: 80%;
        gap: 10px;
    }
@@ -136,10 +238,10 @@ button{
        margin-right: 2%;
    }
    .qr-code {
-       width: 100%;
+       width: 80%;
    }
    .qr-code-container .qr-image {
-       width: 100%;
+       width: 80%;
    }
 }
    
@@ -170,7 +272,7 @@ button{
     .icon-content {
         display: flex;
         align-items: center;
-        flex-direction: column-reverse;
+        flex-direction: column;
         width: 80%;
         gap: 10px;
     }
@@ -181,9 +283,9 @@ button{
         grid-template-columns: 1fr 1fr;
     }
     .qr-code {
-        width: 95%;
+        width: 80%;
     }
     .qr-code-container .qr-image {
-        width: 95%;
+        width: 80%;
     }
 }

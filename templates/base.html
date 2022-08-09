@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="{% static 'datatypestyle.css' %}" />
 
     <link rel="shortcut icon" href="" type="image/x-icon" />
+    <script src="{% static 'script.js' %}"></script>
+    <script src="{% static 'custom.js' %}"></script>
+
     <title>{% block title %}QR code generator{% endblock %}</title>
   </head>
 
@@ -69,18 +72,31 @@
             >
           </li>
           <li>
-            <a class="show2" href="{%url 'dashboard' %}"
+            <a class="show2" href="#"
               ><span class="iconify" data-icon="bi:qr-code"></span> Product</a
             >
           </li>
+          <!-- end of mobile view -->
           <div class="subnav">
+          {% if user.is_authenticated %}
+          <span class="nav-log">
+          {{ user.full_name }}!
+          </span>
+          <button class="nav-login">
+            <a class="nav-log"  href="{% url 'accounts:logout' %}">Log Out</a>
+          </button>
+          {% else %}
+         
             <button class="nav-login">
-              <a class="nav-log" href="{%url 'accounts:login' %}">SIGN IN</a>
+              <a class="nav-log" href="{% url 'accounts:login' %}">SIGN IN</a>
             </button>
             <button class="nav-signin">
-              <a class="nav-sign" href="{%url 'accounts:signup' %}">REGISTER</a>
+              <a class="nav-sign" href="{% url 'accounts:signup' %}"
+                >REGISTER</a
+              >
             </button>
           </div>
+          {% endif %}
         </ul>
       </nav>
     </header>
@@ -165,7 +181,7 @@
             <li><a href="{%url 'about' %}">About us</a></li>
             <li><a href="{%url 'contact-us' %}">Contact us</a></li>
             <li><a href="{%url 'faq' %}">FAQ</a></li>
-            <li><a href="{%url 'dashboard' %}">Create Qr code</a></li>
+            <li><a href="{%url 'datatype' %}">Create Qr code</a></li>
           </ul>
         </div>
       </div>
@@ -181,9 +197,11 @@
     </footer>
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script
       src="https://kit.fontawesome.com/9ec3a209f4.js"
       crossorigin="anonymous"
     ></script>
+    <script src="{% static 'custom.js' %}"></script>
   </body>
 </html>

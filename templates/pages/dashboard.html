@@ -1,22 +1,18 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-
-<head>
-    <link rel="stylesheet" href="{% static 'accounts.css' %}">
-</head>
 <div class="content-main">
     <div class="hidden hidden-greet" style="display:none;">
-        <p>Good Morning,
+        <p>Good {{day}},
             <span>
-                <strong>Michael</strong>
+                <strong>{{first_name}}</strong>
             </span>
         </p>
     </div>
     <aside class="left-pane">
         <img class="qr-image" src="{% static 'images/qr-image-1.png' %}" alt="">
         <div class="create-qr">
-            <button type="button" onclick="location.href='#'">CREATE QR. CODE</button>
+            <button type="button" onclick="location.href='{% url 'datatype' %}'">CREATE QR. CODE</button>
         </div>
         <div class="qr-type">
             <p>Social media</p>
@@ -39,23 +35,23 @@
             <tr>
                 <td class="number-gen">
                     <p>Total Number of code created</p>
-                    <h6>12</h6>
+                    <h6>{{qr_code.count}}</h6>
                 </td>
             </tr>
         </table>
-        <button class="reset-button" type="reset">
+        <button class="reset-button" type="reset" onclick="location.href='{% url 'resetall' %}'">
             Reset Number
         </button>
     </aside>
     <div class="hidden hidden-num" style="display:none;">
         <p>Total Number of Codes Created:
-            <span>12</span>
+            <span>{{qr_code.count}}</span>
         </p>
     </div>
     <section class="mid-pane">
         <div class="greet show">
-            <h2>Good Morning,
-                <span>Micheal</span>
+            <h2>Good {{day}},
+                <span>{{first_name}}</span>
             </h2>
         </div>
         <table class="code-history">
@@ -67,54 +63,20 @@
             <tr>
                 <td>
                     <div class="code-list" style="overflow-y: scroll;">
+                        {% for qr in qr_code %}
                         <div class="code-detail">
-                            <img src="{% static 'images/qr-image-2.png' %}" alt="">
+                            <a href="#"><img src="{{qr.qr_code.url}}" style="width:190px;height: 190px;" alt=""></a> 
                             <div class="detail-content">
-                                <p class="qr-type">Social media</p>
-                                <h5>Link to Twitter Profile</h5>
+                                <p class="qr-type">{{qr.qr_type}}</p>
+                                <h5>{{qr.qr_msg}}</h5>
                                 <p class="created">
                                     <span>Created:</span>
-                                    22 Jun 2022
+                                    {{qr.qr_code_date}}
                                 </p>
-                                <p class="link">www.twitter.com/myprofile/</p>
+                                <a href="#" class="link">Content of QR Code</a>
                             </div>
                         </div>
-                        <div class="code-detail">
-                            <img src="{% static 'images/qr-image-2.png' %}" alt="">
-                            <div class="detail-content">
-                                <p class="qr-type">Email</p>
-                                <h5>Send an Email</h5>
-                                <p class="created">
-                                    <span>Created:</span>
-                                    12 Jun 2022
-                                </p>
-                                <p class="link">www.twitter.com/myprofile/</p>
-                            </div>
-                        </div>
-                        <div class="code-detail">
-                            <img src="{% static 'images/qr-image-2.png' %}" alt="">
-                            <div class="detail-content">
-                                <p class="qr-type">Phone number</p>
-                                <h5>My mobile number</h5>
-                                <p class="created">
-                                    <span>Created:</span>
-                                    11 Jun 2022
-                                </p>
-                                <p class="link">www.twitter.com/myprofile/</p>
-                            </div>
-                        </div>
-                        <div class="code-detail">
-                            <img src="{% static 'images/qr-image-2.png' %}" alt="">
-                            <div class="detail-content">
-                                <p class="qr-type">Phone number</p>
-                                <h5>My mobile number</h5>
-                                <p class="created">
-                                    <span>Created:</span>
-                                    11 Jun 2022
-                                </p>
-                                <p class="link">www.twitter.com/myprofile/</p>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </td>
             </tr>
@@ -124,7 +86,7 @@
     <aside class="right-pane">
         <div class="todays-date">
             <img src="{% static 'images/calendar.svg' %}" alt="">
-            <p>23 July 2022</p>
+            <p>{% now "j M Y" %}</p>
         </div>
         <img class="undraw" style="width:388px; height:340px;"
             src="{% static 'images/undraw_projections_re_ulc6.png' %}" alt="">

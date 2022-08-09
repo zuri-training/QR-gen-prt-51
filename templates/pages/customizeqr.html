@@ -2,23 +2,29 @@
 <section class="genPage-section">
   <!-- section1 -->
   <div class="genPage-container">
+    <div class="centralize-content">
+      <img class="gen-logo" src="{% static 'images/logo.png' %}" alt="logo" />
+    </div>
     <div class="gen-container-flex">
-      <div class="logo-image">
-        <img class="gen-logo" src="{% static 'images/logo.png' %}" alt="logo" />
-      </div>
+      
       <div class="inner-icon-message">
+       <div class="align-widthin">
         <img src="{% static 'images/clock.png' %}" alt="clock" />
         <span class="icon-message"
           >Generate your QR code in under 45 seconds</span
         >
-
+       </div>
+      </div>
+      <div class="inner-icon-message">
+       <div class="align-widthin">
         <img src="{% static 'images/scan.png' %}" alt="scan" />
         <span class="icon-message">Unlimited use of our QR code scanner</span>
-      </div>
-      <div role="heading">
+       </div>
+      </div> </div></div>
+      <div role="heading centralize-content">
         <p class="sub-heading">Style your code</p>
       </div>
-    </div>
+   
     <!-- end of section1 -->
     <!-- section2 -->
     <div class="gen-heading" role="heading">Shape</div>
@@ -28,16 +34,16 @@
           <span>Modular Shape</span>
         </div>
         <div class="gen-shapes">
-          <div class="genbox-columnA">
+          <div class="genbox-columnA" id="root-shap1">
             <div class="genbox-columnA-inner"></div>
           </div>
-          <div class="genbox-columnB">
+          <div class="genbox-columnB" id="root-shap2">
             <div class="genbox-columnB-inner"></div>
           </div>
-          <div class="genbox-columnC">
+          <div class="genbox-columnC" id="root-shap3">
             <div class="genbox-columnC-inner"></div>
           </div>
-          <div class="genbox-columnD">
+          <div class="genbox-columnD"id="root-shap4" >
             <div class="genbox-columnD-inner"></div>
           </div>
         </div>
@@ -63,13 +69,15 @@
           <span></span>
         </div>
       </div>
-      <div class="qr-container">
+      <div class="qr-container changer1">
+       <div class="first-qr-container">
         <img
-          src="{% static 'images/Qr-image.png' %}"
-          alt=""
-          srcset=""
-          class="gen-img"
-        />
+        src="{% static 'images/Qr-image.png' %}"
+        alt=""
+        srcset=""
+        class="gen-img"
+      />
+       </div>
       </div>
     </div>
     <!-- section3 -->
@@ -77,7 +85,7 @@
     <div class="gen-section2">
       <div class="shape-container">
         <div class="color-shapes">
-          <span class="color-box">
+          <span class="color-box" >
             <div class="inner-boxA"></div>
             <div class="inner-boxB"></div>
           </span>
@@ -108,28 +116,26 @@
 
         <div class="shapes-title">
           Color Code
-          <div>
-            <input
-              type="text"
-              name=""
-              id=""
-              class="color-code"
-              placeholder="#4959E9"
-            />
+          <div class="input-filed-color">
+            dcsdcsdcsdcsdc
+            
           </div>
         </div>
         <div class="shapes-title-bottom">
-          <input type="checkbox" name="checkbox" id="" class="color-checkbox" />
+          
+          <div checkbox='checkbox-container'>rfvsdsdvsd</div>
           Transperent
         </div>
       </div>
-      <div class="qr-container">
-        <img
+      <div class="qr-container changer2">
+        <div class="inner-qr-container">
+          <img
           src="{% static 'images/Qr-image.png' %}"
           alt=""
           srcset=""
           class="gen-img"
         />
+        </div>
       </div>
     </div>
     <!-- section4  -->
@@ -144,9 +150,10 @@
       <label class="upload-subtitle"> JPEG,PNG files are accepted </label>
     </div>
     <div class="spacer">
-      <div class="error-404-button">
-        <a style="color:white" href="{% url 'index' %}">DOWNLOAD OR SHARE</a>
-    </div>
+      <button class="nav-signin">
+        <a style="color:white" href="{% url 'index' %}" class="nav-log">DOWNLOAD OR SHARE</a>
+      </button>
+     
     </div>
     <!-- end of section4 div  -->
   </div>
