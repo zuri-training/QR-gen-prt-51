@@ -1,3 +1,4 @@
+{% load static %}    
     <style>
         .section {
             display: flex;
@@ -80,8 +81,21 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="{% static 'share.css' %}"/>
 </head>
 <body>
+
+    <script> 
+      function model() {
+        let modal = document.querySelector("#modal-box");
+        modal.showModal()
+      }
+      function back() {
+        let modal = document.querySelector("#modal-box");
+        modal.close()
+      }
+    </script>
+
     <div class="section">
         <div class="icon-container">
             <span class="iconify" data-icon="clarity:success-line" style="color: white;" data-width="12"></span> 
@@ -89,8 +103,41 @@
         </div>
         <div class="button-container">
                 <button>DESIGN QR CODE</button>
-                <button>DOWNLOAD OR SHARE QR CODE</button>
+                <button onclick="model()">DOWNLOAD OR SHARE QR CODE</button>
         </div>
     </div>
+
+    <dialog id="modal-box" class="modal">
+      <div class="first" onclick="back()"><span>&leftarrow;</span>Back</div>
+      <div class="middle">
+        <img src="{% static 'images/qr-design.png' %}" style="width: 300px; height: 300px" alt="" />
+        <p class=".par">Your <strong>QR Code</strong> is ready to be used!</p>
+      </div>
+      <div class="last">
+        <div class="dropdown">
+          <button class=".drop">DOWNLOAD</button>
+          <div class="drop-content">
+          <a href="#">JPEG <img src="{% static 'images/frame.png' %}" alt="JPEG" /></a>
+          <a href="#">PNG <img src="{% static 'images/frame.png' %}" alt="PNG" /></a>
+          <a href="#">SVG <img src="{% static 'images/frame.png' %}" alt="SVG" /></a>
+          <a href="#">PDF <img src="{% static 'images/frame.png' %}" alt="PDF" /></a>
+          </div>
+        </div>
+        <p class="or">OR</p>
+        <div class="dropdown">
+          <button class=".drop">SHARE</button>
+          <div class="drop-content">
+            <a href="#">Twitter <img src="{% static 'images/twitter.png' %}" alt="Twitter" /></a>
+            <a href="#">Instagram <img src="{% static 'images/insta.png' %}" alt="Instagram" /></a>
+            <a href="#">Whatsapp <img src="{% static 'images/whatsapp.png' %}" alt="Whatsapp" /></a>
+            <a href="#">Facebook <img src="{% static 'images/fb2.png' %}" alt="Facebook" /></a>
+            <a href="#">Email <img src="{% static 'images/email.png' %}" alt="Email" /></a>
+            <a href="#">Copy URL <img src="{% static 'images/url.png' %}" alt="URL" /></a>
+          </div>
+        </div>
+       </div>
+      </div> 
+    </dialog>
+
 </body>
 </html>

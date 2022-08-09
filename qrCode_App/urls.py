@@ -15,13 +15,8 @@ urlpatterns = [
     path('datatype/preemailtype', views.preemailtype, name='preemailtype'),
     path('datatype/presmstype', views.presmstype, name='presmstype'),
     path('custom/', CUSTOMView.as_view(), name='custom'),
-    path('dashboard/', views.dashboard, name='dashboard'),
-    path('success/', views.success, name='success'),
-    path('datatype/popular', views.popular, name='popular'),
-    path('datatype/social-links', views.social_links, name='social-links'),
-    path('datatype/business-links', views.business_links, name='business-links'),
-    path('datatype/predefined-message', views.predefined_message, name='predefined-message'),
-    path('resetall', views.resetall, name='resetall'),
+    path('dashboard/', DASHBOARDView.as_view(), name='dashboard'),
+     path('test/', TestView.as_view(), name='test_page'),
 
     
 ]
