@@ -1,0 +1,50 @@
+{% load static %}
+
+<style>
+    body{
+        height: 1024px;
+        width: 1440px;
+        left: 19594px;
+        top: -2688px;
+        border-radius: 0px;
+        overflow: hidden;
+    }
+    .prop1{
+        width: 72px;
+        height: 72px;
+        border-radius: 8px;
+        background-color: #4959E933;
+        grid-area: 1;
+    }
+    main{
+        display: grid;
+        grid-template-areas:
+        '1 2'
+        '3 4';
+        position: absolute;
+        height: 216px;
+        width: 216px;
+        left: 712px;
+        top: 304px;
+        border-radius: 0px;
+        
+        }
+        
+</style>
+
+<body>
+    <main>
+        <div class="prop1">
+            property1
+        </div>
+        <div class="prop2">
+            property2
+        </div>
+        <div class="prop3">
+            property3
+        </div>
+        <div class="prop4">
+            property4
+        </div>
+    </main>
+</body>

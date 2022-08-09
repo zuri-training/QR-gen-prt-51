@@ -1,0 +1,8 @@
+CONTRIBUTION
+Landing Page
+
+ISSUE
+https://github.com/zuri-training/QR-gen-prt-51/issues/5
+
+COMMITS
+https://github.com/zuri-training/QR-gen-prt-51/commits?author=haryormidey

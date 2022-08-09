@@ -3,9 +3,7 @@ https://github.com/zuri-training/QR-gen-prt-51/commits?author=Petsamuel
 
 ISSUES
 https://github.com/zuri-training/QR-gen-prt-51/issues/13
-
 https://github.com/zuri-training/QR-gen-prt-51/issues/7
-
 https://github.com/zuri-training/QR-gen-prt-51/issues/
 
 //FEATURES 
