@@ -7,3 +7,4 @@ MY CONTRIBUTION TO THE QR-GEN PROJECT
 3) ERROR 404 PAGE : https://github.com/zuri-training/QR-gen-prt-51/issues/33
 4) RESEARCH : https://github.com/zuri-training/QR-gen-prt-51/issues/22
 5) style guide : https://github.com/zuri-training/QR-gen-prt-51/issues/21
+6) Design Qr code page: https://github.com/zuri-training/QR-gen-prt-51/issues/32
