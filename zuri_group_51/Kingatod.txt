@@ -1,4 +1,4 @@
-Slack username: King Atod
+Slack username : King Atod
 
 Github username : Kingatod
 
@@ -27,4 +27,5 @@ https://github.com/zuri-training/QR-gen-prt-51/pull/64
 Linked the anchor tags in both the header and footer to their respective pages:
 https://github.com/zuri-training/QR-gen-prt-51/pull/67 
 
-Helped a teammate make changes to ___ page:
+Helped a teammate make changes to datatype page:
+https://github.com/zuri-training/QR-gen-prt-51/pull/69
