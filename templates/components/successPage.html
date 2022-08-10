@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Generation Successful!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans');
         body {
             font-family: 'Josefin Sans', sans-serif;
-            background-color: #f2f2f2;
             margin: 0;
             padding: 0;
         }
@@ -20,22 +20,20 @@
             align-items: center;
             justify-content: center;
             gap: 40px;
-            margin: 100px;
+            height: 100vh;
             background-color: #ffffff;
             orientation: landscape;
             font-family: 'Josefin Sans', sans-serif;
         }
-        .iconify {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            height: 15%;
-            width: 15%;
-            border: solid 1px;
-            border-radius: 30px;
-            border: none;
-            background-color: rgb(28, 204, 28);
-            padding: 2.5rem;
+        .icon-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .section .icon-container img {
+            height: 250px;
+            width: 250px;
         }
         p {
             font-family: 'Inter', sans-serif;
@@ -82,7 +80,7 @@
             .section .icon-container {
                 flex-direction: row;
             }
-            .iconify {
+            .section .icon-container img {
                 height: 25%;
                 width: 25%;
                 padding: auto;
@@ -111,11 +109,11 @@
   
       <div class="section">
           <div class="icon-container">
-              <img class="iconify" src="{% static 'images/tick-square.png' %}"> 
+              <img src="{% static 'images/tick-square.png' %}"> 
               <p>Your <b>QR Code</b> has been generated, successfully</p>
           </div>
           <div class="button-container">
-                  <button onclick="location.href='{% url 'code_edit' pk=qr_code_latest.pk %}'">DESIGN QR CODE</button>
+                  <button onclick="location.href='#'">DESIGN QR CODE</button>
                   <button onclick="model()">DOWNLOAD OR SHARE QR CODE</button>
           </div>
       </div>
@@ -124,24 +122,24 @@
         <div class="first" onclick="back()"><span>&leftarrow;</span>Back</div>
         <div class="middle">
             <div class="qrcode_container">
-                <img src="{% static 'images/qr-download.png' %}" alt="" />
+                <img src="{% static 'images/qr_download.png' %}" alt="" />
             </div>
-          <p class=".par">Your <strong>QR Code</strong> is ready to be used!</p>
+          <p class="par">Your <strong>QR Code</strong> is ready to be used!</p>
         </div>
         <div class="last">
           <div class="dropdown">
-            <button class=".drop">DOWNLOAD</button>
-            <div class="drop-content">
-            <a href="#">JPEG <img src="{% static 'images/frame.png' %}" alt="JPEG" /></a>
-            <a href="#">PNG <img src="{% static 'images/frame.png' %}" alt="PNG" /></a>
-            <a href="#">SVG <img src="{% static 'images/frame.png' %}" alt="SVG" /></a>
-            <a href="#">PDF <img src="{% static 'images/frame.png' %}" alt="PDF" /></a>
+            <button class="drop" onclick="downloadList()">DOWNLOAD <i class="fa fa-caret-down"></i></button>
+            <div class="drop-content" id="dropDown1">
+                <a href="#">JPEG <img src="{% static 'images/frame.png' %}" alt="JPEG" /></a>
+                <a href="#">PNG <img src="{% static 'images/frame.png' %}" alt="PNG" /></a>
+                <a href="#">SVG <img src="{% static 'images/frame.png' %}" alt="SVG" /></a>
+                <a href="#">PDF <img src="{% static 'images/frame.png' %}" alt="PDF" /></a>
             </div>
           </div>
           <p class="or">OR</p>
           <div class="dropdown">
-            <button class=".drop">SHARE</button>
-            <div class="drop-content">
+            <button class="drop" onclick="shareList()">SHARE <i class="fa fa-caret-down"></i></button>
+            <div class="drop-content" id="dropDown2">
               <a href="#">Twitter <img src="{% static 'images/twitter.png' %}" alt="Twitter" /></a>
               <a href="#">Instagram <img src="{% static 'images/insta.png' %}" alt="Instagram" /></a>
               <a href="#">Whatsapp <img src="{% static 'images/whatsapp.png' %}" alt="Whatsapp" /></a>
@@ -153,5 +151,28 @@
          </div>
         </div> 
       </dialog>
+      <script>
+        function downloadList() {
+          let dropDown1 = document.querySelector("#dropDown1");
+          dropDown1.classList.toggle("show");
+        }
+        function shareList() {
+          let dropDown2 = document.querySelector("#dropDown2");
+          dropDown2.classList.toggle("show");
+        }
+
+        window.onclick = function(event) {
+          if (!event.target.matches('.drop')) {
+            let dropdowns = document.getElementsByClassName("drop-content");
+            let i;
+            for (i = 0; i < dropdowns.length; i++) {
+              let openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+      </script>
 </body>
 </html>

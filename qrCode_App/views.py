@@ -24,18 +24,6 @@ class ABOUTPageView(TemplateView):
     template_name = 'pages/aboutUs.html'
 
 
-class DATAPageview(TemplateView):
-    template_name = 'pages/datatype.html'
-
-
-class DASHBOARDView(TemplateView):
-    template_name = 'pages/dashboard.html'
-
-
-class TestView(TemplateView):
-    template_name = "components/emaillink.html"
-
-
 # custom views for error pages
 def custom_page_not_found_view(request, exception):
     return render(request, "404.html")
@@ -293,8 +281,3 @@ def success(request):
 def resetall(request):
     QrCode.objects.filter(user=request.user).delete()
     return redirect('dashboard')
-
-
-# CBV for contact us page
-class ContactUsView(TemplateView):
-    template_name = 'contactus.html'
