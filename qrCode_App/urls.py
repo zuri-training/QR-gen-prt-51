@@ -1,7 +1,7 @@
 
 from django.urls import path
 from . import views
-from .views import LandingPageView, CONTACTPageView, FAQPageView, ABOUTPageView,
+from .views import LandingPageView,CONTACTPageView,FAQPageView,ABOUTPageView
 urlpatterns = [
     path('', LandingPageView.as_view(), name='index'),
     path('contact/', CONTACTPageView.as_view(), name='contact-us'),
@@ -19,9 +19,9 @@ urlpatterns = [
     path('datatype/popular', views.popular, name='popular'),
     path('datatype/social-links', views.social_links, name='social-links'),
     path('datatype/business-links', views.business_links, name='business-links'),
-    path('datatype/predefined-message',
-         views.predefined_message, name='predefined-message'),
+    path('datatype/predefined-message', views.predefined_message, name='predefined-message'),
     path('resetall', views.resetall, name='resetall'),
-
-
+    path('code/<int:pk>', views.code_detail, name='code_detail'),
+    path('code/<int:pk>/download', views.code_download, name='code_download'),
+    path('code/<int:pk>/edit', views.code_edit, name='code_edit'),
 ]
