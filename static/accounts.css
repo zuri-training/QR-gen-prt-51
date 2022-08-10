@@ -219,7 +219,7 @@ a:active {
   font-weight: 400;
 }
 
-#toggle {
+#toggle, #togglecon {
   margin-left: -40px;
   cursor: pointer;
 }

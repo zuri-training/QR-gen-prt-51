@@ -31,14 +31,17 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
     # new app installed
     "accounts",
     "qrCode_App",
     "qrApi",
+    
     # 3rd party app
     "widget_tweaks",
     "rest_framework",
     "rest_framework.authtoken",
+    
     # "rest_framework_swagger",
     "qrcode",
     "drf_spectacular",
