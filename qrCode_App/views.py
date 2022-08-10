@@ -257,11 +257,13 @@ def dashboard(request):
         'day': day
     })
 
+
 @login_required(login_url='/accounts/login/')
 def code_detail(request, pk):
     day = get_time_of_day()
     first_name = request.user.full_name.split(" ")[0]
-    qr_code_selected = get_object_or_404(QrCode.objects.filter(user=request.user), pk=pk)
+    qr_code_selected = get_object_or_404(
+        QrCode.objects.filter(user=request.user), pk=pk)
     qr_code = QrCode.objects.filter(user=request.user).order_by('-id')
     return render(request, 'pages/code_detail.html', {
         'qr_code_selected': qr_code_selected,
@@ -270,19 +272,24 @@ def code_detail(request, pk):
         'day': day
     })
 
+
 @login_required(login_url='/accounts/login/')
 def code_download(request, pk):
     obj = get_object_or_404(QrCode.objects.filter(user=request.user), pk=pk)
     filepath = obj.qr_code.path
     filename = obj.qr_code.name
-    response = HttpResponse(open(filepath, 'rb').read(), content_type='application/force-download')
+    response = HttpResponse(open(filepath, 'rb').read(),
+                            content_type='application/force-download')
     response['Content-Disposition'] = 'attachment; filename=%s' % filename
     return response
 
+
 @login_required(login_url='/accounts/login/')
-def code_edit(request,pk):
-    qr_code_selected = get_object_or_404(QrCode.objects.filter(user=request.user), pk=pk)
+def code_edit(request, pk):
+    qr_code_selected = get_object_or_404(
+        QrCode.objects.filter(user=request.user), pk=pk)
     return render(request, 'pages/customizeqr.html', {'qr_code_selected': qr_code_selected})
+
 
 @login_required(login_url='/accounts/login/')
 def success(request):
