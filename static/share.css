@@ -12,6 +12,10 @@
   .last {
     width: 360px;
   }
+  .qrcode_container img{
+    width: 180px;
+    height: 180px;
+  }
 }
 
 .modal {
@@ -26,6 +30,13 @@
 .modal::backdrop {
   background-color: #03040f;
   opacity: 0.2;
+}
+.qrcode_container{
+  border: 5px solid #4959E9;
+}
+.qrcode_container img{
+  width: 300px;
+  height: 300px;
 }
 
 .first,

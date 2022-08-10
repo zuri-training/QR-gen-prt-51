@@ -1,7 +1,7 @@
 
 from django.urls import path
 from . import views
-from .views import LandingPageView, CONTACTPageView, FAQPageView, ABOUTPageView, DATAPageview, CUSTOMView, DASHBOARDView, TestView
+from .views import LandingPageView, CONTACTPageView, FAQPageView, ABOUTPageView,
 urlpatterns = [
     path('', LandingPageView.as_view(), name='index'),
     path('contact/', CONTACTPageView.as_view(), name='contact-us'),
@@ -14,7 +14,6 @@ urlpatterns = [
     path('datatype/emailtype', views.emailtype, name='emailtype'),
     path('datatype/preemailtype', views.preemailtype, name='preemailtype'),
     path('datatype/presmstype', views.presmstype, name='presmstype'),
-    path('custom/', CUSTOMView.as_view(), name='custom'),
     path('dashboard/', views.dashboard, name='dashboard'),
     path('success/', views.success, name='success'),
     path('datatype/popular', views.popular, name='popular'),
