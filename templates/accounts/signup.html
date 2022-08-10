@@ -52,8 +52,8 @@
                                 {% render_field form.email id="email" class="form-signup" placeholder="AnjolaAkinosun@gmail.com" type="email" %}
                             </div>
                             <div class="input-box">
-                                <label for="password">Password</label>
-                                {% render_field form.password id="password" class="form-signup" placeholder="************" type="password" %}
+                                <label for="password1">Password</label>
+                                {% render_field form.password1 id="password" class="form-signup" placeholder="************" type="password" %}
                                 <span class="fa fa-eye" id="toggle" onclick="togglePassword()"></span>
                             </div>
                             <ul>
@@ -62,8 +62,8 @@
                                 <li>Must be Alphanumeric</li>
                             </ul>
                             <div class="input-box">
-                                <label for="cfm_password">Confirm Password</label>
-                                {% render_field form.confirmPassword id="cfm_password" class="form-signup" placeholder="************" type="password"%}
+                                <label for="password2">Confirm Password</label>
+                                {% render_field form.password2 id="cfm_password" class="form-signup" placeholder="************" type="password"%}
                                 <span class="fa fa-eye" id="toggle" onclick="confirmPassword()"></span>
                             </div>    
                         </div>

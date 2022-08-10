@@ -1,3 +1,4 @@
+from distutils.debug import DEBUG
 from pathlib import Path
 import os
 from wsgiref.simple_server import sys_version
@@ -5,6 +6,10 @@ from environs import Env
 # import cloudinary
 # import cloudinary.uploader
 # import cloudinary.api
+
+env = Env()
+env.read_env()
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = env.str(
@@ -12,7 +17,8 @@ SECRET_KEY = env.str(
     default="django-insecure-x0dp25v51=wfb3lo5wibvw=t32v13oof#-b(_!f@-=+293m9j-",
 )
 
-DEBUG = env.bool("DEBUG", default=False)
+# DEBUG = env.bool("DEBUG", default=False)
+DEBUG = True
 
 ALLOWED_HOSTS = [".herokuapp.com", "localhost", "127.0.0.1"]
 
@@ -37,6 +43,7 @@ INSTALLED_APPS = [
     "qrcode",
     "drf_spectacular",
     "drf_yasg",
+    'cloudinary',
 ]
 
 # REST_FRAMEWORK SETTINGS
@@ -145,11 +152,14 @@ STATIC_DIR = BASE_DIR / STATIC_URL
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 # media file
-MEDIA_URL = "/assets/"
-MEDIA_DIR = BASE_DIR / "assets/"
+MEDIA_URL = '/media_folder/'
+MEDIA_DIR= BASE_DIR /'media_folder'
 MEDIA_ROOT = MEDIA_DIR
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGOUT_REDIRECT_URL = 'index'
