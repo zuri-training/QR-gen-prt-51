@@ -1,0 +1,1008 @@
+{% load static %}
+
+<style>
+    body{
+        height: 1024px;
+        width: 1440px;
+        left: 19594px;
+        top: -2688px;
+        border-radius: 0px;
+        overflow: auto;
+    }
+    main{
+        box-sizing: border-box;
+        position: absolute;
+        width: 280px;
+        height: 2774px;
+        left: 700px;
+        top: 118px;
+        border: 1px dashed #9747FF;
+        border-radius: 5px;
+        }
+    .group1{
+        position: absolute;
+        width: 216px;
+        height: 216px;
+        left: 32px;
+        top: 32px;
+        display: grid;
+        grid-template-areas: 
+        '1 2'
+        '3 4';
+
+    }
+    .group2{
+        position: absolute;
+        width: 216px;
+        height: 216px;
+        left: 32px;
+        top: 322px;
+        display: grid;
+        grid-template-areas: 
+        '1 2'
+        '3 4';
+    }
+    .group3{
+        position: absolute;
+        width: 216px;
+        height: 216px;
+        left: 32px;
+        top: 574px;
+        display: grid;
+        grid-template-areas: 
+        '1 2'
+        '3 4';
+    }
+    .group4{
+        position: absolute;
+        width: 216px;
+        height: 216px;
+        left: 32px;
+        top: 814px;
+        display: grid;
+        grid-template-areas: 
+        '1 2'
+        '3 4';
+    }
+    .group5{
+        position: absolute;
+        width: 216px;
+        height: 216px;
+        left: 32px;
+        top: 1066px;
+        display: grid;
+        grid-template-areas: 
+        '1 2'
+        '3 4';
+    }
+    .group6{
+        position: absolute;
+        width: 216px;
+        height: 216px;
+        left: 32px;
+        top: 1356px;
+        display: grid;
+        grid-template-areas: 
+        '1 2'
+        '3 4';
+    }
+    .group7{
+        position: absolute;
+        width: 216px;
+        height: 216px;
+        left: 32px;
+        top: 1698px;
+        display: grid;
+        grid-template-areas: 
+        '1 2'
+        '3 4';
+    }
+    .group8{
+        position: absolute;
+        width: 216px;
+        height: 216px;
+        left: 44px;
+        top: 1988px;
+        display: grid;
+        grid-template-areas: 
+        '1 2'
+        '3 4';
+    }
+    .group9{
+        position: absolute;
+        width: 216px;
+        height: 216px;
+        left: 32px;
+        top: 2228px;
+        display: grid;
+        grid-template-areas:
+        '1 2'
+        '3 4';
+    }
+    .group10{
+        position: absolute;
+        width: 216px;
+        height: 216px;
+        left: 44px;
+        top: 2480px;
+        display: grid;
+        grid-template-areas: 
+        '1 2'
+        '3 4';
+    }
+    .frame1{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 72px;
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        bottom: 66.67%;
+        width: 216px;
+        height: 72px;
+    }
+    .frame2{
+        width:216px;
+        height: 72px;
+        top: 144px;
+        gap: 72px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 66.67%;
+        bottom: 0%;
+    }
+    .prop1{
+        width: 72px;
+        height: 72px;
+        background: rgba(73, 89, 233, 0.2);
+        border-radius: 8px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .prop2{
+        width: 72px;
+        height: 72px;
+        background: rgba(73, 89, 233, 0.2);
+        border-radius: 8px;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+    .prop3{
+        width: 72px;
+        height: 72px;
+        background: rgba(73, 89, 233, 0.2);
+        border-radius: 8px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .prop4{
+        width: 72px;
+        height: 72px;
+        background: rgba(73, 89, 233, 0.2);
+        border-radius: 8px;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+    .frame3{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 72px;
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        bottom: 66.67%;
+        width: 216px;
+        height: 72px;    
+    }
+    .frame4{
+        width:216px;
+        height: 72px;
+        top: 144px;
+        gap: 72px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 66.67%;
+        bottom: 0%;
+    }
+    .prop5{
+        width: 72px;
+        height: 72px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    } 
+    .prop6{
+        width: 72px;
+        height: 72px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+    .prop7{
+        width: 72px;
+        height: 72px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .prop8{
+        width: 72px;
+        height: 72px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+    .frame5{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 48px;
+        position: absolute;
+        left: 5.56%;
+        right: 5.56%;
+        top: 0%;
+        bottom: 66.67%;
+        height: 72px;
+        width: 192px;
+        left: 12px;
+        }
+    .frame6{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 48px;
+        position: absolute;
+        left: 5.56%;
+        right: 5.56%;
+        top: 55.56%;
+        bottom: 11.11%;
+        width: 192px;
+        height: 72px;
+        gap:48px;
+    }
+    .prop9{
+        width: 72px;
+        height: 72px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .prop10{
+        width: 72px;
+        height: 72px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+    .prop11{
+        width: 72px;
+        height: 72px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .prop12{
+        width: 72px;
+        height: 72px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+    .frame7{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 72px;
+        position: absolute;
+        left: 59.26%;
+        right: 14.81%;
+        top: 20.37%;
+        bottom: 53.7%;
+        height: 56px;
+        width: 56px;
+        left: 128px;
+        top: 44px;
+        border-radius: 0px;
+        }
+    .frame8{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 72px;
+        position: absolute;
+        left: 20.37%;
+        right: 53.7%;
+        top: 60.19%;
+        bottom: 13.89%;
+        height: 56px;
+        width: 56px;
+        left: 44px;
+        top: 130px;
+        border-radius: 0px;
+    }
+    .prop13{
+        position: absolute;
+        left: 16.67%;
+        right: 50%;
+        top: 16.67%;
+        bottom: 50%;
+        background: #4959E9;
+        border-radius: 8px;
+        height: 72px;
+        width: 72px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .prop14{
+        width: 56px;
+        height: 56px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .prop15{
+        width: 56px;
+        height: 56px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .prop16{
+        position: absolute;
+        left: 55.56%;
+        right: 11.11%;
+        top: 56.48%;
+        bottom: 10.19%;
+        background: #4959E9;
+        border-radius: 8px;
+        height: 72px;
+        width: 72px;
+        left: 120px;
+        top: 122px;
+        border-radius: 8px;
+    }
+    .frame9{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 72px;
+        position: absolute;
+        left: 20.37%;
+        right: 53.7%;
+        top: 20.37%;
+        bottom: 53.7%;
+        height: 56px;
+        width: 56px;
+        left: 44px;
+        top: 44px;
+        border-radius: 0px;
+    }
+    .frame10{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 72px;
+        position: absolute;
+        left: 59.26%;
+        right: 14.81%;
+        top: 60.19%;
+        bottom: 13.89%;
+        height: 56px;
+        width: 56px;
+        left: 128px;
+        top: 130px;
+        border-radius: 0px;
+    }
+    .prop17{
+        width: 56px;
+        height: 56px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .prop18{
+        position: absolute;
+        left: 55.56%;
+        right: 11.11%;
+        top: 16.67%;
+        bottom: 50%;
+        background: #4959E9;
+        border-radius: 8px;
+        height: 72px;
+        width: 72px;
+        left: 120px;
+        top: 36px;
+        border-radius: 8px;
+    }
+    .prop19{
+        position: absolute;
+        left: 16.67%;
+        right: 50%;
+        top: 56.48%;
+        bottom: 10.19%;
+        background: #4959E9;
+        border-radius: 8px;
+        height: 72px;
+        width: 72px;
+        left: 36px;
+        top: 122px;
+    }
+    .prop20{
+        width: 56px;
+        height: 56px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .frame11{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 72px;
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 66.67%;
+        height: 72px;
+        width: 216px;
+        left: 0px;
+        top: 0px;
+        border-radius: 0px;
+    }
+    .frame12{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 72px;
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 66.67%;
+        bottom: 0%;
+        height: 72px;
+        width: 216px;
+        left: 0px;
+        top: 144px;
+        border-radius: 0px;
+    }
+    .prop21{
+        width: 72px;
+        height: 72px;
+        background: rgba(73, 89, 233, 0.2);
+        border-radius: 8px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .prop22{
+        width: 72px;
+        height: 72px;
+        background: rgba(73, 89, 233, 0.2);
+        border-radius: 8px;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        height: 72px;
+        left: 144px;
+        top: 0px;
+    }
+    .prop23{
+        width: 72px;
+        height: 72px;
+        background: rgba(73, 89, 233, 0.2);
+        border-radius: 8px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .prop24{
+        width: 72px;
+        height: 72px;
+        background: rgba(73, 89, 233, 0.2);
+        border-radius: 8px;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        height: 72px;
+        left: 144px;
+        top: 0px;
+    }
+    .frame13{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 72px;
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 66.67%;
+        height: 72px;
+        width: 216px;
+        left: 0px;
+        top: 0px;
+        border-radius: 0px;
+    }
+    .frame14{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 72px;
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 66.67%;
+        bottom: 0%;
+        height: 72px;
+        width: 216px;
+        left: 0px;
+        top: 144px;
+        border-radius: 0px;
+    }
+    .prop25{
+        width: 72px;
+        height: 72px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .prop26{
+        width: 72px;
+        height: 72px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        height: 72px;
+        left: 144px;
+        top: 0px;
+    }
+    .prop27{
+        width: 72px;
+        height: 72px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .prop28{
+        width: 72px;
+        height: 72px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        left: 144px;
+        top: 0px;
+    }
+    .frame15{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 48px;
+        position: absolute;
+        left: 5.56%;
+        right: 5.56%;
+        top: 0%;
+        bottom: 66.67%;
+        height: 72px;
+        width: 192px;
+        left: 12px;
+        top: 0px;
+        border-radius: 0px;
+    }
+    .frame16{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 48px;
+         position: absolute;
+        left: 5.56%;
+        right: 5.56%;
+        top: 55.56%;
+        bottom: 11.11%;
+        height: 72px;
+        width: 192px;
+        left: 12px;
+        top: 120px;
+        border-radius: 0px;
+    }
+    .prop29{
+        width: 72px;
+        height: 72px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .prop30{
+        width: 72px;
+        height: 72px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        left: 120px;
+        top: 0px;
+    }
+    .prop31{
+        width: 72px;
+height: 72px;
+
+/* Primary colour/Main */
+
+background: #4959E9;
+border-radius: 8px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+    }
+    .prop32{
+        width: 72px;
+        height: 72px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        left: 120px;
+        top: 0px;
+    }
+    .frame17{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 72px;
+        position: absolute;
+        left: 59.26%;
+        right: 14.81%;
+        top: 20.37%;
+        bottom: 53.7%;
+        height: 56px;
+        width: 56px;
+        left: 128px;
+        top: 44px;
+        border-radius: 0px;
+    }
+    .frame18{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 72px;
+        position: absolute;
+        left: 20.37%;
+        right: 53.7%;
+        top: 60.19%;
+        bottom: 13.89%;
+        height: 56px;
+        width: 56px;
+        left: 44px;
+        top: 130px;
+        border-radius: 0px;
+    }
+    .prop33{
+        position: absolute;
+        left: 16.67%;
+        right: 50%;
+        top: 16.67%;
+        bottom: 50%;
+        background: #4959E9;
+        border-radius: 8px;
+        height: 72px;
+        width: 72px;
+        left: 36px;
+        top: 36px;
+        border-radius: 8px;
+    }
+    .prop34{
+        width: 56px;
+        height: 56px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .prop35{
+        width: 56px;
+        height: 56px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .prop36{
+        position: absolute;
+        left: 55.56%;
+        right: 11.11%;
+        top: 56.48%;
+        bottom: 10.19%;
+        background: #4959E9;
+        border-radius: 8px;
+        height: 72px;
+        width: 72px;
+        left: 120px;
+        top: 122px;
+        border-radius: 8px;
+    }
+    .frame19{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 72px;
+        position: absolute;
+        left: 20.37%;
+        right: 53.7%;
+        top: 20.37%;
+        bottom: 53.7%;
+        height: 56px;
+        width: 56px;
+        left: 44px;
+        top: 44px;
+        border-radius: 0px;
+    }
+    .frame20{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 72px;
+        position: absolute;
+        left: 59.26%;
+        right: 14.81%;
+        top: 60.19%;
+        bottom: 13.89%;
+        height: 56px;
+        width: 56px;
+        left: 128px;
+        top: 130px;
+        border-radius: 0px;
+    }
+    .prop37{
+        width: 56px;
+        height: 56px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+    .prop38{
+        position: absolute;
+        left: 55.56%;
+        right: 11.11%;
+        top: 16.67%;
+        bottom: 50%;
+        background: #4959E9;
+        border-radius: 8px;
+        height: 72px;
+        width: 72px;
+        left: 120px;
+        top: 36px;
+        border-radius: 8px;
+    }
+    .prop39{
+        position: absolute;
+        left: 16.67%;
+        right: 50%;
+        top: 56.48%;
+        bottom: 10.19%;
+        background: #4959E9;
+        border-radius: 8px;
+        height: 72px;
+        width: 72px;
+        left: 36px;
+        top: 122px;
+        border-radius: 8px;
+    }
+    .prop40{
+        width: 56px;
+        height: 56px;
+        background: #4959E9;
+        border-radius: 8px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+</style>
+
+<body>
+    <main>
+       <div class="group1">
+
+        <div class="frame1">
+            <div class="prop1"></div>
+            <div class="prop2"></div>
+        </div>
+
+        <div class="frame2">
+            <div class="prop3"></div>
+            <div class="prop4"></div>
+        </div>
+       </div>
+
+       <div class="group2">
+
+            <div class="frame3">
+                <div class="prop5"></div>
+                <div class="prop6"></div>
+            </div>
+            <div class="frame4">
+                <div class="prop7"></div>
+                <div class="prop8"></div>
+            </div>
+
+       </div>
+
+       <div class="group3">
+            <div class="frame5">
+                <div class="prop9"></div>
+                <div class="prop10"></div>
+            </div>
+            
+            <div class="frame6">
+                <div class="prop11"></div>
+                <div class="prop12"></div>
+            </div>
+       </div>
+
+       <div class="group4">
+             <div class="prop13"></div>
+
+            <div class="frame7"> 
+                <div class="prop14"></div>
+            </div>
+
+            <div class="prop16"></div>
+
+            <div class="frame8">
+                <div class="prop15"></div>
+            </div>
+       </div>
+
+       <div class="group5">
+            <div class="frame9">
+                <div class="prop17"></div>
+            </div>
+
+            <div class="prop18"></div>
+            <div class="prop19"></div>
+
+            <div class="frame10">
+                <div class="prop20"></div>
+            </div>
+       </div>
+
+       <div class="group6">
+            <div class="frame11">
+                <div class="prop21"></div>
+                <div class="prop22"></div>
+            </div>
+
+            <div class="frame12">
+                <div class="prop23"></div>
+                <div class="prop24"></div>
+            </div>
+       </div>
+
+       <div class="group7">
+            <div class="frame13">
+                <div class="prop25"></div>
+                <div class="prop26"></div>
+            </div>
+
+            <div class="frame14">
+                <div class="prop27"></div>
+                <div class="prop28"></div>
+            </div>
+       </div>
+
+       <div class="group8">
+            <div class="frame15">
+                <div class="prop29"></div>
+                <div class="prop30"></div>
+            </div>
+
+            <div class="frame16">
+                <div class="prop31"></div>
+                <div class="prop32"></div>
+            </div>
+       </div>
+
+       <div class="group9">
+            <div class="prop33"></div>
+            <div class="frame17">
+                <div class="prop34"></div>
+            </div>
+
+            <div class="frame18">
+                <div class="prop35"></div>
+            </div>
+            <div class="prop36"></div>
+       </div>
+
+       <div class="group10">
+            <div class="frame19">
+                <div class="prop37"></div>
+            </div>
+
+            <div class="prop38"></div>
+            <div class="prop39"></div>
+
+            <div class="frame20">
+                <div class="prop40"></div>
+            </div>
+       </div>
+
+    </main>
+</body>

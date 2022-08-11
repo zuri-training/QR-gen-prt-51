@@ -61,7 +61,7 @@ Allow user save data and come back to it.
 
 ## ⛓️ Dependencies  <a name = "limitations"></a>
 
-- django third Party libarys
+- django third Party library 
 - django rest framework for the api authentication
 - swagger libary for the api documentation 
 
@@ -115,6 +115,9 @@ Add notes about how to use the system.
 - []() - bieefilled
 - []() - Abdulhameed
 - []() - king atod
+- []() - Fatima
+- []() - Honeylight
+
 
 
 

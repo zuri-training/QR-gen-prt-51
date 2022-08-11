@@ -1,0 +1,6 @@
+slack username : Hephaestus
+Github username: drehlolu
+track : product design
+contributions: 	style guide (https://github.com/zuri-training/QR-gen-prt-51/issues/21)
+		landing page (https://github.com/zuri-training/QR-gen-prt-51/issues/23)
+		dashboard (https://github.com/zuri-training/QR-gen-prt-51/issues/27)

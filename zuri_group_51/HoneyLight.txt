@@ -1,0 +1,11 @@
+COMMITS:
+
+https://github.com/zuri-training/QR-gen-prt-51/commits?author=HoneyLight
+
+ISSUES:
+
+About page: https://github.com/zuri-training/QR-gen-prt-51/issues/2
+
+Datatype page: https://github.com/zuri-training/QR-gen-prt-51/issues/104
+
+Success page: https://github.com/zuri-training/QR-gen-prt-51/issues/61

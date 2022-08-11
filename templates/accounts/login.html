@@ -18,18 +18,18 @@
 
     </head>
     <body>
-        {% if error %}
+        {% comment %} {% if error %}
             <p>
                 <strong>Invalid email or password.</strong>
             </p>
-        {% endif %}
+        {% endif %} {% endcomment %}
         <main class="container">
             <div class="left">
                 <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_d7uvq2w6.json" background="transparent" speed="1" style="width: 755px; height: auto" loop autoplay></lottie-player>
             </div>
             <div class="right">
                 <div class="logo" style="display: none">
-                    <img src="{% static 'images/Logo.png' %}" alt="" srcset=""/>
+                    <img src="{% static 'images/logo.png' %}" alt="" srcset=""/>
                 </div>
                 <div class="top">
                     <div class="wel">Welcome</div>
@@ -50,6 +50,11 @@
                     </div>
                     <div class="middle">
                         <img src="{% static 'images/OR.png' %}" alt="OR" srcset=""/>
+                    </div>
+                    <div>
+                        {% if error %}
+                            <p style="text-align:center; color: red">Invalid Username or Password</p>
+                        {% endif %}
                     </div>
                     <form method="POST" name="form" onsubmit="validate()">
                         {% csrf_token %}

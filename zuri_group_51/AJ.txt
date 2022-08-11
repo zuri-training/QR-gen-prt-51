@@ -1,0 +1,6 @@
+Slack username: Anjola Akinsoun
+github username : anjolaakinosun
+track : product design
+Contributions : Research (https://github.com/zuri-training/QR-gen-prt-51/issues/22)
+		Mobile view of contact us page (https://github.com/zuri-training/QR-gen-prt-51/issues/26)
+		mobile view of Create 	Qr page (https://github.com/zuri-training/QR-gen-prt-51/issues/30)
