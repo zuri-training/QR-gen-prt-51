@@ -1,8 +1,11 @@
+import os
+import base64
 import datetime
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.views.generic import TemplateView
 from urllib.parse import quote
+from PIL import Image
 from django.contrib.auth.decorators import login_required
 from qrCode_App.models import QrCode
 # Create your views here.
@@ -61,6 +64,41 @@ def get_time_of_day():
         return "afternoon"
     else:
         return "evening"
+
+# Convert to JPEG
+def convert_to_jpeg(path):
+    image = Image.open(path)
+    rgb_image = image.convert('RGB')
+    jpeg_image = rgb_image.save(path.replace('.png', '.jpeg'), 'JPEG')
+    return path.replace('.png', '.jpeg'), os.path.basename(path.replace('.png', '.jpeg'))
+
+# Convert to SVG
+def convert_to_svg(path):
+    startSvgTag = """<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+    <svg version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="240px" height="240px" viewBox="0 0 240 240">"""
+    endSvgTag = """</svg>"""
+    pngFile = open(path, 'rb')
+    base64data = base64.b64encode(pngFile.read())
+    base64String = '<image xlink:href="data:image/png;base64,{0}" width="240" height="240" x="0" y="0" />'.format(base64data.decode('utf-8'))
+    f = open(path.replace('.png', '.svg'), 'w')
+    f.write(startSvgTag + base64String + endSvgTag)
+    f.close()
+    return path.replace('.png', '.svg'), os.path.basename(path.replace('.png', '.svg'))
+
+
+# Convert to PDF
+def convert_to_pdf(path):
+    image = Image.open(path)
+    rgb_image = image.convert('RGB')
+    pdf_image = rgb_image.save(path.replace('.png', '.pdf'), 'PDF')
+    return path.replace('.png', '.pdf'), os.path.basename(path.replace('.png', '.pdf'))
+
+
 
 
 # view to generate different qr codes for different users
@@ -259,10 +297,34 @@ def code_detail(request, pk):
     })
 
 @login_required(login_url='/accounts/login/')
-def code_download(request, pk):
+def code_download_png(request, pk):
     obj = get_object_or_404(QrCode.objects.filter(user=request.user), pk=pk)
     filepath = obj.qr_code.path
     filename = obj.qr_code.name
+    response = HttpResponse(open(filepath, 'rb').read(), content_type='application/force-download')
+    response['Content-Disposition'] = 'attachment; filename=%s' % filename
+    return response
+
+@login_required(login_url='/accounts/login/')
+def code_download_svg(request, pk):
+    obj = get_object_or_404(QrCode.objects.filter(user=request.user), pk=pk)
+    filepath, filename = convert_to_svg(obj.qr_code.path)
+    response = HttpResponse(open(filepath, 'rb').read(), content_type='application/force-download')
+    response['Content-Disposition'] = 'attachment; filename=%s' % filename
+    return response
+
+@login_required(login_url='/accounts/login/')
+def code_download_jpeg(request, pk):
+    obj = get_object_or_404(QrCode.objects.filter(user=request.user), pk=pk)
+    filepath, filename = convert_to_jpeg(obj.qr_code.path)
+    response = HttpResponse(open(filepath, 'rb').read(), content_type='application/force-download')
+    response['Content-Disposition'] = 'attachment; filename=%s' % filename
+    return response
+
+@login_required(login_url='/accounts/login/')
+def code_download_pdf(request, pk):
+    obj = get_object_or_404(QrCode.objects.filter(user=request.user), pk=pk)
+    filepath, filename = convert_to_pdf(obj.qr_code.path)
     response = HttpResponse(open(filepath, 'rb').read(), content_type='application/force-download')
     response['Content-Disposition'] = 'attachment; filename=%s' % filename
     return response
@@ -274,7 +336,8 @@ def code_edit(request,pk):
 
 @login_required(login_url='/accounts/login/')
 def success(request):
-    return render(request, 'components/successPage.html')
+    latest_qr_code = QrCode.objects.filter(user=request.user).order_by('-id')[0]
+    return render(request, 'components/successPage.html', {'latest_qr_code': latest_qr_code})
 
 
 @login_required(login_url='/accounts/login/')
