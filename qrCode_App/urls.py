@@ -22,6 +22,9 @@ urlpatterns = [
     path('datatype/predefined-message', views.predefined_message, name='predefined-message'),
     path('resetall', views.resetall, name='resetall'),
     path('code/<int:pk>', views.code_detail, name='code_detail'),
-    path('code/<int:pk>/download', views.code_download, name='code_download'),
+    path('code/<int:pk>/download_png', views.code_download_png, name='code_download_png'),
+    path('code/<int:pk>/download_svg', views.code_download_svg, name='code_download_svg'),
+    path('code/<int:pk>/download_jpeg', views.code_download_jpeg, name='code_download_jpeg'),
+    path('code/<int:pk>/download_pdf', views.code_download_pdf, name='code_download_pdf'),
     path('code/<int:pk>/edit', views.code_edit, name='code_edit'),
 ]

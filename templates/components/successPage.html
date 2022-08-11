@@ -1,4 +1,5 @@
 {% load static %}    
+{% load social_share %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,6 +48,7 @@
             color: #ffffff;
             border-radius: 5px;
             border: none;
+            cursor: pointer;
             padding: 0.8rem;
         }
         .button-container {
@@ -94,6 +96,7 @@
         }
     </style>
     <link rel="stylesheet" href="{% static 'share.css' %}"/>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 </head>
 <body>
     <script> 
@@ -113,7 +116,7 @@
               <p>Your <b>QR Code</b> has been generated, successfully</p>
           </div>
           <div class="button-container">
-                  <button onclick="location.href='#'">DESIGN QR CODE</button>
+                  <button onclick="location.href='{% url 'code_edit' pk=latest_qr_code.pk %}'">DESIGN QR CODE</button>
                   <button onclick="model()">DOWNLOAD OR SHARE QR CODE</button>
           </div>
       </div>
@@ -122,7 +125,7 @@
         <div class="first" onclick="back()"><span>&leftarrow;</span>Back</div>
         <div class="middle">
             <div class="qrcode_container">
-                <img src="{% static 'images/qr_download.png' %}" alt="" />
+                <img src="{{latest_qr_code.qr_code.url}}" alt="" />
             </div>
           <p class="par">Your <strong>QR Code</strong> is ready to be used!</p>
         </div>
@@ -130,22 +133,23 @@
           <div class="dropdown">
             <button class="drop" onclick="downloadList()">DOWNLOAD <i class="fa fa-caret-down"></i></button>
             <div class="drop-content" id="dropDown1">
-                <a href="#">JPEG <img src="{% static 'images/frame.png' %}" alt="JPEG" /></a>
-                <a href="#">PNG <img src="{% static 'images/frame.png' %}" alt="PNG" /></a>
-                <a href="#">SVG <img src="{% static 'images/frame.png' %}" alt="SVG" /></a>
-                <a href="#">PDF <img src="{% static 'images/frame.png' %}" alt="PDF" /></a>
+                <a href="{% url 'code_download_jpeg' pk=latest_qr_code.pk %}">JPEG <img src="{% static 'images/frame.png' %}" alt="JPEG" /></a>
+                <a href="{% url 'code_download_png' pk=latest_qr_code.pk %}">PNG <img src="{% static 'images/frame.png' %}" alt="PNG" /></a>
+                <a href="{% url 'code_download_svg' pk=latest_qr_code.pk %}">SVG <img src="{% static 'images/frame.png' %}" alt="SVG" /></a>
+                <a href="{% url 'code_download_pdf' pk=latest_qr_code.pk %}">PDF <img src="{% static 'images/frame.png' %}" alt="PDF" /></a>
             </div>
           </div>
           <p class="or">OR</p>
           <div class="dropdown">
             <button class="drop" onclick="shareList()">SHARE <i class="fa fa-caret-down"></i></button>
             <div class="drop-content" id="dropDown2">
-              <a href="#">Twitter <img src="{% static 'images/twitter.png' %}" alt="Twitter" /></a>
-              <a href="#">Instagram <img src="{% static 'images/insta.png' %}" alt="Instagram" /></a>
-              <a href="#">Whatsapp <img src="{% static 'images/whatsapp.png' %}" alt="Whatsapp" /></a>
-              <a href="#">Facebook <img src="{% static 'images/fb2.png' %}" alt="Facebook" /></a>
-              <a href="#">Email <img src="{% static 'images/email.png' %}" alt="Email" /></a>
-              <a href="#">Copy URL <img src="{% static 'images/url.png' %}" alt="URL" /></a>
+                {% post_to_twitter "{{latest_qr_code.qr_msg}}" latest_qr_code.qr_code.url "Twitter <span class='iconify' data-icon='akar-icons:twitter-fill' style='color: #4959e9;'></span>" %}
+                {% post_to_telegram "{{latest_qr_code.qr_msg}}" latest_qr_code.qr_code.url "Telegram <span class='iconify' data-icon='akar-icons:telegram-fill' style='color: #4959e9;'></span>" %}
+                {% post_to_whatsapp latest_qr_code.qr_code.url "WhatsApp <span class='iconify' data-icon='ri:whatsapp-fill' style='color: #45E662;'></span>" %}
+                {% post_to_facebook latest_qr_code.qr_code.url "Facebook <span class='iconify' data-icon='akar-icons:facebook-fill' style='color: #4959e9;'></span>" %}
+                {% send_email "{{latest_qr_code.qr_type}}" "{{latest_qr_code.qr_msg}}" latest_qr_code.qr_code.url "Email <span class='iconify' data-icon='clarity:email-solid' style='color: #8690F0;'></span>" %}
+                {% copy_to_clipboard latest_qr_code.qr_code.url "Copy URL <span class='iconify' data-icon='bi:link-45deg' style='color: #2B2B2B;'></span>" %}
+                {% add_copy_script %}
             </div>
           </div>
          </div>

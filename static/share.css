@@ -111,14 +111,18 @@
   overflow: auto;
   z-index: 1;
 }
-.drop-content a {
-  color: #2b2b2b;
+.drop-content a , .drop-content button{
+  color: #2b2b2b !important;
+  background-color: #FFFFFF !important;
   text-decoration: none;
   display: block;
   padding: 10px 15px;
   font-size: 15px;
 }
-a img {
+.drop-content button .iconify{
+  float: right;
+}
+.iconify, a img {
   width: 15px;
   height: 15px;
   float: right;
