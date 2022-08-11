@@ -26,7 +26,7 @@
             <button type="button" onclick="location.href='{% url 'code_edit' pk=qr_code_selected.pk %}'">Edit Code</button>
         </div>
         <div class="download-code">
-            <button download type="button" onclick="location.href='{% url 'code_download' pk=qr_code_selected.pk %}'">Download Code</button>
+            <button download type="button" onclick="location.href='{% url 'code_download_png' pk=qr_code_selected.pk %}'">Download Code</button>
         </div>
         <table class="total-table">
             <tr>
