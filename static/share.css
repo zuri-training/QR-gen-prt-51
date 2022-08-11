@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 @media screen and (max-width: 400px) {
   .modal {
     max-width: 360px;
@@ -11,6 +13,10 @@
   .middle,
   .last {
     width: 360px;
+  }
+  .qrcode_container img{
+    width: 180px;
+    height: 180px;
   }
 }
 
@@ -26,6 +32,15 @@
 .modal::backdrop {
   background-color: #03040f;
   opacity: 0.2;
+}
+.qrcode_container{
+  border: 5px solid #4959E9;
+  box-sizing: border-box;
+  padding: 30px;
+}
+.qrcode_container img{
+  width: 300px;
+  height: 300px;
 }
 
 .first,
@@ -65,6 +80,8 @@
 .last .or {
   font-size: 16px;
   font-weight: 500;
+  margin: 0px;
+  padding: 0px;
 }
 
 .drop {
@@ -87,21 +104,29 @@
 .drop-content {
   display: none;
   position: absolute;
-  width: 130px;
+  min-width: 130px;
+  margin-top: 30px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  overflow: auto;
   z-index: 1;
 }
-.drop-content a {
-  color: #2b2b2b;
+.drop-content a , .drop-content button{
+  color: #2b2b2b !important;
+  background-color: #FFFFFF !important;
   text-decoration: none;
   display: block;
   padding: 10px 15px;
   font-size: 15px;
 }
-.dropdown:hover .drop-content {
-  display: block;
+.drop-content button .iconify{
+  float: right;
 }
-a img {
+.iconify, a img {
   width: 15px;
   height: 15px;
   float: right;
+}
+.show {
+  display: block;
 }
