@@ -114,7 +114,7 @@ Add notes about how to use the system.
 - []() - mujerheed
 - []() - bieefilled
 - []() - Abdulhameed
-- []() - king atod
+- []() - King Atod
 - []() - Fatima
 - []() - Honeylight
 
