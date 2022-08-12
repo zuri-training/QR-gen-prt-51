@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %} {% block content %}{% load static %}
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us page</title>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <style>
         h2 {
             text-align: center;
-            margin-top: 1rem;
+            margin-top: 2rem;
             margin-bottom: 0.5rem;
             font-family: 'Josefin Sans';
             font-style: normal;
@@ -21,6 +17,7 @@
             line-height: 150%;
             margin-left: 3.5rem;
             margin-right: 3.5rem;
+            margin-bottom: 3.5rem;
         }
         p {
             font-family: 'Josefin Sans';
@@ -41,16 +38,15 @@
         .about-us-content {
             margin-left: 1rem;
             margin-right: 1rem;
+            margin-bottom: 2rem;
         }   
     }
     </style>
 </head>
-<body>
-    <h2>About Us</h2>
-    <div class="about-us-content">
+<h2>About Us</h2>
+<div class="about-us-content">
         <p>We are a team of developers and product designer that came together to build QR code generator. This is borne out of the need to offer a more meaningful connection to brands and products while optimizing their marketing campaign. We observed that most of the QR code generator are not user-friendly, not interactive enough and cumbersome to navigate. So, we came up with a platform that allows users to generate QR codes. QR code generator allows you to keep track of how many people scan your QR Codes, track where they are coming from and date of scan.</p>
         <p>There are diverse benefits of qr codes in marketing and business. This is evident from the fact that you can spot a qr code almost everywhere you go. As a business owner, you need to try it out as they are secure and are an asset to your business. Some features of QR gen are that it allows users to download (PNG, JPEG and PDF download format), or share code by email or social media and allows user to save data and come back to it. It eliminate human error and saves cost.</p>
         <p>Most organisations are embracing paperless policy. QR-gen eliminates the cost of printing menus or catalogs, it brings significant changes to businesses. It makes things easier and increases the potential for revenue and survival. All of these for something that doesn't require any extensive learning and investment. QR codes provides a contactless approach of sharing information to the end-user by only using a smartphone gadget and scanning the QR code, making it convenient and safe to do business or personal transactions.</p>
-    </div>
-</body>
-</html>
+</div>
+{% endblock %}
