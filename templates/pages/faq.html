@@ -17,11 +17,11 @@
             <p>Or choose a category to quickly find what you need.</p>
             </div>
             <div class="faq__choice-box">
-            <div class="faq__getting-started">
+            <div class="faq__getting-started" onclick="location.href='{% url 'home' %}'">
                 <span class="iconify" data-icon="akar-icons:flag"></span>
                 <h2>Getting Started</h2>
             </div>
-            <div class="faq__customer-service">
+            <div class="faq__customer-service" onclick="location.href='{% url 'contact-us' %}'">
                 <span class="iconify" data-icon="akar-icons:chat-question"></span>
                 <h2>Customer Service</h2>
             </div>

@@ -9,7 +9,7 @@
         secure, easy and fast method. Customize each QR-code just to fit you
         personal need.
       </p>
-      <button><a href="#"> GENERATE QR CODE</a></button>
+      <button><a href="{% url 'datatype' %}"> GENERATE QR CODE</a></button>
     </div>
     <div class="animation">
       <lottie-player
@@ -20,19 +20,19 @@
         autoplay
       ></lottie-player>
       <div class="extra">
-        <button><a href="#"> GENERATE QR CODE</a></button>
+        <button><a href="{% url 'datatype' %}"> GENERATE QR CODE</a></button>
       </div>
     </div>
   </div>
   <div class="two">
     <div class="info">
       <p>What should you know about <span>QR-CODE</span> and our services.</p>
-      <button><a href="#">RESOURCES</a></button>
+      <button><a href="{% url 'faq' %}">RESOURCES</a></button>
     </div>
     <div class="image1">
       <img src="{%static 'images/undraw_teaching_re_g7e3 1.png'%}" />
       <div class="extra2">
-        <button><a href="#">RESOURCES</a></button>
+        <button><a href="{% url 'faq' %}">RESOURCES</a></button>
       </div>
     </div>
   </div>
@@ -104,7 +104,7 @@
     </div>
   </div>
   <div class="buttonsix">
-    <button><a href="#">GENERATE QR CODE</a></button>
+    <button><a href="{% url 'datatype' %}">GENERATE QR CODE</a></button>
   </div>
 
   <div class="last">
@@ -118,7 +118,7 @@
         you’ve got a question, we’re here to answer it.
       </p>
       <button>
-        <a href="#">Contact Us </a><span class="iconify" data-icon="bytesize:arrow-right"></span></i>
+        <a href="{% url 'contact-us' %}">Contact Us </a><span class="iconify" data-icon="bytesize:arrow-right"></span></i>
       </button>
     </div>
   </div>
