@@ -50,7 +50,7 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
-
+# 84127596
 # Translations
 *.mo
 *.pot
@@ -114,7 +114,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-
+media_folder/
 # Spyder project settings
 .spyderproject
 .spyproject

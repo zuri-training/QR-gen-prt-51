@@ -129,6 +129,13 @@
             </div>
           <p class="par">Your <strong>QR Code</strong> is ready to be used!</p>
         </div>
+
+        <div class="button-container">
+                <button><a href="{% url 'datatype' %}">DESIGN QR CODE</a></button>
+                <button>DOWNLOAD OR SHARE QR CODE</button>
+        </div>
+    </div>
+
         <div class="last">
           <div class="dropdown">
             <button class="drop" onclick="downloadList()">DOWNLOAD <i class="fa fa-caret-down"></i></button>
@@ -178,5 +185,6 @@
           }
         }
       </script>
+
 </body>
 </html>

@@ -102,7 +102,10 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+#Google recaptcha against spam bot 
+GOOGLE_RECAPTCHA_SITE_KEY = '6LfsF2khAAAAAEYG6JtpaqT0YRGDCURbDUOPtPoa' 
 
+GOOGLE_RECAPTCHA_SECRET_KEY = '6LfsF2khAAAAAOvAiIeARmstT92aUBVXRv0WTMil'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

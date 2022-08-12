@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %} 
 {% block content %}
+
+{% load widget_tweaks %}
         <div class="hero-image">
             <img src="{% static 'images/background.png' %}" alt="computer" style="width: 100%;" class="contact__image">
             <div class="hero-text">
@@ -16,6 +18,8 @@
             <div class="left-col">
                 <h3>Send a Message</h3>
                 <form action="ContactUs" method="get">
+                    <!-- {% csrf_token %} {{form.as_p}} -->
+
                     <label for="fname">Full Name</label>
                     <input type="text" id="fname" name="firstname" placeholder="Akinosun Anjola">
                     <label for="email">Email Address</label>
@@ -26,8 +30,10 @@
                         <button type="submit">SEND</button>
                     </div>
                 </form>
+               
             </div>
             <div class="right-col">
+              
                 <div>
                     <div class="contact-info">
                         <h3>Contact Information</h3>
