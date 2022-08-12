@@ -8,6 +8,8 @@ from urllib.parse import quote
 from PIL import Image
 from django.contrib.auth.decorators import login_required
 from qrCode_App.models import QrCode
+from django.core.mail import send_mail, BadHeaderError
+from .forms import ContactForm
 # Create your views here.
 
 
@@ -344,3 +346,24 @@ def success(request):
 def resetall(request):
     QrCode.objects.filter(user=request.user).delete()
     return redirect('dashboard')
+
+# django contact form 
+def contact(request):
+	if request.method == 'POST':
+		form = ContactForm(request.POST)
+		if form.is_valid():
+			subject = "Website Inquiry" 
+			body = {
+			'first_name': form.cleaned_data['first_name'],
+			'email': form.cleaned_data['email_address'], 
+			'message':form.cleaned_data['message'], 
+			}
+			message = "\n".join(body.values())
+			try:
+				send_mail(subject, message, 'admin@example.com', ['admin@example.com']) 
+			except BadHeaderError:
+				return HttpResponse('Invalid header found.')
+			return redirect ("main:homepage")
+      
+	form = ContactForm()
+	return render(request, "main/contact.html", {'form':form})
