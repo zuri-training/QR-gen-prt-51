@@ -360,9 +360,10 @@ def contact(request):
 			}
 			message = "\n".join(body.values())
 			try:
-				send_mail(subject, message, 'petsamuel4@example.com', ['bieefilled@gmail.com']) 
+				send_mail(subject, message, 'admin@example.com', ['admin@example.com']) 
 			except BadHeaderError:
 				return HttpResponse('Invalid header found.')
-			return redirect ("index")
+			return redirect ("pages/homepage")
+      
 	form = ContactForm()
 	return render(request, "pages/contactus.html", {'form':form})
