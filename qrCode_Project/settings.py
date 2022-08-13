@@ -12,12 +12,9 @@ env.read_env()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = env.str(
-    "SECRET_KEY",
-    default="django-insecure-x0dp25v51=wfb3lo5wibvw=t32v13oof#-b(_!f@-=+293m9j-",
-)
+SECRET_KEY = env.str("SECRET_KEY",)
 
-DEBUG = env.bool("DEBUG", default=True)
+DEBUG = env.bool("DEBUG",)
 # DEBUG = True
 
 ALLOWED_HOSTS = [".herokuapp.com", "localhost", "127.0.0.1"]
