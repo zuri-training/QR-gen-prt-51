@@ -60,7 +60,7 @@ img{
   .top .reg{
     font-weight: 600;
     letter-spacing: -1.5px;
-    margin-bottom: 6px;
+    /* margin-bottom: 2px; */
     text-align: center;
   }
   .input-box label{
@@ -115,7 +115,7 @@ img{
   font-size: 0.8rem;
   line-height: 150%;
   letter-spacing: 0.4px;
-  margin-bottom: 63px;
+  margin-bottom: 20px;
 }
 .bottom {
   display: flex;
