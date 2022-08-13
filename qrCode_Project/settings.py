@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "drf_spectacular",
     "drf_yasg",
     'cloudinary',
+    
 ]
 
 # REST_FRAMEWORK SETTINGS
@@ -105,9 +106,9 @@ DATABASES = {
 
 }
 #Google recaptcha against spam bot 
-GOOGLE_RECAPTCHA_SITE_KEY = '6LfsF2khAAAAAEYG6JtpaqT0YRGDCURbDUOPtPoa' 
+GOOGLE_RECAPTCHA_SITE_KEY = 'GOOGLE_RECAPTCHA_SITE_KEY' 
 
-GOOGLE_RECAPTCHA_SECRET_KEY = '6LfsF2khAAAAAOvAiIeARmstT92aUBVXRv0WTMil'
+GOOGLE_RECAPTCHA_SECRET_KEY = 'GOOGLE_RECAPTCHA_SECRET_KEY'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

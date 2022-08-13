@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static %} 
 {% block content %}
-
 {% load widget_tweaks %}
         <div class="hero-image">
             <img src="{% static 'images/background.png' %}" alt="computer" style="width: 100%;" class="contact__image">
@@ -17,18 +16,18 @@
         <div class="message__container">
             <div class="left-col">
                 <h3>Send a Message</h3>
-                <form method="Post">
-                    {% csrf_token %}
+                <form action="ContactUs" method="get">
+                     {% csrf_token %} 
 
                     <label for="fname">Full Name</label>
                     <!-- <input type="text" id="fname" name="firstname" placeholder="Akinosun Anjola"> -->
-                    {% render_field form.full_name id="fname" placeholder="Akinosun Anjola" type="text" %}
+                    {% render_field form.full_name id="full_name" class="form-signup" placeholder="Anjola Akinosun" type="text" %}
                     <label for="email">Email Address</label>
-                    {% render_field form.email_address id="email" placeholder="AnjolaAkinosun@gmail.com" type="email" %}
                     <!-- <input type="email" id="email" name="email" placeholder="anjola.akinosun@email.com"> -->
-                    <label for="message">Message</label>
-                    {% render_field form.textarea id="contactMessage" placeholder="message here" type="textarea" %}
-                    <!-- <textarea name="Message" id="contactMessage" ></textarea> -->
+                    {% render_field form.email_address id="email" class="form-signup" placeholder="Anjola.akinosun@email.com" type="email" %}
+                    <label for="message">Message</label> <br/>
+                    {% render_field form.textarea id="email" class="form-signup" placeholder="message"%}
+                    <!-- <textarea name="Message" id="" ></textarea> -->
                     <div class="submit">
                         <button type="submit">SEND</button>
                     </div>
