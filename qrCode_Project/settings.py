@@ -17,8 +17,8 @@ SECRET_KEY = env.str(
     default="django-insecure-x0dp25v51=wfb3lo5wibvw=t32v13oof#-b(_!f@-=+293m9j-",
 )
 
-# DEBUG = env.bool("DEBUG", default=False)
-DEBUG = True
+DEBUG = env.bool("DEBUG", default=True)
+# DEBUG = True
 
 ALLOWED_HOSTS = [".herokuapp.com", "localhost", "127.0.0.1"]
 
@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'whitenoise.runserver_nostatic',
 
     # new app installed
     "accounts",
@@ -73,6 +74,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = "qrCode_Project.urls"
@@ -97,10 +99,13 @@ WSGI_APPLICATION = "qrCode_Project.wsgi.application"
 
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+    # "default": {
+    #     "ENGINE": "django.db.backends.sqlite3",
+    #     "NAME": BASE_DIR / "db.sqlite3",
+    # }
+
+    "default": env.dj_db_url("DATABASE_URL")
+
 }
 #Google recaptcha against spam bot 
 GOOGLE_RECAPTCHA_SITE_KEY = '6LfsF2khAAAAAEYG6JtpaqT0YRGDCURbDUOPtPoa' 
@@ -153,10 +158,13 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 
-# static
+# static 
 STATIC_URL = "static/"
 STATIC_DIR = BASE_DIR / STATIC_URL
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))] 
+STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
+STATICFILES_STORAGE ='whitenoise.storage.CompressedManifestStaticFilesStorage' 
 
 # media file
 MEDIA_URL = '/media_folder/'
