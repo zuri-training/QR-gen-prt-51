@@ -141,9 +141,9 @@ USE_TZ = True
 
 
 # CLOUDINARY_STORAGE={
-#     'CLOUD_NAME':'dtyafclf3',
-#     'API_KEY':'866113161722838',
-#     'API_SECRET':'rW0QqAVEUQleXMw0RboCgLf6KrM'
+#     'CLOUD_NAME':'CLOUD_NAME',
+#     'API_KEY':'API_KEY',
+#     'API_SECRET':'API_SECRET'
 # }
 
 # DEFAULT_FILE_STORAGE='cloudinary_storage.storage.MediaCloudinaryStorage'
