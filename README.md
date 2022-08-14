@@ -26,20 +26,9 @@
 - [🚀 Future Scope <a name = "future_scope"></a>](#-future-scope-)
 - [🏁 Getting Started <a name = "getting_started"></a>](#-getting-started-)
   - [How to run project](#how-to-run-project)
-- [🎈 Usage <a name="usage"></a>](#-usage-)
 - [⛏️ Built With <a name = "tech_stack"></a>](#️-built-with-)
 - [✍️ Authors <a name = "authors"></a>](#️-authors-)
-- [🎉 Acknowledgments <a name = "acknowledgments"></a>](#-acknowledgments-)
 
-- [🎈 Usage <a name="usage"></a>](#-usage-)
-- [⛏️ Built With <a name = "tech_stack"></a>](#️-built-with-)
-- [🎉 Acknowledgments <a name = "acknowledgments"></a>](#-acknowledgments-)
-
-## 🧐 Problem Statement <a name = "problem_statement"></a>
-
-QR codes are fast becoming popular these days. Most people are drifting away from the traditional mode of advertising/marketing and just storing their digital information online in QR codes. QR codes are everywhere we go now; banks, hospitals, hotels, restaurants etc. But the question on everyone’s lips is how do they come about these codes?
-
-These codes are generated online by an online software called QR code generator. From secondary research, a lot of these platforms are not simplified enough for beginners to use. And to tackle that problem, we will be following the popular saying: “Less is more.” We will design a platform that allows users to generate QR codes with less hassle. The QR code generated can be downloaded, shared online amongst many other features and when scanned will lead to the user’s portfolio website or catalogue.
 
 ## 💡 Idea / Solution <a name = "idea"></a>
 
@@ -86,9 +75,6 @@ What things you need to install the software and how to install them.
 - run migrations 
 - python manage.py  runserver
 ```
-## 🎈 Usage <a name="usage"></a>
-
-Add notes about how to use the system.
 
 ## ⛏️ Built With <a name = "tech_stack"></a>
 
